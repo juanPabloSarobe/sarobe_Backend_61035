@@ -14,4 +14,6 @@ Se generan 3 métodos:
 3.  getElementById: valida que el id sea valido, y busca en la lista de productos, si encuentra una ocurrencia devuelve el producto completo, caso contrario devuelve un error de búsqueda por consola.
 
 Se crean métodos privados para validación de datos.
+<br/>
+<br/>
 Por ultimo se ejecutan los test de funcionamiento.
