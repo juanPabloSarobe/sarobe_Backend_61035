@@ -32,9 +32,15 @@ Se implementan los productos que vengo utilizando en las clases de react y react
 
 Se crean 3 nuevos métodos:
 
-1. Método updateProduct: recibe un elemento con los datos del producto,donde el único dato obligatorio es el id, y actualiza el objeto dentro del array.
+1. Método updateProduct: recibe un elemento con los datos del producto, donde el único dato obligatorio es el id, y actualiza el objeto dentro del array.
 2. Método deleteProduct: verifica el id recibido y si lo encuentra elimina el producto del array o arroja error
 3. Método privado saveFile: guarda el archivo con los nuevos datos del array.
 
 Se implementa persistencia de datos mediante manejador de archivos File System de node.
 Se crea un archivo products.json donde se van agregando, modificando o eliminando los productos de nuestro e-commerce.
+<br/>
+Se refactorizan todos los métodos anteriores para que sean asíncronos
+<br/>
+<br/>
+Por último se ejecutan los test de funcionamiento en una función anónima auto-ejecutable.
+<br/>
