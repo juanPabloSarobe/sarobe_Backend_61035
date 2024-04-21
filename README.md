@@ -29,3 +29,12 @@ IMPORTANTE: para utilizar los mismos quizás deba cambiar el nombre de algún el
 Cambios: Se agrega clase category y se cambian los productos del desafío 2.
 La categoría thumbnail pasa a llamarse img, dado que todos los proyectos anteriores manejan ese nombre.
 Se implementan los productos que vengo utilizando en las clases de react y react Native, con el objetivo de integrar todos los proyectos al final del curso.
+
+Se crean 3 nuevos métodos:
+
+1. Método updateProduct: recibe un elemento con los datos del producto,donde el único dato obligatorio es el id, y actualiza el objeto dentro del array.
+2. Método deleteProduct: verifica el id recibido y si lo encuentra elimina el producto del array o arroja error
+3. Método privado saveFile: guarda el archivo con los nuevos datos del array.
+
+Se implementa persistencia de datos mediante manejador de archivos File System de node.
+Se crea un archivo products.json donde se van agregando, modificando o eliminando los productos de nuestro e-commerce.
