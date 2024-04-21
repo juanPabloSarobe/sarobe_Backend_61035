@@ -1,0 +1,21 @@
+{
+  "name": "liquidstore_backend",
+  "version": "1.0.0",
+  "description": "Proyecto curso BackEnd comision 61035, normalizado para consumir desde proyectos de React y React Native",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node entregables/desafioClase4.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanPabloSarobe/sarobe_Backend_61035.git"
+  },
+  "author": "Sarobe Juan Pablo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanPabloSarobe/sarobe_Backend_61035/issues"
+  },
+  "homepage": "https://github.com/juanPabloSarobe/sarobe_Backend_61035#readme"
+}

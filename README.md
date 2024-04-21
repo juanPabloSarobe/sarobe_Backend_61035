@@ -17,3 +17,15 @@ Se crean métodos privados para validación de datos.
 <br/>
 <br/>
 Por ultimo se ejecutan los test de funcionamiento.
+<br/>
+<br/>
+
+## Desafío clase 4
+
+OBSERVACIONES IMPORTANTES:
+En los cursos de react (https://react-47225.vercel.app/)(https://github.com/juanPabloSarobe/react-47225) y react native (https://github.com/juanPabloSarobe/LiquidStoreApp?tab=readme-ov-file) cree una tienda de venta de bebidas. Ambos proyectos utilizan de base los mismos tipos de productos. Por lo cual construiré mi proyecto backend pensando en luego ser consumidos por los proyectos anteriores.
+
+IMPORTANTE: para utilizar los mismos quizás deba cambiar el nombre de algún elemento, no obstante no se realizaran tareas de menos, al contrario se agregarán los elementos extras que sean necesarios.
+Cambios: Se agrega clase category y se cambian los productos del desafío 2.
+La categoría thumbnail pasa a llamarse img, dado que todos los proyectos anteriores manejan ese nombre.
+Se implementan los productos que vengo utilizando en las clases de react y react Native, con el objetivo de integrar todos los proyectos al final del curso.
