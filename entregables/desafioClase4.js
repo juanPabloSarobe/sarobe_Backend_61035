@@ -153,10 +153,12 @@ class ProductManager {
   };
   deleteProduct = async (id) => {
     this.#verifiyId(id);
+    this.getProductById(id);
     const products = await this.getProducts();
     const productForDelete = products.find((element) => element.id === id);
     const productIndex = products.findIndex((element) => element.id === id);
     products.splice(productIndex, 1);
+
     console.log(
       `El producto ${productForDelete.title} fue eliminado correctamente`
     );
@@ -221,6 +223,7 @@ const productos = new ProductManager("./products.json");
   });
   console.log(await productos.getProducts());
   await productos.deleteProduct(6);
+  //await productos.deleteProduct(6);
   await productos.addProduct(
     "Ginebra Premium",
     "Ginebra premium con una mezcla de botánicos.",
