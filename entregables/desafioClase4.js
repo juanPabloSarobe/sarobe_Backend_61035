@@ -131,7 +131,9 @@ class ProductManager {
     if (product) {
       return product;
     } else {
-      throw new Error("ERROR ID NOT FOUND. El id ingresado no es un id valido");
+      throw new Error(
+        `ERROR ID NOT FOUND. El id ${id} ingresado no es un id valido`
+      );
     }
   };
 
