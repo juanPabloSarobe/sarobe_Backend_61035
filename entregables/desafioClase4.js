@@ -84,8 +84,25 @@ class ProductManager {
   };
 
   updateProduct = (product) => {
+    // /traigo el producto completo por si product llega sin alguna de los elementos
     const productForUpdate = this.getProductById(product.id);
-    return console.log("update: ", productForUpdate);
+
+    if (productForUpdate) {
+      const productIndex = this.products.findIndex(
+        (element) => element.id === productForUpdate.id
+      );
+      const finalProduct = { ...productForUpdate, ...product };
+
+      return this.products.splice(productIndex, 1, finalProduct);
+    }
+    throw new Error("ERROR. el producto no pudo ser actualizado");
+  };
+  deleteProduct = (id) => {
+    this.#verifiyId(id);
+    const productIndex = this.products.findIndex(
+      (element) => element.id === id
+    );
+    return this.products.splice(productIndex, 1);
   };
 }
 
@@ -104,10 +121,9 @@ productos.addProduct(
 );
 console.log(productos.getProducts());
 productos.addProduct("Mac", "es una mac", 2500, "sin imagen", "nb1002", 30);
-console.log(productos.getProducts());
 productos.addProduct(
-  "Notebook",
-  "es una notebook",
+  "MacBook",
+  "es una macbook",
   1000,
   "sin imagen",
   "nb1003",
@@ -125,11 +141,25 @@ console.log(productos.getProducts());
 productos.getProductById(2);
 productos.updateProduct({
   id: 3,
-  title: "Notebook",
-  description: "es una notebook",
-  price: 1000,
-  thumbnail: "sin imagen",
   code: "nb1003",
   stock: 25,
 });
-productos.getProductById(5);
+productos.updateProduct({
+  id: 4,
+  title: "Teclado Retroiluminado",
+  price: 0.2,
+  stock: 50,
+});
+console.log(productos.getProducts());
+productos.deleteProduct(2);
+productos.addProduct(
+  "Monitor",
+  "es una monitor",
+  900,
+  "sin imagen del monitor",
+  "mn1001",
+  10
+);
+console.log(productos.getProducts());
+
+productos.getProductById(6);
