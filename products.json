@@ -1,0 +1,52 @@
+[
+  {
+    "id": "862ce6ca-95f6-4cc2-8120-f4b511949c75",
+    "title": "Cerveza IPA",
+    "description": "Cerveza India Pale Ale, ligeramente amarga y aromática.",
+    "price": 5.99,
+    "img": "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104302/descarga_schjmg.jpg",
+    "code": "cervezas1001",
+    "stock": 5,
+    "category": "Cervezas"
+  },
+  {
+    "id": "8fe66e8b-4fb0-4ed8-b2cc-1cf13fe58e8a",
+    "title": "Vino Tinto Reserva",
+    "description": "Vino tinto reserva de alta calidad, cosecha 2015.",
+    "price": 12.99,
+    "img": "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104434/CeYiCOGWSUuyzWD_JuDsOg_ytj20a.jpg",
+    "code": "vino1001",
+    "stock": 30,
+    "category": "Vinos"
+  },
+  {
+    "id": "029502d8-de74-4690-bed6-765955b1761c",
+    "title": "Whisky Escocés",
+    "description": "Whisky escocés de malta, suave y ahumado.",
+    "price": 29.99,
+    "img": "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104567/Jack-Daniels-Master-Distiller-N4-550x550_qvvkp4.png",
+    "code": "licores1001",
+    "stock": 0,
+    "category": "Licores"
+  },
+  {
+    "id": "5b96ff71-d7be-4c68-a5ce-c48c8c6b813e",
+    "title": "Ron Añejo",
+    "description": "Ron añejo de 7",
+    "price": 9.99,
+    "img": "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104541/ron-havana-club-7-anos_s9mxc4.png",
+    "code": "licores1002",
+    "stock": 25,
+    "category": "Licores"
+  },
+  {
+    "id": "d41e1a79-57f2-4382-8252-be4cf5c3e06d",
+    "title": "Ginebra Premium",
+    "description": "Ginebra premium con una mezcla de botánicos.",
+    "price": 24.99,
+    "img": "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104611/ventozelo-gin_tbmgg4.png",
+    "code": "licores1003",
+    "stock": 15,
+    "category": "Licores"
+  }
+]

@@ -44,3 +44,14 @@ Se refactorizan todos los métodos anteriores para que sean asíncronos
 <br/>
 Por último se ejecutan los test de funcionamiento en una función anónima auto-ejecutable.
 <br/>
+
+## Desafío clase 6
+
+Se crea el servidor con Express, se configura el package.json, y se instalan la libreria uuidv4, asi como nodemon para desarrollo.
+Se refactorizan las carpetas del proyecto para que se ajuste a la rubrica.
+
+Se crean los siguientes endpoints:
+
+1. **/products** Muestra todos los products. puede recibir 2 parámetros, title y limit, si recibe title filtra por cualquier parte del titulo del producto, si recibe limit filtra la cantidad de productos igual al limite, si recibe los 2, primero filtra por titulo y al resultado lo filtra por limite.
+
+2. **/products/pid** recibe un id de producto por req.params, en caso de que sea valido revuelve el producto. en caso de que no corresponda devuelve error.
