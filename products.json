@@ -48,5 +48,35 @@
     "code": "licores1003",
     "stock": 15,
     "category": "Licores"
+  },
+  {
+    "id": "7db798dc-b20b-40ae-823d-05924dc615a0",
+    "title": "Soda Limón",
+    "description": "Soda de limón refrescante, ideal para mezclar con licores.",
+    "price": 1.49,
+    "img": "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104654/61F7Y3rOWCL._AC_UF894_1000_QL80__xsimls.jpg",
+    "code": "refrescos1001",
+    "stock": 50,
+    "category": "Refrescos"
+  },
+  {
+    "id": "f194012a-293c-4f54-9ad4-5b0999cd1de9",
+    "title": "Sidra",
+    "description": "Sidra refrescante, perfecta para celebraciones.",
+    "price": 6.99,
+    "img": "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104693/BOTELLA-2_06d65695-b6aa-47c7-947e-c08083799f92_ojv5ow.jpg",
+    "code": "cervezas1002",
+    "stock": 35,
+    "category": "Cervezas"
+  },
+  {
+    "id": "684c058c-8e51-474e-857a-bf040ef081c8",
+    "title": "Champán Brut",
+    "description": "Champán brut de alta calidad, perfecto para celebraciones.",
+    "price": 36.99,
+    "img": "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104758/Dom-Perignon-2000-Fullview-Vintage-Grapes-GmbH_j7bcxt.jpg",
+    "code": "vinos1002",
+    "stock": 10,
+    "category": "Vinos"
   }
 ]

@@ -9,7 +9,7 @@ const productos = new ProductManager("./products.json");
 
 app.get("/home", async (req, res) => {
   res.send(await productos.getProducts());
-  console.log(await productos.getProducts());
+
   // res.json(products)
   // res.redirect('/home')
   // res.render()
@@ -20,7 +20,7 @@ app.get("/products", async (req, res) => {
   try {
     let products = await productos.getProducts();
     const { title, limit } = req.query;
-    console.log(title);
+
     if (title) {
       const filterItems = (title) => {
         return products.filter(
@@ -30,9 +30,8 @@ app.get("/products", async (req, res) => {
       products = filterItems(title);
     }
     if (limit) {
-      console.log(products);
       const limitedItems = products.splice(0, parseInt(limit));
-      console.log(limitedItems);
+
       products = limitedItems;
     }
 
@@ -47,11 +46,7 @@ app.get("/products/:pid", async (req, res) => {
     const { pid } = req.params;
     const products = await productos.getProductById(pid);
 
-    if (!products) {
-      res.status(400).json({
-        msj: `ERROR ID NOT FOUND. El id ${pid} ingresado no es un id valido`,
-      });
-    } else res.status(200).json(products);
+    if (products) res.status(200).json(products);
   } catch (error) {
     res.status(500).json({ msg: error.message });
   }
@@ -69,9 +64,53 @@ app.get("/productsByCategory/:category", async (req, res) => {
       if (filterCategory.length !== 0) {
         res.status(200).json(filterCategory);
       } else {
-        res.status(400).json({ msj: "Categoría Invalida" });
+        throw new Error("Invalid category");
       }
     }
+  } catch (error) {
+    res.status(500).json({ msg: error.message });
+  }
+});
+
+app.post("/products", async (req, res) => {
+  try {
+    const product = await productos.addProduct(req.body);
+    if (!product) res.status(400).json({ msj: "Bad request" });
+    res.status(201).json(product);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+});
+
+app.put("/products", async (req, res) => {
+  //Falta terminar el /:pid
+  try {
+    const product = await productos.updateProduct(req.body);
+    if (!product) res.status(400).json({ msj: "Bad request" });
+    res.status(201).json(product);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+});
+app.delete("/products/:pid", async (req, res) => {
+  try {
+    const { pid } = req.params;
+
+    const product = await productos.deleteProduct(pid);
+    if (!product) res.status(400).json({ msj: "Bad request" });
+    res.status(201).json(product);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
+});
+// continuar desde aca!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+app.delete("/users/:idUser", async (req, res) => {
+  try {
+    const { idUser } = req.params;
+    const delUser = await userManager.deleteUser(idUser);
+    if (!delUser) res.status(404).json({ msg: "Error delete user" });
+    else
+      res.status(200).json({ msg: `User id: ${idUser} deleted successfully` });
   } catch (error) {
     res.status(500).json({ msg: error.message });
   }
