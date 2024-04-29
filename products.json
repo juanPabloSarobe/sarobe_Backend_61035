@@ -68,5 +68,35 @@
     "code": "cervezas1002",
     "stock": 35,
     "category": "Cervezas"
+  },
+  {
+    "id": "bcd0381c-ffee-4dd4-8535-9373c1515fd4",
+    "title": "Tequila Reposado",
+    "description": "Tequila reposado en barricas de roble, suave y elegante.",
+    "price": 27.99,
+    "img": "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696105346/don-julio-reposado-web_xk0eft.png",
+    "code": "licores1004",
+    "stock": 15,
+    "category": "Licores"
+  },
+  {
+    "id": "e6db1a25-bcf9-485d-8c73-82b7bbf8929c",
+    "title": "Té de Manzanilla",
+    "description": "Té de manzanilla calmante, perfecto para relajarse.",
+    "price": 2.29,
+    "img": "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104790/41K9uMEPj8L._AC_UF894_1000_QL80__jugepp.jpg",
+    "code": "tes1001",
+    "stock": 30,
+    "category": "Tés"
+  },
+  {
+    "id": "49930a78-e104-47c1-99e1-6239aefaf2ab",
+    "title": "Cerveza Lager",
+    "description": "Cerveza Lager suave y refrescante, perfecta para cualquier ocasión.",
+    "price": 4.98,
+    "img": "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104824/61uqEd22CxL._AC_UF1000_1000_QL80__xdft24.jpg",
+    "code": "cervezas1003",
+    "stock": 60,
+    "category": "Cervezas"
   }
 ]

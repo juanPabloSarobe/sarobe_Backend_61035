@@ -104,6 +104,6 @@ app.delete("/products/:pid", async (req, res) => {
   }
 });
 
-const PORT = 8081;
+const PORT = 8080;
 
 app.listen(PORT, () => console.log(`Server ok en puerto ${PORT}`));

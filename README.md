@@ -44,14 +44,29 @@ Se refactorizan todos los métodos anteriores para que sean asíncronos
 <br/>
 Por último se ejecutan los test de funcionamiento en una función anónima auto-ejecutable.
 <br/>
+<br/>
 
 ## Desafío clase 6
 
-Se crea el servidor con Express, se configura el package.json, y se instalan la libreria uuidv4, asi como nodemon para desarrollo.
+Se crea el servidor con Express, se configura el package.json, y se instalan la librería uuidv4, asi como nodemon para desarrollo.
 Se refactorizan las carpetas del proyecto para que se ajuste a la rubrica.
 
 Se crean los siguientes endpoints:
 
-1. **/products** Muestra todos los products. puede recibir 2 parámetros, title y limit, si recibe title filtra por cualquier parte del titulo del producto, si recibe limit filtra la cantidad de productos igual al limite, si recibe los 2, primero filtra por titulo y al resultado lo filtra por limite.
+1. **GET /products** Muestra todos los products. puede recibir 2 parámetros por query, title y limit, si recibe title filtra por cualquier parte del titulo del producto, si recibe limit filtra la cantidad de productos igual al limite, si recibe los 2, primero filtra por titulo y al resultado lo filtra por limite.
 
-2. **/products/pid** recibe un id de producto por req.params, en caso de que sea valido revuelve el producto. en caso de que no corresponda devuelve error.
+2. **GET /products/pid** recibe un id de producto por req.params, en caso de que sea valido revuelve el producto. en caso de que no corresponda devuelve error.
+
+3. **GET /productsbycategory/:category** recibe una categoría de producto y devuelve los elementos que coincidan con la misma. en caso de que la categoría sea incorrecta devuelve error.
+
+4. **POST /products** recibe por body un objeto con los detalles del producto. realiza todas las validaciones de los datos y en caso que sean correctos inserta el producto nuevo. en caso de faltar un dato, devuelve error, en caso de que el code este duplicado devuelve error.
+
+5. **PUT /products** en este elemento se modifico lo solicitado por la rubrica y no recibe el id del producto por params sino que recibe un objeto con el id y el o los elementos del producto a modificar. realiza todas las validaciones y en caso de ser correctas realiza el cambio en el producto sin eliminarlo. en caso de que las validaciones sean incorrectas devuelve error.
+
+6. **DELETE /products/:pid** recibe por params el id del producto a eliminar, en caso de ser un producto valido lo elimina, en caso contrario devuelve error.
+
+<br/>
+<br/>
+Por último se ejecutan los test de funcionamiento desde postman. Se adjunta link a la documentación de la api: https://documenter.getpostman.com/view/11511543/2sA3BuW9A1
+<br/>
+<br/>
