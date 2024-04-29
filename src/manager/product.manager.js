@@ -142,8 +142,8 @@ export class ProductManager {
   };
   deleteProduct = async (id) => {
     try {
-      this.#verifiyId(id);
-      this.getProductById(id);
+      const product = await this.getProductById(id);
+      if (!product) throw new Error(error.message);
       const products = await this.getProducts();
       const productForDelete = products.find((element) => element.id === id);
       const productIndex = products.findIndex((element) => element.id === id);

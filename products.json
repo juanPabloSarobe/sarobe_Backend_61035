@@ -60,7 +60,7 @@
     "category": "Refrescos"
   },
   {
-    "id": "f194012a-293c-4f54-9ad4-5b0999cd1de9",
+    "id": "89c82fe6-712d-43a7-a537-ba1992bb2577",
     "title": "Sidra",
     "description": "Sidra refrescante, perfecta para celebraciones.",
     "price": 6.99,
@@ -68,15 +68,5 @@
     "code": "cervezas1002",
     "stock": 35,
     "category": "Cervezas"
-  },
-  {
-    "id": "684c058c-8e51-474e-857a-bf040ef081c8",
-    "title": "Champán Brut",
-    "description": "Champán brut de alta calidad, perfecto para celebraciones.",
-    "price": 36.99,
-    "img": "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104758/Dom-Perignon-2000-Fullview-Vintage-Grapes-GmbH_j7bcxt.jpg",
-    "code": "vinos1002",
-    "stock": 10,
-    "category": "Vinos"
   }
 ]

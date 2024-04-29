@@ -103,18 +103,6 @@ app.delete("/products/:pid", async (req, res) => {
     res.status(500).json(error.message);
   }
 });
-// continuar desde aca!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-app.delete("/users/:idUser", async (req, res) => {
-  try {
-    const { idUser } = req.params;
-    const delUser = await userManager.deleteUser(idUser);
-    if (!delUser) res.status(404).json({ msg: "Error delete user" });
-    else
-      res.status(200).json({ msg: `User id: ${idUser} deleted successfully` });
-  } catch (error) {
-    res.status(500).json({ msg: error.message });
-  }
-});
 
 const PORT = 8081;
 
