@@ -35,8 +35,10 @@ export class ProductManager {
         "Error: Price field can not be empty or less than zero and need to be a number"
       );
     }
-    if (!img || img.length === 0) {
-      throw new Error("Error: image path field can not be empty");
+    if (!Array.isArray(img)) {
+      throw new Error(
+        "Error: image path need to be an array or not be declared"
+      );
     }
     if (!code || code.length === 0) {
       throw new Error("Error: Code field can not be empty");
@@ -62,7 +64,7 @@ export class ProductManager {
     title,
     description,
     price,
-    img,
+    img = [],
     code,
     stock,
     category,
@@ -81,6 +83,7 @@ export class ProductManager {
           code,
           stock,
           category,
+          status: true,
         };
 
         products.push(product);

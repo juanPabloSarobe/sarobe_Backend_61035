@@ -7,9 +7,9 @@ console.log(__dirname + "/public");
 const app = express();
 
 app.use(express.static(__dirname + "/public"));
-/* app.use(express.json());
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/products", productRouter); */
+app.use("/products", productRouter);
 
 const PORT = 8080;
 
