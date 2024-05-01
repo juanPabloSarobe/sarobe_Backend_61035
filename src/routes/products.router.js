@@ -1,22 +1,11 @@
+import { Router } from "express";
+const router = Router();
+
 import { ProductManager } from "../manager/product.manager.js";
-import express from "express";
 
-const app = express();
+const productos = new ProductManager("./src/data/products.json");
 
-app.use(express.json());
-
-const productos = new ProductManager("./products.json");
-
-app.get("/home", async (req, res) => {
-  res.send(await productos.getProducts());
-
-  // res.json(products)
-  // res.redirect('/home')
-  // res.render()
-  // res.status(404).json({msg: 'Error, no podes ingresar'})
-});
-
-app.get("/products", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     let products = await productos.getProducts();
     const { title, limit } = req.query;
@@ -41,7 +30,7 @@ app.get("/products", async (req, res) => {
   }
 });
 
-app.get("/products/:pid", async (req, res) => {
+router.get("/:pid", async (req, res) => {
   try {
     const { pid } = req.params;
     const products = await productos.getProductById(pid);
@@ -52,7 +41,7 @@ app.get("/products/:pid", async (req, res) => {
   }
 });
 
-app.get("/productsByCategory/:category", async (req, res) => {
+router.get("/category/:category", async (req, res) => {
   try {
     const products = await productos.getProducts();
     const { category } = req.params;
@@ -72,7 +61,7 @@ app.get("/productsByCategory/:category", async (req, res) => {
   }
 });
 
-app.post("/products", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const product = await productos.addProduct(req.body);
     if (!product) res.status(400).json({ msj: "Bad request" });
@@ -82,7 +71,7 @@ app.post("/products", async (req, res) => {
   }
 });
 
-app.put("/products", async (req, res) => {
+router.put("/", async (req, res) => {
   //Falta terminar el /:pid
   try {
     const product = await productos.updateProduct(req.body);
@@ -92,7 +81,7 @@ app.put("/products", async (req, res) => {
     res.status(500).json(error.message);
   }
 });
-app.delete("/products/:pid", async (req, res) => {
+router.delete("/:pid", async (req, res) => {
   try {
     const { pid } = req.params;
 
@@ -104,6 +93,4 @@ app.delete("/products/:pid", async (req, res) => {
   }
 });
 
-const PORT = 8080;
-
-app.listen(PORT, () => console.log(`Server ok en puerto ${PORT}`));
+export default router;

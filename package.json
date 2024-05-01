@@ -2,7 +2,7 @@
   "name": "liquidstore_backend",
   "version": "1.0.0",
   "description": "Proyecto curso BackEnd comision 61035, normalizado para consumir desde proyectos de React y React Native",
-  "main": "./src/server/server.js",
+  "main": "./src/server.js",
   "type": "module",
   "scripts": {
     "test": "node entregables/desafioClase4.js",
