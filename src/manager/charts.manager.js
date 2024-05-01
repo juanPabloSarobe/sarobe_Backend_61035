@@ -73,7 +73,7 @@ export class ChartsManager {
   };
   addProduct = async (cid, pid) => {
     try {
-      const charts = await this.getCharts();
+      let charts = await this.getCharts();
       const chart = await this.getChartById(cid);
       if (!chart) res.status(400).json({ msj: "bad chart request" });
       const product = await productManager.getProductById(pid);
@@ -81,24 +81,19 @@ export class ChartsManager {
       const chartIndex = charts.findIndex((elem) => elem.chartId === cid);
 
       const productsInChart = charts[chartIndex].products;
-      console.log(productsInChart);
       const existsProduct = productsInChart.some((elem) => elem.id === pid);
 
       if (!existsProduct) {
         productsInChart.push({ id: pid, quantity: 1 });
-        //quede por aca, falta agregar el nuevo producto al carrito total y guardarlo.
-        const newCharts = charts.slice;
       } else {
-        const productIndex = productsInChart.find((elem) => elem.id === pid);
+        const productIndex = productsInChart.findIndex(
+          (elem) => elem.id === pid
+        );
 
-        const oldQuantity = charts[chartIndex].product[productIndex].quantity;
-        const newQuantity =
-          charts[chartIndex].product[productIndex].quantity + 1;
-
-        console.log(oldQuantity, newQuantity);
+        charts[chartIndex].products[productIndex].quantity += 1;
       }
       await this.#saveCharts(charts);
-      return chart;
+      return productsInChart;
     } catch (error) {
       throw new Error(error.message);
     }
