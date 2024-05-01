@@ -75,9 +75,9 @@ export class ChartsManager {
     try {
       let charts = await this.getCharts();
       const chart = await this.getChartById(cid);
-      if (!chart) res.status(400).json({ msj: "bad chart request" });
+      //if (!chart) res.status(400).json({ msj: "bad chart request" });
       const product = await productManager.getProductById(pid);
-      if (!product) res.status(400).json({ msj: "bad product request" });
+      //if (!product) res.status(400).json({ msj: "bad product request" });
       const chartIndex = charts.findIndex((elem) => elem.chartId === cid);
 
       const productsInChart = charts[chartIndex].products;

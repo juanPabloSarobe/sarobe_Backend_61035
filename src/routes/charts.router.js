@@ -38,7 +38,7 @@ router.post("/:cid/products/:pid", async (req, res) => {
   try {
     const { cid, pid } = req.params;
     const chart = await chartManager.addProduct(cid, pid);
-
+    if (!chart) res.status(400).json({ msg: "Bad request" });
     res.status(200).json(chart);
   } catch (error) {
     res.status(500).json({ msg: error.message });
