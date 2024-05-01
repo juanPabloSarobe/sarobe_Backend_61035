@@ -70,3 +70,7 @@ Se crean los siguientes endpoints:
 Por último se ejecutan los test de funcionamiento desde postman. Se adjunta link a la documentación de la api: https://documenter.getpostman.com/view/11511543/2sA3BuW9A1
 <br/>
 <br/>
+
+## Preentrega 1
+
+**POST "/"** Agrega un item a la lista de carritos, el cual contiene un chartId y un elemento products el cual contiene todos los productos del carrito. Recibe un producto en forma de objeto, el cual contiene un ID de producto y la cantidad. En caso de no recibir un producto agrega el elemento products vacio.
