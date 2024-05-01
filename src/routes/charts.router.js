@@ -4,7 +4,6 @@ const router = Router();
 import { ChartsManager } from "../manager/charts.manager.js";
 
 const chartManager = new ChartsManager("./src/data/charts.json");
-
 router.get("/", async (req, res) => {
   try {
     const charts = await chartManager.getCharts();
@@ -38,7 +37,9 @@ router.post("/", async (req, res) => {
 router.post("/:cid/products/:pid", async (req, res) => {
   try {
     const { cid, pid } = req.params;
-    const chart = await chartManager.getChartById(cid);
+    const chart = await chartManager.addProduct(cid, pid);
+
+    res.status(200).json(chart);
   } catch (error) {
     res.status(500).json({ msg: error.message });
   }
