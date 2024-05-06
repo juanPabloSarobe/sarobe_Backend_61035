@@ -73,4 +73,24 @@ Por último se ejecutan los test de funcionamiento desde postman. Se adjunta lin
 
 ## Preentrega 1
 
-**POST "/"** Agrega un item a la lista de carritos, el cual contiene un chartId y un elemento products el cual contiene todos los productos del carrito. Recibe un producto en forma de objeto, el cual contiene un ID de producto y la cantidad. En caso de no recibir un producto agrega el elemento products vacio.
+Se actualiza el servidor express con los siguientes con los siguientes componentes.
+En la carpeta manager se crea un nuevo archivo charts.manager.js para manejar la lógica del carrito. Se implementan los distintos endpoints mediante router en el archivo charts.router.js. y se crea un nuevo archivo de persistencia de datos con file system en la carpeta data con nombre charts.json
+Se actualizo los products.json asi como los métodos para que cada producto ahora reciba el campo status siempre en verdadero. al igual que la entrega anterior el campo thumbnails se renombró como img.
+Se edito el endpoint **POST /products** ahora exige que el path de thumbnail (img, en este caso) sea un array o que este vacío, ya no permite strings.
+
+Se crearon los siguientes endpoints
+
+1. **POST "/"** Agrega un item a la lista de carritos, el cual contiene un chartId y un elemento products el cual contendrá todos los productos del carrito, el mismo se inicializa vacío. El body se entrega vacío
+
+2. **GET "/"** trae todos los datos del carrito.
+3. **GET "/:cid"** trae los datos del carrito en función del id del mismo. en caso de no existir el id proporcionado devuelve un error.
+4. **POST "/:cid/products:pid"** endpoint que agrega productos al carrito. primero recibe un ID de carrito y un ID de producto y evalúa que ambos existan. si alguno de los 2 no existiera o no fuera correcto devuelve error. En caso de recibir un Id de carrito y del producto validos, primero verifica si el producto ya existe dentro del carrito en cuyo caso suma uno a la cantidad, en caso de no existir agrega el id del producto al carrito y la cantidad en 1.
+   <br/>
+   <br/>
+   Por último se ejecutan los test de funcionamiento desde postman. Se verificó que el proyecto corre con npm start. Se adjunta link a la documentación de la api:  
+   <br/>
+   **Product Manager API** https://documenter.getpostman.com/view/11511543/2sA3BuW9A1
+   <br/>
+   **Chart Manager API** https://documenter.getpostman.com/view/11511543/2sA3JJ8NeR
+   <br/>
+   <br/>

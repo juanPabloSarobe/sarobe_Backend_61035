@@ -27,7 +27,6 @@ router.post("/", async (req, res) => {
   try {
     const chart = await chartManager.addChart(req.body);
     if (!chart) res.status(400).json({ msg: "Bad request" });
-    console.log(chart);
     res.status(200).json(chart);
   } catch (error) {
     res.status(500).json({ msg: error.message });
