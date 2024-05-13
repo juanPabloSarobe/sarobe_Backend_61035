@@ -94,3 +94,27 @@ Se crearon los siguientes endpoints
    **Chart Manager API** https://documenter.getpostman.com/view/11511543/2sA3JJ8NeR
    <br/>
    <br/>
+
+## Desafío clase 10
+
+Se configura el servidor para implementar el motor de plantillas Handlebars y websocket
+
+Se crea y configura la plantilla Home, la cual contiene un acceso al header, recibe un array con la lista de productos, y las recorre dentro de handlebars mostrando cada uno de los productos con un each.
+Se crea y configura las plantilla realTimeProducts, la cual contiene un acceso al header y solo tiene un DIV para luego recibir su innerHTML desde el archivo javascript index.js, el cual recibe desde el servidor un array con los products, y dibuja en tiempo real el contenido del HTML a medida que la lista de productos cambia.
+
+Se crean los siguientes endpoints:
+
+1. **GET /vistas/home** Muestra todos los productos en un HTML con una plantilla de handlebars.
+
+2. **GET /vistas/realtimeproducts** Utiliza websocket, para mostrar un HTML con la lista de productos en tiempo real. Se realizan pruebas eliminando, modificando y agregando productos desde postman, y los mismos se ven en tiempo real.
+   <br/>
+
+[![VideoLink]][LinkVideo]
+
+[LinkVideo]: https://res.cloudinary.com/dg8ndxl2y/video/upload/v1715571364/testingWebsocket_jmnwxg.mp4 "Testing Websocket."
+[VideoLink]: https://img.shields.io/badge/DEMO_Video-F17105?style=for-the-badge&logoColor=white&logo=youtube
+
+<br/>
+Por último se ejecutan los test de funcionamiento desde postman. 
+<br/>
+<br/>
