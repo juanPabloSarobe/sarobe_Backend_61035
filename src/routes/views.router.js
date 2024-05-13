@@ -26,4 +26,12 @@ router.get("/home", async (req, res) => {
   }
 });
 
+router.get("/realtimeproducts", async (req, res) => {
+  try {
+    res.render("realTimeProducts");
+  } catch (error) {
+    res.render("error");
+  }
+});
+
 export default router;

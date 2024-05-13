@@ -3,12 +3,12 @@
     "id": "862ce6ca-95f6-4cc2-8120-f4b511949c75",
     "title": "Cerveza IPA",
     "description": "Cerveza India Pale Ale, ligeramente amarga y aromática.",
-    "price": 5.99,
+    "price": 5.2,
     "img": [
       "https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104302/descarga_schjmg.jpg"
     ],
     "code": "cervezas1001",
-    "stock": 5,
+    "stock": 21,
     "category": "Cervezas",
     "status": true
   },
@@ -130,7 +130,7 @@
     "status": true
   },
   {
-    "id": "ecf30cf3-9f71-4d66-a013-59e4687d254a",
+    "id": "7a0dbd89-1b08-495e-8b35-5507f12fb2d8",
     "title": "Ginebra de Bayas",
     "description": "Ginebra con infusiones de bayas silvestres, exquisitamente aromática.",
     "price": 23.99,
