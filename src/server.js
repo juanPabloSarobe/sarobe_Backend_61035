@@ -6,6 +6,8 @@ import { __dirname } from "./utils.js";
 import handlebars from "express-handlebars";
 import { Server } from "socket.io";
 import { ProductManager } from "./manager/product.manager.js";
+import { errorHandler } from "./middlewares/errorHandler.js";
+import { initMongoDB } from "./daos/mongodb/connection.js";
 
 const productos = new ProductManager(`${__dirname}/data/products.json`);
 
@@ -25,6 +27,9 @@ app.set("view engine", "handlebars");
 app.use("/products", productRouter);
 app.use("/charts", chartRouter);
 app.use("/vistas", viewsRouter);
+app.use(errorHandler);
+
+initMongoDB();
 
 const PORT = 8080;
 const httpServer = app.listen(PORT, () =>
