@@ -4,4 +4,4 @@ const ChartSchema = new Schema({
   products: [],
 });
 
-export const ChartModel = model("chart", ChartSchema);
+export const ChartModel = model("charts", ChartSchema);
