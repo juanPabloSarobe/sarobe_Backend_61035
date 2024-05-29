@@ -7,7 +7,8 @@ if (!user) {
     title: "¡Welcome to chat!",
     text: "Insert your email",
     input: "text",
-    showCancelButton: true,
+    allowOutsideClick: false,
+    allowEscapeKey: false,
     inputValidator: (value) => {
       if (!value) {
         return "Your email is required";
