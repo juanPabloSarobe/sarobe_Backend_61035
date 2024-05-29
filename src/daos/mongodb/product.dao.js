@@ -8,6 +8,13 @@ export default class ProductDaoMongoDB {
       throw new Error(error);
     }
   };
+  getAllWebSocket = async () => {
+    try {
+      return await ProductModel.find().lean();
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
 
   getById = async (id) => {
     try {

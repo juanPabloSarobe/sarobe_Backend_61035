@@ -1,14 +1,15 @@
 const socketClient = io();
 
 const productDiv = document.getElementById("productDiv");
+const btn = document.getElementById("btn");
 
-socketClient.on("saludosDesdeBack", (msj) => {
-  console.log(msj);
-
-  socketClient.emit("respuestaDesdeFront", "Muchas gracias");
+btn.addEventListener("click", () => {
+  //alert("actualizado");
+  socketClient.emit("productUpdate");
 });
 
 socketClient.on("products", (data) => {
+  console.log(data);
   const productsList = data
     .map((prod) => {
       return ` <div id="card" style="display: flex; flex-direction: row; background-color: white; border-radius: 10px 10px; margin: 4px;  ">

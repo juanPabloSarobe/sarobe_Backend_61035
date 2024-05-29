@@ -2,15 +2,18 @@ import express from "express";
 import productRouter from "./routes/products.router.js ";
 import chartRouter from "./routes/charts.router.js";
 import viewsRouter from "./routes/views.router.js";
+import chatRouter from "./routes/chats.router.js";
 import { __dirname } from "./utils.js";
 import handlebars from "express-handlebars";
 import { Server } from "socket.io";
-import { ProductManager } from "./manager/product.manager.js";
 import { errorHandler } from "./middlewares/errorHandler.js";
 import { initMongoDB } from "./daos/mongodb/connection.js";
+import MessageManager from "./daos/mongodb/chat.dao.js";
+import ProductsManager from "./daos/mongodb/product.dao.js";
+import * as messageManager from "./services/chat.services.js";
 
-const productos = new ProductManager(`${__dirname}/data/products.json`);
-
+//const messageManager = new MessageManager();
+const products = new ProductsManager();
 const app = express();
 
 app.use(express.static(__dirname + "/public"));
@@ -26,6 +29,7 @@ app.set("view engine", "handlebars");
 
 app.use("/products", productRouter);
 app.use("/charts", chartRouter);
+app.use("/chats", chatRouter);
 app.use("/vistas", viewsRouter);
 app.use(errorHandler);
 
@@ -43,11 +47,24 @@ socketServer.on("connection", async (socket) => {
   socket.on("disconnect", () => {
     console.log(`usuario ${socket.id} desconectado`);
   });
+  socketServer.emit("messages", await messageManager.getAllMongo());
 
-  socket.emit("saludosDesdeBack", "Bienvenido a websocket");
-  socket.on("respuestaDesdeFront", (resp) => {
-    console.log(resp);
+  socket.on("newUser", (user) => {
+    console.log(`> ${user} ha iniciado sesión`);
+    socket.broadcast.emit("newUser", user);
   });
 
-  socket.emit("products", await productos.getProducts());
+  socket.on("chat:message", async (msg) => {
+    await messageManager.createMsgMongo(msg);
+    socketServer.emit("messages", await messageManager.getAllMongo()); //emite a todos los clientes
+  });
+
+  socket.on("chat:typing", (data) => {
+    socket.broadcast.emit("chat:typing", data);
+  });
+
+  socket.emit("products", await products.getAllWebSocket());
+  socket.on("productUpdate", async () => {
+    socketServer.emit("products", await products.getAllWebSocket());
+  });
 });
