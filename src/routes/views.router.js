@@ -17,7 +17,7 @@ router.get("/v2", (req, res) => {
 
 router.get("/home", async (req, res) => {
   try {
-    const productos = await controller.getAll();
+    const productos = await controller.getAllWebSocket();
 
     res.render("home", { productos });
   } catch (error) {

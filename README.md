@@ -118,3 +118,34 @@ Se crean los siguientes endpoints:
 Por último se ejecutan los test de funcionamiento desde postman. 
 <br/>
 <br/>
+
+## Desafío clase 15
+
+Se configura el servidor para implementar base de datos mongoDB, con conexión a mongo Atlas.
+Se añade persistencia de datos tanto de los productos, como de los carritos, y de los mensajes de chat.
+Se configura un chat con Handlebars y websocket con persistencia en mongo Atlas.
+Se crea el sistema de carpetas DAO, con los modelos de esquemas para Mongo, los servicios correspondientes que servirían para redireccionar a otro sistema de persistencia de datos de ser necesario, los controllers que efectivamente controlan los datos de ingreso e invocan las consultas a la DB mediante el servicio, y por ultimo estos son llamados desde las rutas o endpoints.
+
+Se creo al archivo de Handlebars para el chat, utilizando la carpeta public para el diseño de los estilos y para alojar los archivos js que manipulan el websocket. Se creo el archivo chat.js el cual contiene el código para el chat, asi como también se edito el Modal de SweetAlert para que solo se puedan introducir emails y no permita cerrarse sin el dato con el fin de evitar usuarios null en la DB.
+
+Se actualizan los siguientes endpoints:
+
+1. **GET /vistas/home** Muestra todos los productos en un HTML con una plantilla de handlebars. la información se toma desde mongo, para lo cual se tuvo que implementar la función .lean() en la consulta para que sea compatible
+
+2. **GET /vistas/realtimeproducts** Utiliza websocket, para mostrar un HTML con la lista de productos en tiempo real. Nuevamente implementando la función .lean(). En este caso, al realizar los cambio desde postman en mongo, no se actualiza automáticamente la lista, ya que no hay un disparador que vuelva a dibujar los elementos, por lo cual se agrego un botón de actualizar que simularía la acción de aceptar una modificación de un producto desde el front, para llamar nuevamente al .emit que vuelve a cargar los datos.
+
+3. **Todos los endpoints anteriores** Se modificaron todos los end points ya creados anteriormente para utilizar el el controller y tomar los datos desde mongo.
+   <br/>
+
+Se crearon los siguientes endpoints:
+
+1. **DELETE /charts/:cid** se creo el endpoint para eliminar un carrito completo.
+
+1. **GET /chats/** endpoint que dispara el handlebars del chat
+
+<br/>
+Por último se ejecutan los test de funcionamiento desde postman y del chat desde el explorador. 
+<br/>
+Se envía el archivo de variables de entorno de forma privada.
+<br/>
+<br/>

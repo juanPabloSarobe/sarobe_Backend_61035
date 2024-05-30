@@ -4,16 +4,12 @@ let user = null;
 
 if (!user) {
   Swal.fire({
-    title: "¡Welcome to chat!",
-    text: "Insert your email",
-    input: "text",
+    title: "Welcome to our Chat",
+    input: "email",
+    inputLabel: "Your email address",
+    inputPlaceholder: "Enter your email address",
     allowOutsideClick: false,
     allowEscapeKey: false,
-    inputValidator: (value) => {
-      if (!value) {
-        return "Your email is required";
-      }
-    },
   }).then((input) => {
     user = input.value;
     socket.emit("newUser", user);

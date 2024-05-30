@@ -56,7 +56,7 @@ socketServer.on("connection", async (socket) => {
 
   socket.on("chat:message", async (msg) => {
     await messageManager.createMsgMongo(msg);
-    socketServer.emit("messages", await messageManager.getAllMongo()); //emite a todos los clientes
+    socketServer.emit("messages", await messageManager.getAllMongo());
   });
 
   socket.on("chat:typing", (data) => {

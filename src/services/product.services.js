@@ -8,6 +8,13 @@ export const getAll = async () => {
     throw new Error(error);
   }
 };
+export const getAllWebSocket = async () => {
+  try {
+    return await productDao.getAllWebSocket();
+  } catch (error) {
+    throw new Error(error);
+  }
+};
 export const getById = async (id) => {
   try {
     return await productDao.getById(id);
