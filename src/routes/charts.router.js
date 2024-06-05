@@ -14,6 +14,8 @@ router.put("/:cid", controller.addManyProduct);
 
 router.delete("/:cid/products/:pid", controller.delProduct);
 
-router.delete("/:cid", controller.remove);
+router.delete("/:cid", controller.remove); //elimina el carrito completo
+
+router.delete("/cleanCart/:cid", controller.cleanCart); //vacia el carrito
 
 export default router;

@@ -53,3 +53,10 @@ export const remove = async (id) => {
     throw new Error(error);
   }
 };
+export const cleanCart = async (id) => {
+  try {
+    return await chartDao.cleanCart(id);
+  } catch (error) {
+    throw new Error(error);
+  }
+};

@@ -48,9 +48,6 @@ export const addProduct = async (req, res, next) => {
 export const addManyProduct = async (req, res, next) => {
   try {
     const { cid } = req.params;
-    let { products } = req.body;
-    console.log("re.body: ", req.body);
-    console.log("products: ", products);
     const chart = await service.addManyProduct(cid, req.body);
     if (!chart) res.status(400).json({ msg: "Bad request" });
     res.status(200).json(chart);
@@ -75,6 +72,16 @@ export const remove = async (req, res, next) => {
   try {
     const { cid } = req.params;
     const chart = await service.remove(cid);
+    if (!chart) res.status(404).json({ msj: "Error removing chart" });
+    else res.status(201).json(chart);
+  } catch (error) {
+    next(error.message);
+  }
+};
+export const cleanCart = async (req, res, next) => {
+  try {
+    const { cid } = req.params;
+    const chart = await service.cleanCart(cid);
     if (!chart) res.status(404).json({ msj: "Error removing chart" });
     else res.status(201).json(chart);
   } catch (error) {

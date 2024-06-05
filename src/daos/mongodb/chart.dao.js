@@ -54,10 +54,14 @@ export default class ChartDaoMongoDB {
   };
 
   addManyProduct = async (cid, products) => {
-    const response = await ChartModel.findByIdAndUpdate(cid, products, {
-      new: true,
-    });
-    return response;
+    try {
+      const response = await ChartModel.findByIdAndUpdate(cid, products, {
+        new: true,
+      });
+      return response;
+    } catch (error) {
+      throw new Error(error);
+    }
   };
 
   delProduct = async (id, productId) => {
@@ -78,6 +82,18 @@ export default class ChartDaoMongoDB {
   delete = async (id) => {
     try {
       return await ChartModel.findByIdAndDelete(id);
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
+  cleanCart = async (cid) => {
+    try {
+      const clearCart = await ChartModel.findByIdAndUpdate(
+        cid,
+        { $set: { products: [] } },
+        { new: true }
+      );
+      return clearCart;
     } catch (error) {
       throw new Error(error);
     }
