@@ -9,5 +9,8 @@ const ChartSchema = new Schema({
     },
   ],
 });
+ChartSchema.pre("find", function () {
+  this.populate("products.product");
+});
 
 export const ChartModel = model("charts", ChartSchema);

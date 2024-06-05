@@ -11,7 +11,9 @@ export default class ChartDaoMongoDB {
 
   getById = async (id) => {
     try {
-      const response = await ChartModel.findById(id);
+      const response = await ChartModel.findById(id).populate(
+        "products.product"
+      );
       return response;
     } catch (error) {
       throw new Error(error);
@@ -39,14 +41,16 @@ export default class ChartDaoMongoDB {
           { $push: { products: { product: productId, quantity: quantity } } },
           { new: true }
         );
-        return addedProduct;
+        if (!addedProduct.modifiedCount) return null;
+        else return await ChartModel.findById(id);
       } else {
         const addProduct = await ChartModel.updateOne(
           { _id: id, "products.product": productId },
           { $set: { "products.$.quantity": quantity } },
           { new: true }
         );
-        return addProduct;
+        if (!addProduct.modifiedCount) return null;
+        else return await ChartModel.findById(id);
       }
     } catch (error) {
       throw new Error(error);

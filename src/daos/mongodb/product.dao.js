@@ -1,7 +1,7 @@
 import { ProductModel } from "./models/product.model.js";
 
 export default class ProductDaoMongoDB {
-  getAll = async () => {
+  getAll = async (title, limit, sort, query) => {
     try {
       return await ProductModel.find();
     } catch (error) {
