@@ -2,8 +2,8 @@ import * as service from "../services/product.services.js";
 
 export const getAll = async (req, res, next) => {
   try {
-    let products = await service.getAll();
     const { title, limit, sort, query } = req.query;
+    let products = await service.getAll(title, limit, sort, query);
 
     if (title) {
       const filterItems = (title) => {
