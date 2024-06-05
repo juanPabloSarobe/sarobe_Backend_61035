@@ -3,7 +3,7 @@ import * as service from "../services/product.services.js";
 export const getAll = async (req, res, next) => {
   try {
     let products = await service.getAll();
-    const { title, limit } = req.query;
+    const { title, limit, sort, query } = req.query;
 
     if (title) {
       const filterItems = (title) => {
@@ -15,7 +15,6 @@ export const getAll = async (req, res, next) => {
     }
     if (limit) {
       const limitedItems = products.splice(0, parseInt(limit));
-
       products = limitedItems;
     }
 

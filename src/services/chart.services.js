@@ -23,13 +23,29 @@ export const create = async (chart) => {
     throw new Error(error);
   }
 };
-export const addProduct = async (id, productId) => {
+export const addProduct = async (id, productId, quantity) => {
   try {
-    return await chartDao.addProduct(id, productId);
+    return await chartDao.addProduct(id, productId, quantity);
   } catch (error) {
     throw new Error(error);
   }
 };
+export const addManyProduct = async (id, products) => {
+  try {
+    return await chartDao.addManyProduct(id, products);
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+export const delProduct = async (id, productId) => {
+  try {
+    return await chartDao.delProduct(id, productId);
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
 export const remove = async (id) => {
   try {
     return await chartDao.delete(id);
