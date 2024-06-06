@@ -1,9 +1,17 @@
 import { ProductModel } from "./models/product.model.js";
 
 export default class ProductDaoMongoDB {
-  getAll = async (title, limit, sort, query) => {
+  getAll = async (title, page = 1, limit = 10, sort) => {
     try {
-      return await ProductModel.find();
+      const query = title
+        ? {
+            title: { $regex: title, $options: "i" }, // regex, para que se pueda filtrar por cualquier parte del titulo, 'i' para que la búsqueda no distinga entre mayúsculas y minúsculas
+          }
+        : {};
+
+      let order = {};
+      if (sort) order.price = sort === "asc" ? 1 : sort === "desc" ? -1 : null;
+      return await ProductModel.paginate(query, { page, limit, sort: order });
     } catch (error) {
       throw new Error(error);
     }
@@ -24,9 +32,18 @@ export default class ProductDaoMongoDB {
       throw new Error(error);
     }
   };
-  getByCategory = async (category) => {
+  getByCategory = async (category, stock, page = 1, limit = 10, sort) => {
     try {
-      return await ProductModel.find({ category: category });
+      const hasStock = stock ? Number(stock) : 0;
+      const query = category
+        ? {
+            category: { $regex: category, $options: "i" }, // regex, para que se pueda filtrar por cualquier parte de la categoria, 'i' para que la búsqueda no distinga entre mayúsculas y minúsculas
+            stock: { $gte: hasStock },
+          }
+        : {};
+      let order = {};
+      if (sort) order.price = sort === "asc" ? 1 : sort === "desc" ? -1 : null;
+      return await ProductModel.paginate(query, { page, limit, sort: order });
     } catch (error) {
       throw new Error(error);
     }

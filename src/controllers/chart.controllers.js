@@ -22,9 +22,7 @@ export const getById = async (req, res, next) => {
 
 export const create = async (req, res, next) => {
   try {
-    console.log("req.body:", req.body);
     const chart = await service.create(req.body);
-    console.log("chart.controller: ", chart);
     if (!chart) res.status(400).json({ msg: "Bad request" });
     res.status(200).json(chart);
   } catch (error) {
@@ -35,9 +33,7 @@ export const addProduct = async (req, res, next) => {
   try {
     const { cid, pid } = req.params;
     let { quantity } = req.body;
-
     if (!quantity) quantity = 1;
-
     const chart = await service.addProduct(cid, pid, quantity);
     if (!chart) res.status(400).json({ msg: "Bad request" });
     res.status(200).json(chart);

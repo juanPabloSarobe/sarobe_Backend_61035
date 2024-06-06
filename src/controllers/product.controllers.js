@@ -1,24 +1,34 @@
 import * as service from "../services/product.services.js";
+import { __dirname } from "../utils.js";
 
 export const getAll = async (req, res, next) => {
   try {
-    const { title, limit, sort, query } = req.query;
-    let products = await service.getAll(title, limit, sort, query);
+    const { title, page, limit, sort } = req.query;
+    const hasTitle = title ? `&title=${title}` : "";
+    const hasSort = sort ? `&sort=${sort}` : "";
+    let products = await service.getAll(title, page, limit, sort);
 
-    if (title) {
-      const filterItems = (title) => {
-        return products.filter(
-          (el) => el.title.toLowerCase().indexOf(title.toLowerCase()) > -1
-        );
-      };
-      products = filterItems(title);
-    }
-    if (limit) {
-      const limitedItems = products.splice(0, parseInt(limit));
-      products = limitedItems;
-    }
+    const nextLink = products.hasNextPage
+      ? `http://localhost:8080/products?limit=${products.limit}&page=${products.nextPage}${hasTitle}${hasSort}`
+      : null;
+    const prevLink = products.hasPrevPage
+      ? `http://localhost:8080/products?limit=${products.limit}&page=${products.prevPage}${hasTitle}${hasSort}`
+      : null;
+    const response = {
+      payload: products.docs,
+      info: {
+        totalPages: products.totalPages,
+        prevPage: products.prevPage,
+        nextPage: products.nextPage,
+        hasPrevPage: products.hasPrevPage,
+        hasNextPage: products.hasNextPage,
+        prevLink,
+        nextLink,
+      },
+    };
 
-    res.status(200).json(products);
+    if (!products) res.status(404).json({ msg: "product not found" });
+    else res.status(200).json(response);
   } catch (error) {
     next(error.message);
   }
@@ -37,14 +47,38 @@ export const getById = async (req, res, next) => {
 
 export const getByCategory = async (req, res, next) => {
   try {
-    const { category } = req.params;
+    const { category, stock, page, limit, sort } = req.query;
+    const hasCategory = category ? `&category=${category}` : "";
+    const hasStock = stock ? `&stock=${stock}` : "";
+    const hasSort = sort ? `&sort=${sort}` : "";
+    const products = await service.getByCategory(
+      category,
+      stock,
+      page,
+      limit,
+      sort
+    );
+    const nextLink = products.hasNextPage
+      ? `http://localhost:8080/products/cat?limit=${products.limit}&page=${products.nextPage}${hasCategory}${hasSort}${hasStock}`
+      : null;
+    const prevLink = products.hasPrevPage
+      ? `http://localhost:8080/products/cat?limit=${products.limit}&page=${products.prevPage}${hasCategory}${hasSort}${hasStock}`
+      : null;
+    const response = {
+      payload: products.docs,
+      info: {
+        totalPages: products.totalPages,
+        prevPage: products.prevPage,
+        nextPage: products.nextPage,
+        hasPrevPage: products.hasPrevPage,
+        hasNextPage: products.hasNextPage,
+        prevLink,
+        nextLink,
+      },
+    };
 
-    if (category) {
-      const products = await service.getByCategory(category);
-      if (products.length === 0)
-        res.status(404).json({ msg: `category ${category} not found` });
-      else res.status(200).json(products);
-    }
+    if (!products) res.status(404).json({ msg: "product not found" });
+    else res.status(200).json(response);
   } catch (error) {
     next(error.message);
   }
