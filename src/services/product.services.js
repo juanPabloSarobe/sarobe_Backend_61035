@@ -15,6 +15,13 @@ export const getAllWebSocket = async () => {
     throw new Error(error);
   }
 };
+export const getAllWebSocketPaginated = async (title, page, limit, sort) => {
+  try {
+    return await productDao.getAllWebSocketPaginated(title, page, limit, sort);
+  } catch (error) {
+    throw new Error(error);
+  }
+};
 export const getById = async (id) => {
   try {
     return await productDao.getById(id);

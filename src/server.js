@@ -21,7 +21,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //iniciamos la librería handlebars, siempre van estas 3 lineas
-app.engine("handlebars", handlebars.engine());
+app.engine(
+  "handlebars",
+  handlebars.engine({
+    allowedProtoProperties: true,
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true,
+    allowedProtoMethods: true,
+  })
+);
 //pasamos la carpeta donde va a tomar las vistas
 app.set("views", __dirname + "/views");
 //pasamos la configuración seteamos el motor de plantillas a utilizar

@@ -23,6 +23,25 @@ export default class ProductDaoMongoDB {
       throw new Error(error);
     }
   };
+  getAllWebSocketPaginated = async (title, page = 1, limit = 10, sort) => {
+    try {
+      const query = title
+        ? {
+            title: { $regex: title, $options: "i" }, // regex, para que se pueda filtrar por cualquier parte del titulo, 'i' para que la búsqueda no distinga entre mayúsculas y minúsculas
+          }
+        : {};
+
+      let order = {};
+      if (sort) order.price = sort === "asc" ? 1 : sort === "desc" ? -1 : null;
+      return await ProductModel.paginate(query, {
+        page,
+        limit,
+        sort: order,
+      });
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
 
   getById = async (id) => {
     try {
