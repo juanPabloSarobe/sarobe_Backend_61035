@@ -18,7 +18,6 @@ router.get("/v2", (req, res) => {
 router.get("/home", async (req, res) => {
   try {
     const productos = await controller.getAllWebSocket();
-    console.log("productos:, ", productos);
     res.render("home", { productos });
   } catch (error) {
     res.render("error");
@@ -56,8 +55,6 @@ router.get("/products", async (req, res) => {
     };
     const { info } = response;
     const productosArr = [...products.docs];
-    const { nextPage } = products;
-    console.log(info);
     let productos = [];
     productosArr.forEach((element) => {
       const producto = {

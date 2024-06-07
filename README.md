@@ -149,3 +149,38 @@ Por último se ejecutan los test de funcionamiento desde postman y del chat desd
 Se envía el archivo de variables de entorno de forma privada.
 <br/>
 <br/>
+
+## Segunda Pre-entrega Proyecto final (clase 17)
+
+Se configura el servidor para implementar base de datos mongoDB, con conexión a mongo Atlas.
+se modifican los models para implementar la population. También se implementa pagination.
+El GET de productos ahora permite un titulo, un limite, una pagina y un orden y se implementa en la pagination. asi como también la estructura para poder avanzar y retroceder paginas.
+se implementa el endpoint para buscar por categorías, también con pagination.
+Para el carrito se implementan todos los endpoint solicitados, asi como uno extra que elimina por completo el carrito.
+Se implementa la population de los productos dentro del carrito.
+
+Se implementa la view/products, el cual recibe title, page, limit y order y muestra los productos en función de dichos filtros asi como también los botones prev y next para moverse entre las paginas.
+
+Se actualizan los siguientes endpoints:
+
+1. **GET /vistas/products** Muestra todos los productos en un HTML con una plantilla de handlebars. la información se toma desde mongo, utilizando paginate. Como no es compatible con el método .lean() se reestructura la info a manualmente, y se agregan los botones PREV y NEXT para moverse entre las paginas.
+
+2. **GET /products** ahora recibe title, limit, page y sort, para realizar la pagination del mismo.
+
+3. **GET /products/cat** endpoint que puede filtrar por categoría y por precio, ademas de paginar.
+
+4. **DELETE /charts/:cid** el endpoint vacía el carrito.
+
+5. **Resto de Endpoints del carrito** se modifican todos los endpoint del carrito en función de la consigna. se agrega el método populate tanto en middleware como directo en la función findById
+   <br/>
+
+Se crearon los siguientes endpoints:
+
+1. **DELETE /charts/cleanCart/:cid** se creo el endpoint para eliminar un carrito completo.
+
+<br/>
+Por último se ejecutan los test de funcionamiento desde postman y del chat desde el explorador. 
+<br/>
+Se envía el archivo de variables de entorno de forma privada.
+<br/>
+<br/>
