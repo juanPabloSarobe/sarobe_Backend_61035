@@ -37,6 +37,26 @@ input {
   display: block;
   width: 100%;
 }
+.btnLogin {
+  margin-top: 15px;
+  background-color: #1ed106;
+}
+.btnLogout {
+  margin-top: 15px;
+  background-color: red;
+}
+.btnLogin:hover {
+  cursor: pointer;
+  background-color: #66d857;
+}
+.btnLogout:hover {
+  cursor: pointer;
+  background-color: darkred;
+}
+.btnMove {
+  margin-top: 15px;
+  background-color: #555;
+}
 button {
   background: #66d857;
   color: #fff;
@@ -44,10 +64,10 @@ button {
   border: 0;
   padding: 12px 0;
   width: 100%;
-  margin: 15px;
+  margin-top: 15px;
   border-radius: 0 0 2px 2px;
   cursor: pointer;
 }
 button:hover {
-  background: #1ed106;
+  background: #655555;
 }

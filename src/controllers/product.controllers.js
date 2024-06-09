@@ -1,5 +1,5 @@
 import * as service from "../services/product.services.js";
-import { __dirname } from "../utils.js";
+//import { __dirname } from "../utils.js";
 
 export const getAll = async (req, res, next) => {
   try {
@@ -39,7 +39,10 @@ export const getById = async (req, res, next) => {
     const { pid } = req.params;
     const product = await service.getById(pid);
     if (!product) res.status(404).json({ msg: "product not found" });
-    else res.status(200).json(product);
+    else {
+      testCookies(req, res, product);
+      res.status(200).json(product);
+    }
   } catch (error) {
     next(error.message);
   }
@@ -113,4 +116,21 @@ export const remove = async (req, res, next) => {
   } catch (error) {
     next(error.message);
   }
+};
+
+const testCookies = (req, res, product) => {
+  //Test de cookies
+  //con el response (res) las seteamos y con request (req) las obtenemos
+  res.cookie("product", product.title); // El servidor almacena una cookie en el front
+  res.cookie("price", product.price, { maxAge: 3000 }); // El servidor almacena una cookie en el front
+  res.cookie("stock", product.stock, { signed: true, maxAge: 10000 }); // El servidor almacena una cookie en el front
+  res.cookie("description", product.description, {
+    signed: true,
+    httpOnly: true,
+  }); // El servidor almacena una cookie en el front
+  const cookies = req.cookies;
+  console.log(cookies); // el servidor recibe una cookie desde el front
+  console.log(req.signedCookies); // el servidor recibe una cookie signed desde el front
+  //res.clearCookie("product");  // se utiliza para eliminar una cookie, si no sabemos las cookies, utilizamos el metodo Object.keys para obtener los nombres de todas las cookies
+  //Fin test cookies
 };

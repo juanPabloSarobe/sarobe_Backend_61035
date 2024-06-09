@@ -4,15 +4,14 @@ const router = Router();
 import * as controller from "../services/product.services.js";
 
 router.get("/", (req, res) => {
-  res.render("vista1", { layout: "main2.handlebars" });
+  res.render("login", { layout: "main2.handlebars" });
 });
 
-router.get("/v2", (req, res) => {
-  const user = {
-    firstName: "Juan",
-    lastName: "Sarobe",
-  };
-  res.render("vista2", { user });
+router.get("/register", (req, res) => {
+  res.render("register");
+});
+router.get("/profile", (req, res) => {
+  res.render("profile");
 });
 
 router.get("/home", async (req, res) => {
