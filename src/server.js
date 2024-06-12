@@ -3,6 +3,7 @@ import productRouter from "./routes/products.router.js ";
 import chartRouter from "./routes/charts.router.js";
 import viewsRouter from "./routes/views.router.js";
 import chatRouter from "./routes/chats.router.js";
+import userRouter from "./routes/user.router.js";
 import { __dirname } from "./utils.js";
 import handlebars from "express-handlebars";
 import { Server } from "socket.io";
@@ -58,6 +59,7 @@ app.use("/products", productRouter);
 app.use("/charts", chartRouter);
 app.use("/chats", chatRouter);
 app.use("/vistas", viewsRouter);
+app.use("/user", userRouter);
 app.use(errorHandler);
 
 initMongoDB();

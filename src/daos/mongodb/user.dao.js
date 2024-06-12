@@ -3,10 +3,18 @@ import { UserModel } from "./models/user.model.js";
 export default class UserDao {
   register = async (user) => {
     try {
-      const user = await UserModel.create(user);
-      return user;
+      const newUser = await UserModel.create(user);
+      return newUser;
     } catch (error) {
-      throw new Error(error);
+      if (error.errorResponse.code === 11000) {
+        const newUser = {
+          error: "El usuario ya existe",
+        };
+
+        return newUser;
+      } else {
+        throw new Error(error.errorResponse);
+      }
     }
   };
 

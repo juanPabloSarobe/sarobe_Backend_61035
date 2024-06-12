@@ -1,9 +1,11 @@
 {{>header}}
 
-<h2>Desafío clase 10 </h2>
+
+
+<h3> Bienvenido {{user.first_name}} {{ user.last_name}}</h3>
+<h3> Tu rol es: {{user.role}} </h3>
 
 <h3> Lista de productos</h3>
-
 
 {{#each productos}}
 <div style="display: flex; flex-direction: row; background-color: white; border-radius: 10px 10px; margin: 4px;  ">

@@ -1,9 +1,16 @@
 <h1>PROFILE</h1>
 
 <h2>Bienvenido</h2>
-{{!--  <h4>Nombre: {{first_name}}</h4>
- <h4>apellido: {{last_name}}</h4>
- <h4>email: {{email}}</h4>
- <h4>edad: {{age}}</h4> --}}
+<h4>Nombre: {{user.first_name}}</h4>
+<h4>apellido: {{user.last_name}}</h4>
+<h4>email: {{user.email}}</h4>
+<h4>edad: {{user.age}}</h4>
+<h4>rol: {{user.role}}</h4>
+<button
+  class="btnMove"
+  onclick="location.href='/vistas/products?limit=3&page=1'"
+>go to products</button>
 
-<button class="btnLogout" onclick="location.href='/vistas'">Logout</button>
+<form action="/user/logout" method="post">
+  <input class="btnLogout" type="submit" value="Logout" />
+</form>

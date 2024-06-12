@@ -1,17 +1,20 @@
 import { Router } from "express";
-
+import { isLogued, validateLogin } from "../middlewares/validateLogin.js";
 const router = Router();
 import * as controller from "../services/product.services.js";
 
-router.get("/", (req, res) => {
-  res.render("login", { layout: "main2.handlebars" });
+router.get("/", isLogued, (req, res) => {
+  const { error } = req.session;
+  res.render("login", { error });
 });
 
-router.get("/register", (req, res) => {
-  res.render("register");
+router.get("/register", isLogued, (req, res) => {
+  const user = req.session.message;
+  res.render("register", { user });
 });
-router.get("/profile", (req, res) => {
-  res.render("profile");
+router.get("/profile", validateLogin, (req, res) => {
+  const user = req.session.message;
+  res.render("profile", { user });
 });
 
 router.get("/home", async (req, res) => {
@@ -22,8 +25,9 @@ router.get("/home", async (req, res) => {
     res.render("error");
   }
 });
-router.get("/products", async (req, res) => {
+router.get("/products", validateLogin, async (req, res) => {
   try {
+    const user = req.session.message;
     const { title, page, limit, sort } = req.query;
     const hasTitle = title ? `&title=${title}` : "";
     const hasSort = sort ? `&sort=${sort}` : "";
@@ -33,7 +37,7 @@ router.get("/products", async (req, res) => {
       limit,
       sort
     );
-
+    const profileLink = `http://localhost:8080/vistas/profile`;
     const nextLink = products.hasNextPage
       ? `http://localhost:8080/vistas/products?limit=${products.limit}&page=${products.nextPage}${hasTitle}${hasSort}`
       : null;
@@ -66,7 +70,7 @@ router.get("/products", async (req, res) => {
       productos.push(producto);
     });
 
-    res.render("products", { productos, info });
+    res.render("products", { productos, info, user, profileLink });
   } catch (error) {
     res.render("error");
   }

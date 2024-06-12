@@ -43,7 +43,8 @@ input {
 }
 .btnLogout {
   margin-top: 15px;
-  background-color: red;
+  background-color: rgba(83, 83, 83, 0.106);
+  border: 1px, solid, red;
 }
 .btnLogin:hover {
   cursor: pointer;
@@ -56,6 +57,12 @@ input {
 .btnMove {
   margin-top: 15px;
   background-color: #555;
+}
+.btnProfile {
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+  font-size: x-large;
 }
 button {
   background: #66d857;
