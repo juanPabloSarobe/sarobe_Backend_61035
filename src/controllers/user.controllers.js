@@ -36,7 +36,7 @@ export const login = async (req, res, next) => {
         username: user.username,
         admin: user.admin,
       };
-      res.redirect("/vistas/products");
+      res.redirect("/vistas/products?limit=3&page=1");
     }
   } catch (error) {
     next(error.message);

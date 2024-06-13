@@ -184,3 +184,45 @@ Por último se ejecutan los test de funcionamiento desde postman y del chat desd
 Se envía el archivo de variables de entorno de forma privada.
 <br/>
 <br/>
+
+## Desafío clase 19
+
+Se configuran las vistas para que se inicie en la login. se crean las siguientes Vistas:
+
+1. **vistas/login** recibe un mail y un password y lo verifica en la base de datos a ver si ya esta cargado. en caso de estar repetido se muestra en la misma pantalla de login. También posee un link para redireccionar al register
+2. **vistas/register** recibe los datos indicados en el desafío. También posee un link para redireccionar al login.
+
+`Observaciones:` tanto el login como el register, tienen un middleware que no permite acceder a ellos en caso que ya haya una sesión abierta.
+
+Al registrarse correctamente, se redirecciona al login, el register valida que los campos requeridos no estén vacíos, asi como también se verifica en base de datos que el mail no este duplicado y se muestra la advertencia por pantalla.
+
+Luego de login correcto, se redirecciona a la pantalla productos, donde se muestra la bienvenida al usuario indicando nombre, apellido y rol.
+
+3. **vistas/profile** vista que muestra el perfil del usuario logueado. esta tiene un middleware que no permite acceder si no se esta logueado.
+
+En el navbar hay un link al perfil del usuario, desde donde se puede acceder al perfil del usuario, y desde allí también se puede cerrar la sesión o volver a los productos.
+
+En el word que indica como se realizará la corrección, indica en el ultimo renglón:
+
+> Se ingresarán las credenciales específicas de admin indicadas en las diapositivas, el login debe redirigir correctamente y mostrar en los datos del rol: “admin” haciendo referencia a la correcta gestión de roles.
+
+> Se revisará que el admin NO viva en base de datos, sino que sea una validación que se haga de manera interna en el código.
+
+Dado que el profesor en clase cargó el usuario en la DB como admin directamente, no supe como interpretar correctamente este apartado, por lo que lo tome literal y si bien se carga el usuario adminCoder, el rol ADMIN no se carga en la DB, sino que se hace luego una validación en el código.
+
+En la vista productos, se muestran los productos con pagination implementada, asi como los botones para su navegación
+<br/>
+
+Se crearon los siguientes endpoints:
+
+1. **POST user/login** verifica que el usuario este creado en la DB y devuelve los datos en aso correcto
+2. **POST user/register** crea el usuario en la DB.
+3. **GET user/info** devuelve los datos de la sesión.
+4. **GET user/logout** destruye la sesión activa y vuelve a la vista login.
+
+<br/>
+Por último se ejecutan los test de funcionamiento desde postman y desde el explorador. 
+<br/>
+Se envía el archivo de variables de entorno de forma privada.
+<br/>
+<br/>
