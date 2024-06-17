@@ -7,10 +7,18 @@ const router = Router();
 
 router.post(
   "/register",
-  passport.authenticate("register"),
+  passport.authenticate("register", {
+    failureRedirect: "/vistas/error",
+  }),
   controller.register
 );
-router.post("/login", passport.authenticate("login"), controller.login);
+router.post(
+  "/login",
+  passport.authenticate("login", {
+    failureRedirect: "/vistas/error",
+  }),
+  controller.login
+);
 router.get("/info", controller.infoSession);
 router.post("/logout", controller.logout);
 

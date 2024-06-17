@@ -25,7 +25,6 @@ export const register = async (userData) => {
 export const login = async ({ email, password }) => {
   try {
     const userExist = await userDao.login(email);
-    console.log("UserExist= ", userExist);
     if (!userExist) return null;
     const passValid = isValidPassword(password, userExist.password);
     if (!passValid) return null;

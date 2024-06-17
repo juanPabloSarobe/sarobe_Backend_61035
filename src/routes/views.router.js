@@ -8,6 +8,11 @@ router.get("/", isLogued, (req, res) => {
   res.render("login", { error });
 });
 
+router.get("/error", isLogued, (req, res) => {
+  const { error } = req.session;
+  res.render("error", { error });
+});
+
 router.get("/register", isLogued, (req, res) => {
   const user = req.session.message;
   res.render("register", { user });
