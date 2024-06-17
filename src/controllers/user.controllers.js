@@ -1,23 +1,35 @@
-import * as service from "../services/user.services.js";
-import { createHash, isValidPassword } from "../utils.js";
+import * as services from "../services/user.services.js";
 
 export const register = async (req, res, next) => {
   try {
-    const userHash = { ...req.body, password: createHash(req.body.password) };
-    const user = await service.register(userHash);
-    if (user?.error) {
-      req.session.message = user.error;
-      res.redirect("/vistas/register");
-    }
-    if (!user) res.status(404).json({ msj: "Bad request" });
-    else res.redirect("/vistas");
+    res.json({
+      msg: "Register OK",
+      session: req.session,
+    });
   } catch (error) {
     next(error.message);
   }
 };
 export const login = async (req, res, next) => {
   try {
-    const { email, password } = req.body;
+    let id = null;
+    if (req.session.passport && req.session.passport.user)
+      id = req.session.passport.user;
+    const user = await services.getUserById(id);
+    if (!user) res.status(401).json({ msg: "Error de autenticacion" });
+    const { first_name, last_name, email, age, role } = user;
+    res.json({
+      msg: "LOGIN OK!",
+      user: {
+        first_name,
+        last_name,
+        email,
+        age,
+        role,
+      },
+    });
+
+    /*    const { email, password } = req.body;
     const user = await service.login(email);
     if (!user) {
       req.session.error = "Usuario o mail incorrecto";
@@ -44,7 +56,7 @@ export const login = async (req, res, next) => {
         };
         res.redirect("/vistas/products?limit=3&page=1");
       }
-    }
+    } */
   } catch (error) {
     next(error.message);
   }

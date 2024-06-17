@@ -20,8 +20,21 @@ export default class UserDao {
 
   login = async (email) => {
     try {
+      console.log("email= ", email);
       const isLogin = await UserModel.findOne({ email });
+      console.log("isLogin= ", isLogin);
       return isLogin;
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
+
+  getById = async (id) => {
+    try {
+      console.log("id= ", id);
+      const resp = await UserModel.findById(id);
+      console.log("resp= ", resp);
+      return resp;
     } catch (error) {
       throw new Error(error);
     }

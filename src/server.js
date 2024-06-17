@@ -15,6 +15,8 @@ import "dotenv/config";
 import cookieParser from "cookie-parser";
 import session from "express-session";
 import MongoStore from "connect-mongo";
+import passport from "passport";
+import "./passport/local-strategy.js";
 
 const products = new ProductsManager();
 const app = express();
@@ -53,6 +55,10 @@ app.use(session(sessionConfig)); //con esto queda disponible para utilizar en cu
 app.engine("handlebars", handlebars.engine());
 app.set("views", __dirname + "/views"); //pasamos la carpeta donde va a tomar las vistas
 app.set("view engine", "handlebars"); //pasamos la configuración seteamos el motor de plantillas a utilizar
+
+//! ANTES DE LAS RUTAS - Inicializamos passport para estrategias de autenticación
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Enrutador
 app.use("/products", productRouter);
