@@ -18,9 +18,9 @@ export default class UserDao {
     }
   };
 
-  login = async (email, password) => {
+  login = async (email) => {
     try {
-      const isLogin = await UserModel.findOne({ email, password });
+      const isLogin = await UserModel.findOne({ email });
       return isLogin;
     } catch (error) {
       throw new Error(error);
