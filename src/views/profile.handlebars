@@ -2,10 +2,18 @@
 
 <h2>Bienvenido</h2>
 <h4>Nombre: {{user.first_name}}</h4>
-<h4>apellido: {{user.last_name}}</h4>
+{{#unless user.isGithub}}
+  <h4>apellido: {{user.last_name}}</h4>
+{{/unless}}
 <h4>email: {{user.email}}</h4>
-<h4>edad: {{user.age}}</h4>
+{{#unless user.isGithub}}
+  <h4>edad: {{user.age}}</h4>
+{{/unless}}
 <h4>rol: {{user.role}}</h4>
+{{#if user.isGithub}}
+  <h4>Github Profile</h4>
+{{/if}}
+
 <button
   class="btnMove"
   onclick="location.href='/vistas/products?limit=3&page=1'"

@@ -22,4 +22,14 @@ router.post(
 router.get("/info", controller.infoSession);
 router.post("/logout", controller.logout);
 
+router.get(
+  "/register-github",
+  passport.authenticate("github", { scope: ["user:email"] })
+);
+router.get(
+  "/profile",
+  passport.authenticate("github", { scope: ["user:email"] }),
+  controller.githubResponse
+);
+
 export default router;

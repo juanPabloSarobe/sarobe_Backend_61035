@@ -20,27 +20,19 @@ export const login = async (req, res, next) => {
       req.session.error = "Usuario o mail incorrecto";
       res.redirect("/vistas");
     } else {
-      console.log("user= ", user);
-      if (!isValidPassword(password, user.password)) {
-        console.log("user.pass= ", user.password);
-        req.session.error = "Usuario o mail incorrecto";
-        res.redirect("/vistas");
-      } else {
-        const { first_name, last_name, email, age, role } = user;
-        const isAdmin =
-          email === "adminCoder@coder.com" ? { role: "admin" } : { role: role };
-        const message = {
-          msg: { first_name, last_name, email, age, role, ...isAdmin },
-        };
-        req.session.message = message.msg;
-        req.session.info = {
-          loggedIn: true,
-          contador: 1,
-          username: user.username,
-          admin: user.admin,
-        };
-        res.redirect("/vistas/products?limit=3&page=1");
-      }
+      const { first_name, last_name, email, age, role } = user;
+      const isAdmin =
+        email === "adminCoder@coder.com" ? { role: "admin" } : { role: role };
+      const message = {
+        msg: { first_name, last_name, email, age, role, ...isAdmin },
+      };
+      req.session.message = message.msg;
+      req.session.info = {
+        loggedIn: true,
+        contador: 1,
+      };
+      console.log(req.session);
+      res.redirect("/vistas/products?limit=3&page=1");
     }
   } catch (error) {
     next(error.message);
@@ -55,7 +47,25 @@ export const infoSession = (req, res, next) => {
   });
 };
 
-export const logout = (req, res, next) => {
+export const logout = async (req, res, next) => {
   req.session.destroy();
   res.redirect("/vistas");
+};
+
+export const githubResponse = async (req, res, next) => {
+  try {
+    console.log(req.user);
+    const { first_name, last_name, email, role, isGithub, age = 18 } = req.user;
+    const message = {
+      msg: { first_name, last_name, email, age, role, isGithub },
+    };
+    req.session.message = message.msg;
+    req.session.info = {
+      loggedIn: true,
+      contador: 1,
+    };
+    res.redirect("/vistas/products?limit=3&page=1");
+  } catch (error) {
+    next(error);
+  }
 };

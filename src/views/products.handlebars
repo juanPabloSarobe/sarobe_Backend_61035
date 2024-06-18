@@ -2,9 +2,11 @@
 
 
 
-<h3> Bienvenido {{user.first_name}} {{ user.last_name}}</h3>
+<h3> Bienvenido {{user.first_name}} {{#unless user.isGithub}}{{user.last_name}}{{/unless}}</h3>
 <h3> Tu rol es: {{user.role}} </h3>
-
+{{#if user.isGithub}}
+<h3>Github login success</h3>
+{{/if}}
 <h3> Lista de productos</h3>
 
 {{#each productos}}

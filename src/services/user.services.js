@@ -11,10 +11,7 @@ export const register = async (userData) => {
       const userHashed = { ...userData, password: createHash(password) };
 
       const user = await userDao.register(userHashed);
-      if (user?.error) {
-        req.session.message = user.error;
-        res.redirect("/vistas/register");
-      }
+
       if (!user) res.status(404).json({ msj: "Bad request" });
       else return user;
     } else return null;

@@ -41,6 +41,10 @@ input {
   margin-top: 15px;
   background-color: #1ed106;
 }
+.btnGithub {
+  background-color: #848484;
+  color: black;
+}
 .btnLogout {
   margin-top: 15px;
   background-color: rgba(83, 83, 83, 0.106);

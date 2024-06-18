@@ -17,6 +17,7 @@ import session from "express-session";
 import MongoStore from "connect-mongo";
 import passport from "passport";
 import "./passport/local-strategy.js";
+import "./passport/github-strategy.js";
 
 const products = new ProductsManager();
 const app = express();

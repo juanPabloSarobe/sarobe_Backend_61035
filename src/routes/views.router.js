@@ -1,5 +1,9 @@
 import { Router } from "express";
-import { isLogued, validateLogin } from "../middlewares/validateLogin.js";
+import {
+  isAuth,
+  isLogued,
+  validateLogin,
+} from "../middlewares/validateLogin.js";
 const router = Router();
 import * as controller from "../services/product.services.js";
 
@@ -8,12 +12,12 @@ router.get("/", isLogued, (req, res) => {
   res.render("login", { error });
 });
 
-router.get("/error", isLogued, (req, res) => {
+router.get("/error", (req, res) => {
   const { error } = req.session;
   res.render("error", { error });
 });
 
-router.get("/register", isLogued, (req, res) => {
+router.get("/register", isAuth, (req, res) => {
   const user = req.session.message;
   res.render("register", { user });
 });
