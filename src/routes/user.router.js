@@ -20,7 +20,15 @@ router.post(
   controller.login
 );
 router.get("/info", controller.infoSession);
-router.post("/logout", controller.logout);
+//router.post("/logout", controller.logout);
+
+router.get("/logout", (req, res) => {
+  res.clearCookie("connect.sid");
+  req.logout((err) => {
+    if (err) res.send(err);
+  });
+  res.redirect("/vistas");
+});
 
 router.get(
   "/register-github",
