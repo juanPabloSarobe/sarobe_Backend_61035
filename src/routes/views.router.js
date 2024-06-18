@@ -2,6 +2,7 @@ import { Router } from "express";
 import {
   isAuth,
   isLogued,
+  isNotAuth,
   validateLogin,
 } from "../middlewares/validateLogin.js";
 const router = Router();
@@ -17,7 +18,7 @@ router.get("/error", (req, res) => {
   res.render("error", { error });
 });
 
-router.get("/register", isAuth, (req, res) => {
+router.get("/register", isNotAuth, (req, res) => {
   const user = req.session.message;
   res.render("register", { user });
 });

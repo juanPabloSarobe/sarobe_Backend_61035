@@ -3,7 +3,6 @@ import { isValidPassword } from "../utils.js";
 
 export const register = async (req, res, next) => {
   try {
-    console.log(req.session);
     res.redirect("/vistas");
   } catch (error) {
     next(error.message);
@@ -31,7 +30,6 @@ export const login = async (req, res, next) => {
         loggedIn: true,
         contador: 1,
       };
-      console.log(req.session);
       res.redirect("/vistas/products?limit=3&page=1");
     }
   } catch (error) {
@@ -54,7 +52,6 @@ export const logout = async (req, res, next) => {
 
 export const githubResponse = async (req, res, next) => {
   try {
-    console.log(req.user);
     const { first_name, last_name, email, role, isGithub, age = 18 } = req.user;
     const message = {
       msg: { first_name, last_name, email, age, role, isGithub },

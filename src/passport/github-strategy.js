@@ -11,7 +11,6 @@ const strategyConfig = {
 
 const registerOrLogin = async (accessToken, refreshToken, profile, done) => {
   try {
-    // console.log(profile);
     const email = profile._json.email ?? `${profile.username}@github.com`;
 
     const user = await services.getUserByEmail(email);
