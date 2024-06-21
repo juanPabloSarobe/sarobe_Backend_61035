@@ -226,3 +226,25 @@ Por último se ejecutan los test de funcionamiento desde postman y desde el expl
 Se envía el archivo de variables de entorno de forma privada.
 <br/>
 <br/>
+
+## Desafío clase 21
+
+Se configuran las vistas par que se pueda acceder desde un botón utilizando la autenticación de Github:
+
+Se implenta bcrypt correctamente, se implementa passport tanto en login como en register.
+
+Se crean las estrategias de passport tanto para local como para github.
+
+Se modifican los endpoints necesarios para el funcionamiento de passport:
+
+1. **POST user/login** se implementa el middleware de passport.
+2. **POST user/register** se implementa el middleware de passport.
+3. **GET user/register-github** se implementa el middleware de passport.
+4. **GET user/profile** se implementa el middleware de passport.
+
+<br/>
+Por último se ejecutan los test de funcionamiento desde postman y desde el explorador. 
+<br/>
+Se envía el archivo de variables de entorno de forma privada.
+<br/>
+<br/>
