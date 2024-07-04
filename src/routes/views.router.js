@@ -24,7 +24,26 @@ router.get("/register", isNotAuth, (req, res) => {
 });
 router.get("/profile", validateLogin, (req, res) => {
   const user = req.session.message;
-  res.render("profile", { user });
+  const cart = req.session.message.cart.products;
+
+  const productosArr = [...cart];
+  let productos = [];
+  let total = 0;
+  productosArr.forEach((element) => {
+    const producto = {
+      title: element.product.title,
+      description: element.product.description,
+      price: element.product.price,
+      stock: element.product.stock,
+      img: element.product.img,
+      quantity: element.quantity,
+      subtotal: element.product.price * element.quantity,
+    };
+    total += producto.subtotal;
+    productos.push(producto);
+  });
+
+  res.render("profile", { user, productos, total });
 });
 
 router.get("/home", async (req, res) => {

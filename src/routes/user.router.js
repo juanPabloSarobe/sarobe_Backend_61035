@@ -19,8 +19,7 @@ router.post(
   }),
   controller.login
 );
-router.get("/info", controller.infoSession);
-//router.post("/logout", controller.logout);
+router.get("/current", controller.infoSession);
 
 router.get("/logout", (req, res) => {
   res.clearCookie("connect.sid");

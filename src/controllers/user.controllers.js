@@ -19,17 +19,18 @@ export const login = async (req, res, next) => {
       req.session.error = "Usuario o mail incorrecto";
       res.redirect("/vistas");
     } else {
-      const { first_name, last_name, email, age, role } = user;
+      const { first_name, last_name, email, age, role, cart } = user;
       const isAdmin =
         email === "adminCoder@coder.com" ? { role: "admin" } : { role: role };
       const message = {
-        msg: { first_name, last_name, email, age, role, ...isAdmin },
+        msg: { first_name, last_name, email, age, role, cart, ...isAdmin },
       };
       req.session.message = message.msg;
       req.session.info = {
         loggedIn: true,
         contador: 1,
       };
+      //res.status(200).json(req.session);
       res.redirect("/vistas/products?limit=3&page=1");
     }
   } catch (error) {

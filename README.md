@@ -248,3 +248,22 @@ Por último se ejecutan los test de funcionamiento desde postman y desde el expl
 Se envía el archivo de variables de entorno de forma privada.
 <br/>
 <br/>
+
+## Desafío clase 24
+
+Se decide utilizar como sistema de login session con passport
+
+Se modifica el user Model para que pueda recibir por body un id de cart. El mismo hace referencia a la colección charts.
+Se implementa también populate, para luego traer en la respuesta el contenido completo del carrito de ese usuario.
+
+Se crean y modifican los siguientes endpoints.
+
+1. **GET user/current** Si esta logueado devuelve los datos de la session y del usuario y el user de passport. Si no esta logueado solo devuelve los datos de session.
+2. **GET vistas/profile** Se modifico la vista profile para que al traer un usuario con carrito, nos traiga también el detalle del carrito, el subtotal por producto y el total general.
+
+<br/>
+Por último se ejecutan los test de funcionamiento desde postman y desde el explorador.
+<br/>
+Se envía el archivo de variables de entorno de forma privada.
+<br/>
+<br/>
