@@ -1,58 +1,60 @@
-import ProductDaoMongoDB from "../daos/mongodb/product.dao.js";
-const productDao = new ProductDaoMongoDB();
+// import ProductDaoMongoDB from "../daos/mongodb/product.dao.js";
+// const productDao = new ProductDaoMongoDB();
+import persistence from "../daos/factory.js";
+const { prodDao } = persistence;
 
 export const getAll = async (title, page, limit, sort) => {
   try {
-    return await productDao.getAll(title, page, limit, sort);
+    return await prodDao.getAll(title, page, limit, sort);
   } catch (error) {
     throw new Error(error);
   }
 };
 export const getAllWebSocket = async () => {
   try {
-    return await productDao.getAllWebSocket();
+    return await prodDao.getAllWebSocket();
   } catch (error) {
     throw new Error(error);
   }
 };
 export const getAllWebSocketPaginated = async (title, page, limit, sort) => {
   try {
-    return await productDao.getAllWebSocketPaginated(title, page, limit, sort);
+    return await prodDao.getAllWebSocketPaginated(title, page, limit, sort);
   } catch (error) {
     throw new Error(error);
   }
 };
 export const getById = async (id) => {
   try {
-    return await productDao.getById(id);
+    return await prodDao.getById(id);
   } catch (error) {
     throw new Error(error);
   }
 };
 export const getByCategory = async (category, stock, page, limit, sort) => {
   try {
-    return await productDao.getByCategory(category, stock, page, limit, sort);
+    return await prodDao.getByCategory(category, stock, page, limit, sort);
   } catch (error) {
     throw new Error(error);
   }
 };
 export const create = async (product) => {
   try {
-    return await productDao.create(product);
+    return await prodDao.create(product);
   } catch (error) {
     throw new Error(error);
   }
 };
 export const update = async (id, product) => {
   try {
-    return await productDao.update(id, product);
+    return await prodDao.update(id, product);
   } catch (error) {
     throw new Error(error);
   }
 };
 export const remove = async (id) => {
   try {
-    return await productDao.delete(id);
+    return await prodDao.delete(id);
   } catch (error) {
     throw new Error(error);
   }

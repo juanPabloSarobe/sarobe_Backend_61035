@@ -1,7 +1,7 @@
 import { existsSync, promises } from "fs";
 import { v4 as uuidv4 } from "uuid";
 
-export class ProductDaoFS {
+export default class ProductDaoFS {
   constructor(path) {
     this.path = path;
   }
@@ -95,12 +95,13 @@ export class ProductDaoFS {
     }
   };
 
-  getAll = async () => {
+  getAll = async (title = "", page = 1, limit = 10, sort = "") => {
     try {
       if (existsSync(this.path)) {
         const productsFile = await promises.readFile(this.path, "utf8");
         const products = JSON.parse(productsFile);
-        return products;
+        const prods = { docs: products };
+        return prods;
       } else return [];
     } catch (error) {
       throw new Error(error.message);

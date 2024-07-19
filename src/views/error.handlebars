@@ -1,12 +1,7 @@
-{{>header}}
-
 <p>UPSS!!! Error de autenticación. intenta nuevamente</p>
 <p>Seras redirecionado en 2 segundos </p>
 
- <script>
+<script>
 
-    setTimeout(()=>{
-      location.href = "/vistas";
-
-    }, 2000);
-    </script>
+  setTimeout(()=>{ location.href = "/api/vistas"; }, 2000);
+</script>

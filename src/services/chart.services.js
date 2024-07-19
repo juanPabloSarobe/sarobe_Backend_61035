@@ -1,16 +1,19 @@
-import ChartDaoMongoDB from "../daos/mongodb/chart.dao.js";
-const chartDao = new ChartDaoMongoDB();
+// import ChartDaoMongoDB from "../daos/mongodb/chart.dao.js";
+// const chartDao = new ChartDaoMongoDB();
+
+import persistence from "../daos/factory.js";
+const { cartDao } = persistence;
 
 export const getAll = async () => {
   try {
-    return await chartDao.getAll();
+    return await cartDao.getAll();
   } catch (error) {
     throw new Error(error);
   }
 };
 export const getById = async (id) => {
   try {
-    return await chartDao.getById(id);
+    return await cartDao.getById(id);
   } catch (error) {
     throw new Error(error);
   }
@@ -18,21 +21,21 @@ export const getById = async (id) => {
 
 export const create = async (chart) => {
   try {
-    return await chartDao.create(chart);
+    return await cartDao.create(chart);
   } catch (error) {
     throw new Error(error);
   }
 };
 export const addProduct = async (id, productId, quantity) => {
   try {
-    return await chartDao.addProduct(id, productId, quantity);
+    return await cartDao.addProduct(id, productId, quantity);
   } catch (error) {
     throw new Error(error);
   }
 };
 export const addManyProduct = async (id, products) => {
   try {
-    return await chartDao.addManyProduct(id, products);
+    return await cartDao.addManyProduct(id, products);
   } catch (error) {
     throw new Error(error);
   }
@@ -40,7 +43,7 @@ export const addManyProduct = async (id, products) => {
 
 export const delProduct = async (id, productId) => {
   try {
-    return await chartDao.delProduct(id, productId);
+    return await cartDao.delProduct(id, productId);
   } catch (error) {
     throw new Error(error);
   }
@@ -48,14 +51,14 @@ export const delProduct = async (id, productId) => {
 
 export const remove = async (id) => {
   try {
-    return await chartDao.delete(id);
+    return await cartDao.delete(id);
   } catch (error) {
     throw new Error(error);
   }
 };
 export const cleanCart = async (id) => {
   try {
-    return await chartDao.cleanCart(id);
+    return await cartDao.cleanCart(id);
   } catch (error) {
     throw new Error(error);
   }

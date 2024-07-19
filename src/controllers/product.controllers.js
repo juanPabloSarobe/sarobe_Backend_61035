@@ -3,16 +3,17 @@ import * as service from "../services/product.services.js";
 
 export const getAll = async (req, res, next) => {
   try {
+    console.log("getAll");
     const { title, page, limit, sort } = req.query;
     const hasTitle = title ? `&title=${title}` : "";
     const hasSort = sort ? `&sort=${sort}` : "";
     let products = await service.getAll(title, page, limit, sort);
-
+    console.log(products);
     const nextLink = products.hasNextPage
-      ? `http://localhost:8080/products?limit=${products.limit}&page=${products.nextPage}${hasTitle}${hasSort}`
+      ? `http://localhost:8080/api/products?limit=${products.limit}&page=${products.nextPage}${hasTitle}${hasSort}`
       : null;
     const prevLink = products.hasPrevPage
-      ? `http://localhost:8080/products?limit=${products.limit}&page=${products.prevPage}${hasTitle}${hasSort}`
+      ? `http://localhost:8080/api/products?limit=${products.limit}&page=${products.prevPage}${hasTitle}${hasSort}`
       : null;
     const response = {
       payload: products.docs,
@@ -62,10 +63,10 @@ export const getByCategory = async (req, res, next) => {
       sort
     );
     const nextLink = products.hasNextPage
-      ? `http://localhost:8080/products/cat?limit=${products.limit}&page=${products.nextPage}${hasCategory}${hasSort}${hasStock}`
+      ? `http://localhost:8080/api/products/cat?limit=${products.limit}&page=${products.nextPage}${hasCategory}${hasSort}${hasStock}`
       : null;
     const prevLink = products.hasPrevPage
-      ? `http://localhost:8080/products/cat?limit=${products.limit}&page=${products.prevPage}${hasCategory}${hasSort}${hasStock}`
+      ? `http://localhost:8080/api/products/cat?limit=${products.limit}&page=${products.prevPage}${hasCategory}${hasSort}${hasStock}`
       : null;
     const response = {
       payload: products.docs,

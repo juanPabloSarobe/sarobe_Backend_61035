@@ -23,25 +23,26 @@ router.get("/register", isNotAuth, (req, res) => {
   res.render("register", { user });
 });
 router.get("/profile", validateLogin, (req, res) => {
-  const user = req.session.message;
-  const cart = req.session.message.cart.products;
-
-  const productosArr = [...cart];
   let productos = [];
   let total = 0;
-  productosArr.forEach((element) => {
-    const producto = {
-      title: element.product.title,
-      description: element.product.description,
-      price: element.product.price,
-      stock: element.product.stock,
-      img: element.product.img,
-      quantity: element.quantity,
-      subtotal: element.product.price * element.quantity,
-    };
-    total += producto.subtotal;
-    productos.push(producto);
-  });
+  const user = req.session.message;
+  const cart = req.session.message.cart?.products;
+  if (cart) {
+    const productosArr = [...cart];
+    productosArr.forEach((element) => {
+      const producto = {
+        title: element.product.title,
+        description: element.product.description,
+        price: element.product.price,
+        stock: element.product.stock,
+        img: element.product.img,
+        quantity: element.quantity,
+        subtotal: element.product.price * element.quantity,
+      };
+      total += producto.subtotal;
+      productos.push(producto);
+    });
+  }
 
   res.render("profile", { user, productos, total });
 });
@@ -68,10 +69,10 @@ router.get("/products", validateLogin, async (req, res) => {
     );
     const profileLink = `http://localhost:8080/vistas/profile`;
     const nextLink = products.hasNextPage
-      ? `http://localhost:8080/vistas/products?limit=${products.limit}&page=${products.nextPage}${hasTitle}${hasSort}`
+      ? `http://localhost:8080/api/vistas/products?limit=${products.limit}&page=${products.nextPage}${hasTitle}${hasSort}`
       : null;
     const prevLink = products.hasPrevPage
-      ? `http://localhost:8080/vistas/products?limit=${products.limit}&page=${products.prevPage}${hasTitle}${hasSort}`
+      ? `http://localhost:8080/api/vistas/products?limit=${products.limit}&page=${products.prevPage}${hasTitle}${hasSort}`
       : null;
     const response = {
       payload: products.docs,

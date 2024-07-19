@@ -3,7 +3,7 @@ import { isValidPassword } from "../utils.js";
 
 export const register = async (req, res, next) => {
   try {
-    res.redirect("/vistas");
+    res.redirect("/api/vistas");
   } catch (error) {
     next(error.message);
   }
@@ -17,7 +17,7 @@ export const login = async (req, res, next) => {
     const user = await services.getUserById(id);
     if (!user) {
       req.session.error = "Usuario o mail incorrecto";
-      res.redirect("/vistas");
+      res.redirect("/api/vistas");
     } else {
       const { first_name, last_name, email, age, role, cart } = user;
       const isAdmin =
@@ -31,7 +31,7 @@ export const login = async (req, res, next) => {
         contador: 1,
       };
       //res.status(200).json(req.session);
-      res.redirect("/vistas/products?limit=3&page=1");
+      res.redirect("/api/vistas/products?limit=3&page=1");
     }
   } catch (error) {
     next(error.message);
@@ -48,7 +48,7 @@ export const infoSession = (req, res, next) => {
 
 export const logout = async (req, res, next) => {
   req.session.destroy();
-  res.redirect("/vistas");
+  res.redirect("/api/vistas");
 };
 
 export const githubResponse = async (req, res, next) => {
@@ -62,7 +62,7 @@ export const githubResponse = async (req, res, next) => {
       loggedIn: true,
       contador: 1,
     };
-    res.redirect("/vistas/products?limit=3&page=1");
+    res.redirect("/api/vistas/products?limit=3&page=1");
   } catch (error) {
     next(error);
   }

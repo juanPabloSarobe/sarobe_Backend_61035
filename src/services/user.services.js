@@ -1,7 +1,8 @@
-import UserDao from "../daos/mongodb/user.dao.js";
+//import UserDao from "../daos/mongodb/user.dao.js";
 import { createHash, isValidPassword } from "../utils.js";
-
-const userDao = new UserDao();
+import persistence from "../daos/factory.js";
+const { userDao } = persistence;
+//const userDao = new UserDao();
 
 export const register = async (userData) => {
   try {

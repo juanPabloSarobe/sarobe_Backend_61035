@@ -1,14 +1,8 @@
 import express from "express";
-import productRouter from "./routes/products.router.js ";
-import chartRouter from "./routes/charts.router.js";
-import viewsRouter from "./routes/views.router.js";
-import chatRouter from "./routes/chats.router.js";
-import userRouter from "./routes/user.router.js";
 import { __dirname } from "./utils.js";
 import handlebars from "express-handlebars";
 import { Server } from "socket.io";
 import { errorHandler } from "./middlewares/errorHandler.js";
-import { initMongoDB } from "./daos/mongodb/connection.js";
 import ProductsManager from "./daos/mongodb/product.dao.js";
 import * as messageManager from "./services/chat.services.js";
 import "dotenv/config";
@@ -18,6 +12,8 @@ import MongoStore from "connect-mongo";
 import passport from "passport";
 import "./passport/local-strategy.js";
 import "./passport/github-strategy.js";
+import MainRouter from "./routes/routes.js";
+const mainRouter = new MainRouter();
 
 const products = new ProductsManager();
 const app = express();
@@ -62,14 +58,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Enrutador
-app.use("/products", productRouter);
-app.use("/charts", chartRouter);
-app.use("/chats", chatRouter);
-app.use("/vistas", viewsRouter);
-app.use("/user", userRouter);
+app.use("/api", mainRouter.getRouter());
 app.use(errorHandler);
-
-initMongoDB();
 
 const PORT = 8080;
 const httpServer = app.listen(PORT, () =>

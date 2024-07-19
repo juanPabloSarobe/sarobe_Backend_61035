@@ -8,14 +8,14 @@ const router = Router();
 router.post(
   "/register",
   passport.authenticate("register", {
-    failureRedirect: "/vistas/error",
+    failureRedirect: "/api/vistas/error",
   }),
   controller.register
 );
 router.post(
   "/login",
   passport.authenticate("login", {
-    failureRedirect: "/vistas/error",
+    failureRedirect: "/api/vistas/error",
   }),
   controller.login
 );
@@ -26,7 +26,7 @@ router.get("/logout", (req, res) => {
   req.logout((err) => {
     if (err) res.send(err);
   });
-  res.redirect("/vistas");
+  res.redirect("/api/vistas");
 });
 
 router.get(
