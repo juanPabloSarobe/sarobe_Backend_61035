@@ -3,16 +3,15 @@ import ProductDaoFS from "./filesystem/product.dao.js";
 import ChartDaoMongoDB from "./mongodb/chart.dao.js";
 import UserDaoMongo from "./mongodb/user.dao.js";
 import { initMongoDB } from "./mongodb/connection.js";
-
+import config from "../../config.js";
 let prodDao = null;
 let userDao = null;
 let cartDao = null;
 
-let persistence = process.argv[2];
+let persistence = config.PERSISTENCE;
 
 switch (persistence) {
   case "fs":
-    console.log(persistence);
     prodDao = new ProductDaoFS("./src/data/products.json");
 
     // userDao = new UserDaoFS('./src/daos/....

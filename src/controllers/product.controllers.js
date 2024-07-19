@@ -3,12 +3,10 @@ import * as service from "../services/product.services.js";
 
 export const getAll = async (req, res, next) => {
   try {
-    console.log("getAll");
     const { title, page, limit, sort } = req.query;
     const hasTitle = title ? `&title=${title}` : "";
     const hasSort = sort ? `&sort=${sort}` : "";
     let products = await service.getAll(title, page, limit, sort);
-    console.log(products);
     const nextLink = products.hasNextPage
       ? `http://localhost:8080/api/products?limit=${products.limit}&page=${products.nextPage}${hasTitle}${hasSort}`
       : null;

@@ -13,6 +13,7 @@ import passport from "passport";
 import "./passport/local-strategy.js";
 import "./passport/github-strategy.js";
 import MainRouter from "./routes/routes.js";
+import config from "../config.js";
 const mainRouter = new MainRouter();
 
 const products = new ProductsManager();
@@ -61,9 +62,11 @@ app.use(passport.session());
 app.use("/api", mainRouter.getRouter());
 app.use(errorHandler);
 
-const PORT = 8080;
+const PORT = config.PORT;
 const httpServer = app.listen(PORT, () =>
-  console.log(`Server ok en puerto ${PORT}`)
+  console.log(
+    `Server ok en puerto ${PORT} in ${config.NODE_ENV} mode whit persistence in ${config.PERSISTENCE}`
+  )
 );
 
 const socketServer = new Server(httpServer);

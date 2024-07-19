@@ -267,3 +267,22 @@ Por último se ejecutan los test de funcionamiento desde postman y desde el expl
 Se envía el archivo de variables de entorno de forma privada.
 <br/>
 <br/>
+
+## Desafío clase 27
+
+se crea un archivo config.js el cual tiene un ejemplo para utilizar multiples archivos .env asi como de acceder a los valores de las variables de entorno.
+Se crea el archivo factory.js el cual recibe por parámetro al momento de levantar el servidor el sistema de persistencia, pero mediante la variables de entorno del config.js
+
+Se ajustan los servicios para que utilicen el modelo de factory implementado.
+
+Se crea un archivo routes.js, el cual centraliza las rutas generales para limpiar el archivo server.js.
+
+Se cargan los datos en el archivo .env tal cual lo solicitado.
+
+Se termina de dividir el sistema por capas como lo solicita la consigna. se limpian las rutas del server.js
+<br/>
+Por último se ejecutan los test de funcionamiento desde postman y desde el explorador.
+<br/>
+Se envía el archivo de variables de entorno de forma privada.
+<br/>
+<br/>
