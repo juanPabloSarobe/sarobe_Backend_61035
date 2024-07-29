@@ -1,5 +1,7 @@
 import * as service from "../services/cart.services.js";
 import { pResp } from "../utils.js";
+import UserRepository from "../repository/user.repository.js";
+const userRepository = new UserRepository();
 
 export const getAll = async (req, res, next) => {
   try {
@@ -77,3 +79,18 @@ export const cleanCart = async (req, res, next) => {
     next(error.message);
   }
 };
+/* const updateResp = async (req, res, next) => {
+  try {
+    const userId = req.session.passport?.user;
+    if (userId) {
+      const user = await userRepository.getUserById(userId);
+      console.log("UserController:", user.cart);
+      req.session.message = user;
+      console.log("req.session.message.cart = ", req.session.message.cart);
+    } else {
+      pResp(res, 404, { msg: "User not logued" });
+    }
+  } catch (error) {
+    next(error);
+  }
+}; */

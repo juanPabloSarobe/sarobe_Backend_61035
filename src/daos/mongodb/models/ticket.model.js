@@ -5,7 +5,15 @@ const ticketSchema = new Schema({
   purchase_datetime: { type: String, required: true },
   amount: { type: Number, required: true },
   purchaser: { type: String, required: true },
-  cart: { type: Schema.Types.ObjectId, ref: "carts" },
+  products: [
+    {
+      _id: false,
+      product: { type: Schema.Types.ObjectId, ref: "products" },
+      quantity: { type: Number },
+      price: { type: Number },
+      subtotal: { type: Number },
+    },
+  ],
   userId: { type: Schema.Types.ObjectId, ref: "users" },
 });
 
