@@ -1,33 +1,21 @@
 import { Router } from "express";
-import { isLogued } from "../middlewares/validateLogin.js";
+import { isAuth, isLogued } from "../middlewares/validateLogin.js";
 import * as controller from "../controllers/user.controllers.js";
 import passport from "passport";
+import { isAdmin } from "../middlewares/isAdmin.js";
 
 const router = Router();
 
 router.post(
   "/register",
-  passport.authenticate("register", {
-    failureRedirect: "/api/vistas/error",
-  }),
+  passport.authenticate("register"),
   controller.register
 );
-router.post(
-  "/login",
-  passport.authenticate("login", {
-    failureRedirect: "/api/vistas/error",
-  }),
-  controller.login
-);
-router.get("/current", controller.infoSession);
+router.post("/login", passport.authenticate("login"), controller.login);
+router.get("/current", [isAuth], controller.current);
+router.get("/infoSession", [isAuth, isAdmin], controller.infoSession);
 
-router.get("/logout", (req, res) => {
-  res.clearCookie("connect.sid");
-  req.logout((err) => {
-    if (err) res.send(err);
-  });
-  res.redirect("/api/vistas");
-});
+router.get("/logout", [isAuth], controller.logout);
 
 router.get(
   "/register-github",

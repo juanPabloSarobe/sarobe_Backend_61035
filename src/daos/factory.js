@@ -1,12 +1,14 @@
 import ProductDaoMongo from "./mongodb/product.dao.js";
 import ProductDaoFS from "./filesystem/product.dao.js";
-import ChartDaoMongoDB from "./mongodb/chart.dao.js";
+import cartDaoMongoDB from "./mongodb/cart.dao.js";
 import UserDaoMongo from "./mongodb/user.dao.js";
+import TicketDaoMongoDB from "./mongodb/ticket.dao.js";
 import { initMongoDB } from "./mongodb/connection.js";
 import config from "../../config.js";
 let prodDao = null;
 let userDao = null;
 let cartDao = null;
+let ticketDao = null;
 
 let persistence = config.PERSISTENCE;
 
@@ -21,7 +23,9 @@ switch (persistence) {
     initMongoDB();
     userDao = new UserDaoMongo();
     prodDao = new ProductDaoMongo();
-    cartDao = new ChartDaoMongoDB();
+    cartDao = new cartDaoMongoDB();
+    ticketDao = new TicketDaoMongoDB();
+
     break;
   // case 'sql':
   //     userDao = new UserDaoSql();
@@ -34,4 +38,4 @@ switch (persistence) {
     break;
 }
 
-export default { userDao, prodDao, cartDao };
+export default { userDao, prodDao, cartDao, ticketDao };

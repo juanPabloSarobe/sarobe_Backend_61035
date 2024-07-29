@@ -1,3 +1,5 @@
+import { pResp } from "../utils.js";
+
 export const validateLogin = (req, res, next) => {
   if (req.session?.info?.loggedIn === undefined) {
     res.redirect("/api/vistas");
@@ -24,5 +26,5 @@ export const isNotAuth = (req, res, next) => {
 
 export const isAuth = (req, res, next) => {
   if (req.isAuthenticated()) return next();
-  res.status(401).send({ msg: "Unauthorized" });
+  pResp(res, 401, { msg: "Please login first" });
 };

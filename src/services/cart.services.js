@@ -1,5 +1,5 @@
-// import ChartDaoMongoDB from "../daos/mongodb/chart.dao.js";
-// const chartDao = new ChartDaoMongoDB();
+// import cartDaoMongoDB from "../daos/mongodb/cart.dao.js";
+// const cartDao = new cartDaoMongoDB();
 
 import persistence from "../daos/factory.js";
 const { cartDao } = persistence;
@@ -19,9 +19,9 @@ export const getById = async (id) => {
   }
 };
 
-export const create = async (chart) => {
+export const create = async (cart) => {
   try {
-    return await cartDao.create(chart);
+    return await cartDao.create(cart);
   } catch (error) {
     throw new Error(error);
   }
@@ -29,13 +29,6 @@ export const create = async (chart) => {
 export const addProduct = async (id, productId, quantity) => {
   try {
     return await cartDao.addProduct(id, productId, quantity);
-  } catch (error) {
-    throw new Error(error);
-  }
-};
-export const addManyProduct = async (id, products) => {
-  try {
-    return await cartDao.addManyProduct(id, products);
   } catch (error) {
     throw new Error(error);
   }

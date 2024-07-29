@@ -11,7 +11,7 @@ const strategyConfig = {
 const signUp = async (req, email, password, done) => {
   try {
     const user = await services.getUserByEmail(email);
-    if (user) return done(null, false);
+    if (user) return done(null, false, { msg: "User already exists" });
     const newUser = await services.register(req.body);
     return done(null, newUser);
   } catch (error) {

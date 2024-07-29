@@ -1,5 +1,18 @@
 import { Schema, model } from "mongoose";
 
+const ticketSchema = new Schema({
+  code: { type: String, required: true },
+  purchase_datetime: { type: String, required: true },
+  amount: { type: Number, required: true },
+  purchaser: { type: String, required: true },
+  cart: { type: Schema.Types.ObjectId, ref: "carts" },
+  userId: { type: Schema.Types.ObjectId, ref: "users" },
+});
+
+export const TicketModel = model("ticket", ticketSchema);
+
+/* import { Schema, model } from "mongoose";
+
 const UserSchema = new Schema({
   first_name: { type: String, required: true },
   last_name: { type: String, required: true },
@@ -16,3 +29,4 @@ UserSchema.pre("find", function () {
 });
 
 export const UserModel = model("users", UserSchema);
+ */

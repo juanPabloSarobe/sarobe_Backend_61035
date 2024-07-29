@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const ChartSchema = new Schema({
+const cartSchema = new Schema({
   products: [
     {
       _id: false,
@@ -9,8 +9,8 @@ const ChartSchema = new Schema({
     },
   ],
 });
-ChartSchema.pre("find", function () {
+cartSchema.pre("find", function () {
   this.populate("products.product");
 });
 
-export const ChartModel = model("charts", ChartSchema);
+export const cartModel = model("carts", cartSchema);

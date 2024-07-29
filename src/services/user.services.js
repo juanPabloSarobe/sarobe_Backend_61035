@@ -1,15 +1,23 @@
 //import UserDao from "../daos/mongodb/user.dao.js";
 import { createHash, isValidPassword } from "../utils.js";
 import persistence from "../daos/factory.js";
-const { userDao } = persistence;
-//const userDao = new UserDao();
+const { userDao, cartDao } = persistence;
+import UserRepository from "../repository/user.repository.js";
+const userRepository = new UserRepository();
 
 export const register = async (userData) => {
   try {
     const { email, password } = userData;
     const existUser = await getUserByEmail(email);
     if (!existUser) {
-      const userHashed = { ...userData, password: createHash(password) };
+      const cartUser = await cartDao.create();
+      const role = email === "adminCoder@coder.com" ? "admin" : "user";
+      const userHashed = {
+        ...userData,
+        role,
+        password: createHash(password),
+        cart: cartUser._id,
+      };
 
       const user = await userDao.register(userHashed);
 
@@ -33,7 +41,7 @@ export const login = async ({ email, password }) => {
 };
 export const getUserById = async (id) => {
   try {
-    return await userDao.getById(id);
+    return await userRepository.getUserById(id);
   } catch (error) {
     throw new Error(error);
   }

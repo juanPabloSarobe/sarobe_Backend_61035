@@ -37,11 +37,11 @@ const sessionConfig = {
   store: MongoStore.create({
     mongoUrl: connectionString,
     crypto: { secret: SESSIONSECRET },
-    ttl: 180,
+    ttl: 360,
     reapInterval: 200,
   }),
   secret: SESSIONSECRET,
-  cookie: { maxAge: 180000 },
+  cookie: { maxAge: 360000 },
   saveUninitialized: true,
   resave: true,
 };

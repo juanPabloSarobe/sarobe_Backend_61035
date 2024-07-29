@@ -1,9 +1,9 @@
-import { ChartModel } from "./models/chart.model.js";
+import { cartModel } from "./models/cart.model.js";
 
-export default class ChartDaoMongoDB {
+export default class cartDaoMongoDB {
   getAll = async () => {
     try {
-      return await ChartModel.find();
+      return await cartModel.find();
     } catch (error) {
       throw new Error(error);
     }
@@ -11,18 +11,18 @@ export default class ChartDaoMongoDB {
 
   getById = async (id) => {
     try {
-      const response = await ChartModel.findById(id).populate(
-        "products.product"
-      );
+      const response = await cartModel
+        .findById(id)
+        .populate("products.product");
       return response;
     } catch (error) {
       throw new Error(error);
     }
   };
 
-  create = async (chart) => {
+  create = async (cart) => {
     try {
-      return await ChartModel.create(chart);
+      return await cartModel.create(cart);
     } catch (error) {
       throw new Error(error);
     }
@@ -30,39 +30,28 @@ export default class ChartDaoMongoDB {
 
   addProduct = async (id, productId, quantity) => {
     try {
-      const { products } = await ChartModel.findById(id, { products: true });
+      const { products } = await cartModel.findById(id, { products: true });
 
       const productAdded = products.some(
         (element) => element.product.toString() === productId
       );
       if (!productAdded) {
-        const addedProduct = await ChartModel.updateOne(
+        const addedProduct = await cartModel.updateOne(
           { _id: id },
           { $push: { products: { product: productId, quantity: quantity } } },
           { new: true }
         );
         if (!addedProduct.modifiedCount) return null;
-        else return await ChartModel.findById(id);
+        else return await cartModel.findById(id);
       } else {
-        const addProduct = await ChartModel.updateOne(
+        const addProduct = await cartModel.updateOne(
           { _id: id, "products.product": productId },
           { $set: { "products.$.quantity": quantity } },
           { new: true }
         );
         if (!addProduct.modifiedCount) return null;
-        else return await ChartModel.findById(id);
+        else return await cartModel.findById(id);
       }
-    } catch (error) {
-      throw new Error(error);
-    }
-  };
-
-  addManyProduct = async (cid, products) => {
-    try {
-      const response = await ChartModel.findByIdAndUpdate(cid, products, {
-        new: true,
-      });
-      return response;
     } catch (error) {
       throw new Error(error);
     }
@@ -70,7 +59,7 @@ export default class ChartDaoMongoDB {
 
   delProduct = async (id, productId) => {
     try {
-      const delProduct = await ChartModel.updateOne(
+      const delProduct = await cartModel.updateOne(
         {
           _id: id,
         },
@@ -85,14 +74,14 @@ export default class ChartDaoMongoDB {
   };
   delete = async (id) => {
     try {
-      return await ChartModel.findByIdAndDelete(id);
+      return await cartModel.findByIdAndDelete(id);
     } catch (error) {
       throw new Error(error);
     }
   };
   cleanCart = async (cid) => {
     try {
-      const clearCart = await ChartModel.findByIdAndUpdate(
+      const clearCart = await cartModel.findByIdAndUpdate(
         cid,
         { $set: { products: [] } },
         { new: true }

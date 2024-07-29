@@ -74,13 +74,13 @@ Por último se ejecutan los test de funcionamiento desde postman. Se adjunta lin
 ## Preentrega 1
 
 Se actualiza el servidor express con los siguientes con los siguientes componentes.
-En la carpeta manager se crea un nuevo archivo charts.manager.js para manejar la lógica del carrito. Se implementan los distintos endpoints mediante router en el archivo charts.router.js. y se crea un nuevo archivo de persistencia de datos con file system en la carpeta data con nombre charts.json
+En la carpeta manager se crea un nuevo archivo carts.manager.js para manejar la lógica del carrito. Se implementan los distintos endpoints mediante router en el archivo carts.router.js. y se crea un nuevo archivo de persistencia de datos con file system en la carpeta data con nombre carts.json
 Se actualizo los products.json asi como los métodos para que cada producto ahora reciba el campo status siempre en verdadero. al igual que la entrega anterior el campo thumbnails se renombró como img.
 Se edito el endpoint **POST /products** ahora exige que el path de thumbnail (img, en este caso) sea un array o que este vacío, ya no permite strings.
 
 Se crearon los siguientes endpoints
 
-1. **POST "/"** Agrega un item a la lista de carritos, el cual contiene un chartId y un elemento products el cual contendrá todos los productos del carrito, el mismo se inicializa vacío. El body se entrega vacío
+1. **POST "/"** Agrega un item a la lista de carritos, el cual contiene un cartId y un elemento products el cual contendrá todos los productos del carrito, el mismo se inicializa vacío. El body se entrega vacío
 
 2. **GET "/"** trae todos los datos del carrito.
 3. **GET "/:cid"** trae los datos del carrito en función del id del mismo. en caso de no existir el id proporcionado devuelve un error.
@@ -91,7 +91,7 @@ Se crearon los siguientes endpoints
    <br/>
    **Product Manager API** https://documenter.getpostman.com/view/11511543/2sA3BuW9A1
    <br/>
-   **Chart Manager API** https://documenter.getpostman.com/view/11511543/2sA3JJ8NeR
+   **cart Manager API** https://documenter.getpostman.com/view/11511543/2sA3JJ8NeR
    <br/>
    <br/>
 
@@ -139,7 +139,7 @@ Se actualizan los siguientes endpoints:
 
 Se crearon los siguientes endpoints:
 
-1. **DELETE /charts/:cid** se creo el endpoint para eliminar un carrito completo.
+1. **DELETE /carts/:cid** se creo el endpoint para eliminar un carrito completo.
 
 1. **GET /chats/** endpoint que dispara el handlebars del chat
 
@@ -169,14 +169,14 @@ Se actualizan los siguientes endpoints:
 
 3. **GET /products/cat** endpoint que puede filtrar por categoría y por precio, ademas de paginar.
 
-4. **DELETE /charts/:cid** el endpoint vacía el carrito.
+4. **DELETE /carts/:cid** el endpoint vacía el carrito.
 
 5. **Resto de Endpoints del carrito** se modifican todos los endpoint del carrito en función de la consigna. se agrega el método populate tanto en middleware como directo en la función findById
    <br/>
 
 Se crearon los siguientes endpoints:
 
-1. **DELETE /charts/cleanCart/:cid** se creo el endpoint para eliminar un carrito completo.
+1. **DELETE /carts/cleanCart/:cid** se creo el endpoint para eliminar un carrito completo.
 
 <br/>
 Por último se ejecutan los test de funcionamiento desde postman y del chat desde el explorador. 
@@ -253,7 +253,7 @@ Se envía el archivo de variables de entorno de forma privada.
 
 Se decide utilizar como sistema de login session con passport
 
-Se modifica el user Model para que pueda recibir por body un id de cart. El mismo hace referencia a la colección charts.
+Se modifica el user Model para que pueda recibir por body un id de cart. El mismo hace referencia a la colección carts.
 Se implementa también populate, para luego traer en la respuesta el contenido completo del carrito de ese usuario.
 
 Se crean y modifican los siguientes endpoints.
