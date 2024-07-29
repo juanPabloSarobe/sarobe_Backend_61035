@@ -14,7 +14,7 @@ router.delete("/userCart/delete/:pid", [isAuth], controller.delProduct);
 
 router.delete("/userCart/delete", [isAuth], controller.remove); //elimina el carrito completo
 //DEPRECADO, si elimino el carrito de la colección carts, va a traer errores al traer los datos de usuario, y no se le podrá vincular otro carrito.
-//Se deja el servicio para eliminar en carrito para ejecutarlo en caso de que se quisiera eliminar un usuario completo.
+//Se deja el servicio para eliminar el carrito para ejecutarlo en caso de que se quisiera eliminar un usuario completo.
 
 router.delete("/userCart/cleanCart", [isAuth], controller.cleanCart); //vacia el carrito
 
