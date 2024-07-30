@@ -292,6 +292,8 @@ Se envía el archivo de variables de entorno de forma privada.
 Se refactoriza prácticamente casi todo el proyecto. Primero se refactoriza todo lo referido al cart, ya que tenia una falta de ortográfica (chart) que confundía, por ende se cambiaron los nombre de los archivos, dependencias, funciones, métodos, clases, etc.
 La capa de persistencia ya estaba implementada utilizando el patron factory de la entrega anterior, se agrega patron repository y DTO para el endpoint current.
 
+Se eliminó el uso de vistas, ahora todos los endpoints devuelven la respuesta en JSON.
+
 Se implementa el middleware isAuth, en los endpoint que sea necesario que el usuario este logueado, el cual solo permite continuar si esta correctamente logueado.
 Se crea el middleware isAdmin, que verifica si el usuario logueado tienen permisos de administrador, en dicho caso permite continuar. se implementa en los endpoints de creación, edición y eliminación de productos, no asi en los de consulta.
 
@@ -302,7 +304,12 @@ Ademas se agrega también el id del usuario.
 
 De esta forma se crea un endpoint raíz para tickets, que permite obtener todos los tickets que haya comprado el usuario logueado.
 
-Al momento de realizar la compra, tal cual lo indicado por el profesor en clase se realiza una verificación muy simple del stock, si la cantidad comprada es menor al stock, se compra dicha cantidad, si es mayor, se compra todo el stock. luego de realizada la cmpra se vacía el carrito del usuario.
+Al momento de realizar la compra, tal cual lo indicado por el profesor en clase se realiza una verificación muy simple del stock, si la cantidad comprada es menor al stock, se compra dicha cantidad, si es mayor, se compra todo el stock. luego de realizada la compra se vacía el carrito del usuario.
+
+No se implementó envío de mail o sms, dado que no lo indico el profesor ni lo implementó en en afterclass
+
+<br/>
+<br/>
 
 Se actualizan los siguientes endpoints:
 
@@ -327,9 +334,14 @@ Se crearon los siguientes endpoints:
 2. **GET /ticket/** consulta todos los tickets comprados del usuario
 
 <br/>
-Por último se ejecutan los test de funcionamiento desde postman y del chat desde el explorador. 
+Por último se ejecutan los test de funcionamiento desde postman.
 <br/>
 Se envía el archivo de variables de entorno de forma privada.
 <br/>
 <br/>
+
+> A esta altura, el front ya podría diseñar una página de visualización y búsqueda de productos, por categorías, palabras claves, y paginada.
+> Se podría agregar, editar o eliminar productos, mediante el usuario administrador.
+> Creación de usuarios, agregar, editar o eliminar productos al carrito, y ejecutar una compra simulada. Y también cada usuario podría ver todas sus compras realizadas.
+
 > inicializar con `npm run dev prod mongo`
