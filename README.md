@@ -343,5 +343,3 @@ Se envía el archivo de variables de entorno de forma privada.
 > A esta altura, el front ya podría diseñar una página de visualización y búsqueda de productos, por categorías, palabras claves, y paginada.
 > Se podría agregar, editar o eliminar productos, mediante el usuario administrador.
 > Creación de usuarios, agregar, editar o eliminar productos al carrito, y ejecutar una compra simulada. Y también cada usuario podría ver todas sus compras realizadas.
-
-> inicializar con `npm run dev prod mongo`
