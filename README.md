@@ -343,3 +343,17 @@ Se envía el archivo de variables de entorno de forma privada.
 > A esta altura, el front ya podría diseñar una página de visualización y búsqueda de productos, por categorías, palabras claves, y paginada.
 > Se podría agregar, editar o eliminar productos, mediante el usuario administrador.
 > Creación de usuarios, agregar, editar o eliminar productos al carrito, y ejecutar una compra simulada. Y también cada usuario podría ver todas sus compras realizadas.
+
+<br/>
+
+**Product Manager API** https://documenter.getpostman.com/view/11511543/2sA3BuW9A1
+<br/>
+
+**Cart Manager API** https://documenter.getpostman.com/view/11511543/2sA3JJ8NeR
+<br/>
+
+**Ticket Manager API** https://documenter.getpostman.com/view/11511543/2sA3kbexfH
+<br/>
+
+**User Manager API** https://documenter.getpostman.com/view/11511543/2sA3kbexfK
+<br/>
