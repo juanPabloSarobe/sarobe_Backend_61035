@@ -286,3 +286,50 @@ Por último se ejecutan los test de funcionamiento desde postman y desde el expl
 Se envía el archivo de variables de entorno de forma privada.
 <br/>
 <br/>
+
+## Tercera Pre-entrega Proyecto final (clase 30)
+
+Se refactoriza prácticamente casi todo el proyecto. Primero se refactoriza todo lo referido al cart, ya que tenia una falta de ortográfica (chart) que confundía, por ende se cambiaron los nombre de los archivos, dependencias, funciones, métodos, clases, etc.
+La capa de persistencia ya estaba implementada utilizando el patron factory de la entrega anterior, se agrega patron repository y DTO para el endpoint current.
+
+Se implementa el middleware isAuth, en los endpoint que sea necesario que el usuario este logueado, el cual solo permite continuar si esta correctamente logueado.
+Se crea el middleware isAdmin, que verifica si el usuario logueado tienen permisos de administrador, en dicho caso permite continuar. se implementa en los endpoints de creación, edición y eliminación de productos, no asi en los de consulta.
+
+Se refactorizan todos los endpoints referidos al carrito, ya no es necesario pasarle el id de usuario por parámetro, sino que lo obtiene del objeto session, que se crea luego de loguearse, como tiene un middleware que verifica el login, no se puede acceder a ningún endpoint si no esta logueado.
+
+Se crea el modelo ticket, con los datos requeridos en desafío, pero ademas se agregaron algunos datos extras, por ejemplo el detalle de los productos comprados, la cantidad de cada uno, el precio al momento de compra, y al tener la cantidad se calcula el subtotal.
+Ademas se agrega también el id del usuario.
+
+De esta forma se crea un endpoint raíz para tickets, que permite obtener todos los tickets que haya comprado el usuario logueado.
+
+Al momento de realizar la compra, tal cual lo indicado por el profesor en clase se realiza una verificación muy simple del stock, si la cantidad comprada es menor al stock, se compra dicha cantidad, si es mayor, se compra todo el stock. luego de realizada la cmpra se vacía el carrito del usuario.
+
+Se actualizan los siguientes endpoints:
+
+1. **POST /products** se agrega middleware de login administrador
+2. **PUT /products/pid** se agrega middleware de login administrador. Ahora se utiliza el mismo endpoint para agregar o modificar productos
+3. **DELETE /products/pid** se agrega middleware de login administrador
+4. **GET carts/userCart** ya no requiere el id de usuario por parámetro, se agrega middleware de login
+5. **POST carts** ya no requiere el id de usuario por parámetro, se elimina el endpoint, se utiliza de forma interna al crear el usuario
+6. **PUT carts/userCart/products/:pid** ya no requiere el id de usuario por parámetro, se agrega middleware de login
+7. **DELETE carts/userCart/delete/:pid** ya no requiere el id de usuario por parámetro, se agrega middleware de login
+8. **DELETE carts/userCart/cleanCart** ya no requiere el id de usuario por parámetro, se agrega middleware de login
+9. **DELETE carts/userCart/delete** ya no requiere el id de usuario por parámetro, se agrega middleware de login. Se deshabilita, ya que ahora cara usuario tiene un único ID de carrito, si lo eliminamos traerá problemas al querer volver a crearlo. se deje la lógica ya que serviría para eliminar un carrito solo al momento de querer eliminar un usuario.
+10. **GET user/current** ya no requiere el id de usuario por parámetro, se agrega middleware de login, se implementa DTO para entregar solo la info necesaria.
+11. **GET user/infoSession** se agrega middleware de login administrador. permite visualizar la información completa de la session
+12. **GET user/logout** se agrega middleware de login, cierra la session.
+
+    <br/>
+
+Se crearon los siguientes endpoints:
+
+1. **POST /ticket/purchase** crea y persiste en db el ticket comprado
+2. **GET /ticket/** consulta todos los tickets comprados del usuario
+
+<br/>
+Por último se ejecutan los test de funcionamiento desde postman y del chat desde el explorador. 
+<br/>
+Se envía el archivo de variables de entorno de forma privada.
+<br/>
+<br/>
+> inicializar con `npm run dev prod mongo`
