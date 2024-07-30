@@ -8,4 +8,11 @@ export default class TicketDaoMongoDB {
       throw new Error(error);
     }
   };
+  getById = async (id) => {
+    try {
+      return await TicketModel.find({ userId: id });
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
 }

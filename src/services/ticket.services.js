@@ -8,3 +8,10 @@ export const create = async (ticket) => {
     throw new Error(error);
   }
 };
+export const getById = async (id) => {
+  try {
+    return await ticketDao.getById(id);
+  } catch (error) {
+    throw new Error(error);
+  }
+};

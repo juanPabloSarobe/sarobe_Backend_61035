@@ -17,24 +17,9 @@ const ticketSchema = new Schema({
   userId: { type: Schema.Types.ObjectId, ref: "users" },
 });
 
+ticketSchema.pre("find", function () {
+  this.populate("products.product");
+  //this.populate("userId"); se deja por si se quiere popular el usuario, pero no seria necesario implementarlo
+});
+
 export const TicketModel = model("ticket", ticketSchema);
-
-/* import { Schema, model } from "mongoose";
-
-const UserSchema = new Schema({
-  first_name: { type: String, required: true },
-  last_name: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  age: { type: Number },
-  password: { type: String, required: true },
-  role: { type: String, default: "user" },
-  isGithub: { type: Boolean, default: false },
-  cart: { type: Schema.Types.ObjectId, ref: "carts", default: [] },
-});
-
-UserSchema.pre("find", function () {
-  this.populate("cart");
-});
-
-export const UserModel = model("users", UserSchema);
- */

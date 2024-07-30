@@ -7,6 +7,17 @@ import { cleanCart } from "./cart.controllers.js";
 import UserRepository from "../repository/user.repository.js";
 const userRepository = new UserRepository();
 
+export const getTicketById = async (req, res, next) => {
+  try {
+    const userId = req.session.passport?.user;
+    const tickets = await services.getById(userId);
+    if (!tickets) pResp(res, 404, { msg: "bad Request" });
+    pResp(res, 200, tickets);
+  } catch (error) {
+    next(error.message);
+  }
+};
+
 export const create = async (req, res, next) => {
   try {
     const userId = req.session.passport?.user;
