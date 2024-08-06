@@ -14,4 +14,7 @@ router.post("/", [isAuth, isAdmin], controller.create);
 router.put("/:pid", [isAuth, isAdmin], controller.update);
 router.delete("/:pid", [isAuth, isAdmin], controller.remove);
 
+router.get("/mockingproducts/get", controller.getMockingProducts);
+router.post("/mockingproducts", controller.mockingProducts);
+
 export default router;

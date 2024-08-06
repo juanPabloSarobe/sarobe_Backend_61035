@@ -1,10 +1,10 @@
-import { pResp } from "../utils.js";
+import { httpResponse } from "../utils/httpResponse.js";
 
 export const isAdmin = (req, res, next) => {
   try {
     const { role } = req.session?.message;
     if (role !== "admin") {
-      pResp(res, 401, "user administrator only");
+      httpResponse.Unauthorized(res, { role: role }, "administrator role only");
     } else {
       return next();
     }

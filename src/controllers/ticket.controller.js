@@ -1,18 +1,17 @@
 import { v4 as uuidv4 } from "uuid";
 import * as services from "../services/ticket.services.js";
-import { getUserById } from "../services/user.services.js";
 import { getById } from "../services/product.services.js";
-import { pResp } from "../utils.js";
 import { cleanCart } from "./cart.controllers.js";
 import UserRepository from "../repository/user.repository.js";
+import { httpResponse } from "../utils/httpResponse.js";
 const userRepository = new UserRepository();
 
 export const getTicketById = async (req, res, next) => {
   try {
     const userId = req.session.passport?.user;
     const tickets = await services.getById(userId);
-    if (!tickets) pResp(res, 404, { msg: "bad Request" });
-    pResp(res, 200, tickets);
+    if (!tickets) httpResponse.NotFound(res, tickets, "Bad Request");
+    httpResponse.Ok(res, tickets);
   } catch (error) {
     next(error.message);
   }
@@ -48,7 +47,7 @@ export const create = async (req, res, next) => {
         }
       }
     } else {
-      return pResp(res, 404, { msg: "empty cart" });
+      return httpResponse.NotFound(res, cart, "empty cart");
     }
     let preTicket = {
       code,
@@ -61,10 +60,10 @@ export const create = async (req, res, next) => {
 
     const ticket = await services.create(preTicket);
     if (!ticket) {
-      pResp(res, 404, { msg: "Bad Request" });
+      httpResponse.NotFound(res, ticket, "Bad Request");
     } else {
       cleanCart(req, res, next);
-      pResp(res, 200, { ticket: ticket });
+      httpResponse.Ok(res, ticket);
     }
   } catch (error) {
     next(error.message);

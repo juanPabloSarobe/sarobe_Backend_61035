@@ -1,6 +1,7 @@
 import * as service from "../services/product.services.js";
+import { httpResponse } from "../utils/httpResponse.js";
+
 //import { __dirname } from "../utils.js";
-import { pResp } from "../utils.js";
 
 export const getAll = async (req, res, next) => {
   try {
@@ -27,8 +28,8 @@ export const getAll = async (req, res, next) => {
       },
     };
 
-    if (!products) pResp(res, 404, { msg: "product not found" });
-    else pResp(res, 200, response);
+    if (!products) httpResponse.NotFound(res, response, "product not found");
+    else httpResponse.Ok(res, response);
   } catch (error) {
     next(error.message);
   }
@@ -38,10 +39,10 @@ export const getById = async (req, res, next) => {
   try {
     const { pid } = req.params;
     const product = await service.getById(pid);
-    if (!product) pResp(res, 404, { msg: "product not found" });
+    if (!product) httpResponse.NotFound(res, product, "product not found");
     else {
       // testCookies(req, res, product);
-      pResp(res, 200, product);
+      httpResponse.Ok(res, product);
     }
   } catch (error) {
     next(error.message);
@@ -80,8 +81,8 @@ export const getByCategory = async (req, res, next) => {
       },
     };
 
-    if (!products) pResp(res, 404, { msg: "product not found" });
-    else pResp(res, 200, response);
+    if (!products) httpResponse.NotFound(res, response, "product not found");
+    else httpResponse.Ok(res, response);
   } catch (error) {
     next(error.message);
   }
@@ -90,8 +91,8 @@ export const getByCategory = async (req, res, next) => {
 export const create = async (req, res, next) => {
   try {
     const product = await service.create(req.body);
-    if (!product) pResp(res, 404, { msg: "Bad Request" });
-    res.status(201).json(product);
+    if (!product) httpResponse.NotFound(res, product, "Bad Request");
+    httpResponse.Ok(res, product);
   } catch (error) {
     next(error.message);
   }
@@ -101,8 +102,8 @@ export const update = async (req, res, next) => {
     const { pid } = req.params;
 
     const product = await service.update(pid, req.body);
-    if (!product) pResp(res, 404, { msg: "error update products" });
-    else res.status(201).json(product);
+    if (!product) httpResponse.NotFound(res, product, "error update products");
+    else httpResponse.Ok(res, product);
   } catch (error) {
     next(error.message);
   }
@@ -111,8 +112,8 @@ export const remove = async (req, res, next) => {
   try {
     const { pid } = req.params;
     const product = await service.remove(pid);
-    if (!product) pResp(res, 404, { msg: "error removing product" });
-    else res.status(201).json(product);
+    if (!product) httpResponse.NotFound(res, product, "error removing product");
+    else httpResponse.Ok(res, product);
   } catch (error) {
     next(error.message);
   }
@@ -136,4 +137,27 @@ const testCookies = (req, res, product) => {
   console.log(signedCookies); // el servidor recibe una cookie signed desde el front
   //res.clearCookie("product");  // se utiliza para eliminar una cookie, si no sabemos las cookies, utilizamos el metodo Object.keys para obtener los nombres de todas las cookies
   //Fin test cookies
+};
+
+export const mockingProducts = async (req, res, next) => {
+  try {
+    const { cant } = req.query;
+    const product = await service.mockingProducts(cant);
+    if (!product) httpResponse.NotFound(res, product, "Bad Request");
+    httpResponse.Ok(res, product);
+  } catch (error) {
+    console.log("Creation error", error);
+    next(error);
+  }
+};
+
+export const getMockingProducts = async (req, res, next) => {
+  try {
+    const product = await service.getMockingProducts();
+
+    if (!product) httpResponse.NotFound(res, product, "Bad Request");
+    httpResponse.Ok(res, product);
+  } catch (error) {
+    next(error);
+  }
 };

@@ -84,6 +84,7 @@ export default class ProductDaoFS {
           stock,
           category,
           status: true,
+          faker,
         };
 
         products.push(product);

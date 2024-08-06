@@ -24,7 +24,8 @@ const login = async (req, email, password, done) => {
   try {
     const userLogin = await services.login({ email, password });
     if (!userLogin) {
-      req.session.destroy();
+      //req.session.destroy();
+      console.log("ates del done");
       return done(null, false, { message: "Autentication Denied" });
     }
     return done(null, userLogin);

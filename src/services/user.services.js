@@ -1,5 +1,5 @@
 //import UserDao from "../daos/mongodb/user.dao.js";
-import { createHash, isValidPassword } from "../utils.js";
+import { createHash, isValidPassword } from "../utils/utils.js";
 import persistence from "../daos/factory.js";
 const { userDao, cartDao } = persistence;
 import UserRepository from "../repository/user.repository.js";
@@ -33,6 +33,7 @@ export const login = async ({ email, password }) => {
     const userExist = await userDao.login(email);
     if (!userExist) return null;
     const passValid = isValidPassword(password, userExist.password);
+    console.log("not valid password");
     if (!passValid) return null;
     return userExist;
   } catch (error) {

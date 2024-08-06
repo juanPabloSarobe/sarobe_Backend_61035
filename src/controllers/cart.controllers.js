@@ -1,12 +1,12 @@
 import * as service from "../services/cart.services.js";
-import { pResp } from "../utils.js";
 import UserRepository from "../repository/user.repository.js";
+import { httpResponse } from "../utils/httpResponse.js";
 const userRepository = new UserRepository();
 
 export const getAll = async (req, res, next) => {
   try {
     const carts = await service.getAll();
-    pResp(res, 200, carts);
+    httpResponse.Ok(res, carts);
   } catch (error) {
     next(error.message);
   }
@@ -16,8 +16,8 @@ export const getById = async (req, res, next) => {
   try {
     const cid = req.session?.message?.cart;
     const cart = await service.getById(cid);
-    if (!cart) pResp(res, 404, { msg: "cart not found" });
-    else pResp(res, 200, cart);
+    if (!cart) httpResponse.NotFound(res, cart, "cart not found");
+    else httpResponse.Ok(res, cart);
   } catch (error) {
     next(error.message);
   }
@@ -26,8 +26,8 @@ export const getById = async (req, res, next) => {
 export const create = async (req, res, next) => {
   try {
     const cart = await service.create(req.body);
-    if (!cart) pResp(res, 404, { msg: "Bad request" });
-    pResp(res, 200, cart);
+    if (!cart) httpResponse.NotFound(res, cart, "bad request");
+    httpResponse.Ok(res, cart);
   } catch (error) {
     next(error.message);
   }
@@ -39,8 +39,8 @@ export const addProduct = async (req, res, next) => {
     let { quantity } = req.body;
     if (!quantity) quantity = 1;
     const cart = await service.addProduct(cid, pid, quantity);
-    if (!cart) pResp(res, 404, { msg: "Bad request" });
-    pResp(res, 200, cart);
+    if (!cart) httpResponse.NotFound(res, cart, "bad request");
+    httpResponse.Ok(res, cart);
   } catch (error) {
     next(error.message);
   }
@@ -51,8 +51,8 @@ export const delProduct = async (req, res, next) => {
     const cid = req.session?.message?.cart;
     const { pid } = req.params;
     const cart = await service.delProduct(cid, pid);
-    if (!cart) pResp(res, 404, { msg: "Bad request" });
-    pResp(res, 200, cart);
+    if (!cart) httpResponse.NotFound(res, cart, "bad request");
+    httpResponse.Ok(res, cart);
   } catch (error) {
     next(error.message);
   }
@@ -61,10 +61,10 @@ export const delProduct = async (req, res, next) => {
 export const remove = async (req, res, next) => {
   try {
     const cid = req.session?.message?.cart;
-    return pResp(res, 404, { msg: "delete function disabled" });
-    const cart = await service.remove(cid);
-    if (!cart) res.status(404).json({ msj: "Error removing cart" });
-    else pResp(res, 201, cart);
+    return httpResponse.NotFound(res, cid, "delete function disabled");
+    /*  const cart = await service.remove(cid);
+    if (!cart) httpResponse.NotFound(res, cart, "Error removing cart");
+    else httpResponse.Ok(res, cart); */
   } catch (error) {
     next(error.message);
   }
@@ -73,24 +73,9 @@ export const cleanCart = async (req, res, next) => {
   try {
     const cid = req.session?.message?.cart;
     const cart = await service.cleanCart(cid);
-    if (!cart) res.status(404).json({ msj: "Error cleaning cart" });
-    else pResp(res, 201, cart);
+    if (!cart) httpResponse.NotFound(res, cart, "Error cleaning cart");
+    else httpResponse.Ok(res, cart);
   } catch (error) {
     next(error.message);
   }
 };
-/* const updateResp = async (req, res, next) => {
-  try {
-    const userId = req.session.passport?.user;
-    if (userId) {
-      const user = await userRepository.getUserById(userId);
-      console.log("UserController:", user.cart);
-      req.session.message = user;
-      console.log("req.session.message.cart = ", req.session.message.cart);
-    } else {
-      pResp(res, 404, { msg: "User not logued" });
-    }
-  } catch (error) {
-    next(error);
-  }
-}; */

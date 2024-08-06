@@ -1,5 +1,6 @@
+import { httpResponse } from "../utils/httpResponse.js";
 export const errorHandler = (error, req, res, next) => {
-  console.log(`error ${error.message} ${error.status}`);
-  const status = error.status || 500;
-  res.status(status).send(error.message);
+  const status = error.stack || 500;
+
+  httpResponse.ServerError(res, error.message);
 };

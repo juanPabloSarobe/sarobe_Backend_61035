@@ -1,4 +1,4 @@
-import { pResp } from "../utils.js";
+import { httpResponse } from "../utils/httpResponse.js";
 
 export const validateLogin = (req, res, next) => {
   if (req.session?.info?.loggedIn === undefined) {
@@ -26,5 +26,5 @@ export const isNotAuth = (req, res, next) => {
 
 export const isAuth = (req, res, next) => {
   if (req.isAuthenticated()) return next();
-  pResp(res, 401, { msg: "Please login first" });
+  httpResponse.Forbidden(res, "", "Please login first");
 };

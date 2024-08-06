@@ -1,6 +1,7 @@
 // import ProductDaoMongoDB from "../daos/mongodb/product.dao.js";
 // const productDao = new ProductDaoMongoDB();
 import persistence from "../daos/factory.js";
+import { generateProduct } from "../utils/utils.js";
 const { prodDao } = persistence;
 
 export const getAll = async (title, page, limit, sort) => {
@@ -55,6 +56,27 @@ export const update = async (id, product) => {
 export const remove = async (id) => {
   try {
     return await prodDao.delete(id);
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+export const mockingProducts = async (cant = 50) => {
+  try {
+    const productsArray = [];
+    for (let i = 0; i < cant; i++) {
+      const product = generateProduct();
+      productsArray.push(product);
+    }
+    return await prodDao.create(productsArray);
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+export const getMockingProducts = async () => {
+  try {
+    return await prodDao.getMockingProducts();
   } catch (error) {
     throw new Error(error);
   }

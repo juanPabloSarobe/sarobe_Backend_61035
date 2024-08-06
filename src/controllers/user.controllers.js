@@ -1,5 +1,6 @@
 import * as services from "../services/user.services.js";
-import { isValidPassword, pResp } from "../utils.js";
+import { httpResponse } from "../utils/httpResponse.js";
+import { isValidPassword } from "../utils/utils.js";
 
 export const register = async (req, res, next) => {
   try {
@@ -10,13 +11,14 @@ export const register = async (req, res, next) => {
 };
 export const login = async (req, res, next) => {
   try {
+    console.log("despues del DONE");
     let id = null;
     if (req.session.passport && req.session.passport.user)
       id = req.session.passport.user;
     const user = await services.getUserById(id);
     if (!user) {
       req.session.error = "Usuario o mail incorrecto";
-      pResp(req, 404, req.session.error);
+      httpResponse.NotFound(res, user, req.session.error);
     } else {
       const { first_name, last_name, email, age, role, cart } = user;
 
@@ -28,7 +30,7 @@ export const login = async (req, res, next) => {
         loggedIn: true,
         contador: 1,
       };
-      pResp(res, 200, req.session);
+      httpResponse.Ok(res, req.session);
     }
   } catch (error) {
     next(error.message);
@@ -47,7 +49,7 @@ export const infoSession = async (req, res, next) => {
     };
     req.session.message = message.msg;
   }
-  pResp(res, 200, {
+  httpResponse.Ok(res, {
     session: req.session,
     sessionId: req.sessionID,
     cookies: req.cookies,
@@ -59,7 +61,7 @@ export const logout = async (req, res, next) => {
   //res.clearCookie("product"); para eliminar cookies
   req.session.destroy();
 
-  pResp(res, 200, { msj: "session cerrada correctamente" });
+  httpResponse.Ok(res, "", "session cerrada correctamente");
 
   // res.redirect("/api/vistas");
 };
@@ -75,7 +77,7 @@ export const githubResponse = async (req, res, next) => {
       loggedIn: true,
       contador: 1,
     };
-    pResp(res, 200, req.session);
+    httpResponse.Ok(res, req.session);
     //res.redirect("/api/vistas/products?limit=3&page=1");
   } catch (error) {
     next(error);
@@ -89,9 +91,9 @@ export const current = async (req, res, next) => {
       const user = await services.getUserById(userId);
       console.log("UserController:", user);
       req.session.message = user;
-      pResp(res, 200, user);
+      httpResponse.Ok(res, user);
     } else {
-      pResp(res, 404, { msg: "User not logued" });
+      httpResponse.Unauthorized(res, user, "User not logued");
     }
   } catch (error) {
     next(error);
