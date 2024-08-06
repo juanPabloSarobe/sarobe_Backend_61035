@@ -11,7 +11,6 @@ export const register = async (req, res, next) => {
 };
 export const login = async (req, res, next) => {
   try {
-    console.log("despues del DONE");
     let id = null;
     if (req.session.passport && req.session.passport.user)
       id = req.session.passport.user;
@@ -89,7 +88,6 @@ export const current = async (req, res, next) => {
     const userId = req.session.passport?.user;
     if (userId) {
       const user = await services.getUserById(userId);
-      console.log("UserController:", user);
       req.session.message = user;
       httpResponse.Ok(res, user);
     } else {

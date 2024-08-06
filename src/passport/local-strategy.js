@@ -15,7 +15,6 @@ const signUp = async (req, email, password, done) => {
     const newUser = await services.register(req.body);
     return done(null, newUser);
   } catch (error) {
-    console.log(error);
     return done(error);
   }
 };
@@ -24,13 +23,12 @@ const login = async (req, email, password, done) => {
   try {
     const userLogin = await services.login({ email, password });
     if (!userLogin) {
-      //req.session.destroy();
-      console.log("ates del done");
+      req.session.destroy();
+
       return done(null, false, { message: "Autentication Denied" });
     }
     return done(null, userLogin);
   } catch (error) {
-    console.log(error);
     return done(error);
   }
 };

@@ -357,3 +357,18 @@ Se envía el archivo de variables de entorno de forma privada.
 
 **User Manager API** https://documenter.getpostman.com/view/11511543/2sA3kbexfK
 <br/>
+
+## Desafío clase 32
+
+Se implementa el modulo de mocking de productos, el cua recibe por parámetro la cantidad de productos a insertar. Se modifico el product. model para que tenga un campo mas llamado faker, de forma de poder filtrar los mockups.
+Se creo un manejador de errores con un diccionario, el cual admite 2 lenguajes de respuesta, español e ingles, los cuales recibe desde el factory al levantar el servidor, en aso de no recibir nada toma el valor por defecto del archivo .env. También realiza una verificación que el parámetro enviado sea correcto, en caso contrario utiliza el idioma por default.
+Se reemplazaron todas las respuestas personalizadas, por las nuevas httpResponse, con manejador de errores y diccionario. tanto en los endpoints, como en los middleware.
+
+Se cargan los datos default nuevos en el archivo .env .
+
+<br/>
+Por último se ejecutan los test de funcionamiento desde postman y desde el explorador.
+<br/>
+Se envía el archivo de variables de entorno de forma privada.
+<br/>
+<br/>

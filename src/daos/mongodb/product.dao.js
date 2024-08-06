@@ -93,7 +93,6 @@ export default class ProductDaoMongoDB {
 
   getMockingProducts = async () => {
     try {
-      console.log("dao");
       return await ProductModel.find({ faker: true });
     } catch (error) {
       throw new Error(error);
