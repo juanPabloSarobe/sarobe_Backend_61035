@@ -14,6 +14,7 @@ import "./passport/local-strategy.js";
 import "./passport/github-strategy.js";
 import MainRouter from "./routes/routes.js";
 import config from "../config.js";
+import { logger } from "./utils/logger.js";
 const mainRouter = new MainRouter();
 
 const products = new ProductsManager();
@@ -64,22 +65,22 @@ app.use(errorHandler);
 
 const PORT = config.PORT;
 const httpServer = app.listen(PORT, () =>
-  console.log(
-    `Server ok en puerto ${PORT} in ${config.NODE_ENV} mode whit persistence in ${config.PERSISTENCE}`
+  logger.info(
+    `Server ok en puerto ${PORT} in ${config.NODE_ENV} mode whit persistence in ${config.PERSISTENCE}, LANGUAGE = ${config.LANGUAGE}`
   )
 );
 
 const socketServer = new Server(httpServer);
 
 socketServer.on("connection", async (socket) => {
-  console.log(`Usuario ${socket.id} conectado`);
+  logger.info(`Usuario ${socket.id} conectado`);
   socket.on("disconnect", () => {
-    console.log(`usuario ${socket.id} desconectado`);
+    logger.info(`usuario ${socket.id} desconectado`);
   });
   socketServer.emit("messages", await messageManager.getAllMongo());
 
   socket.on("newUser", (user) => {
-    console.log(`> ${user} ha iniciado sesión`);
+    logger.info(`> ${user} ha iniciado sesión`);
     socket.broadcast.emit("newUser", user);
   });
 

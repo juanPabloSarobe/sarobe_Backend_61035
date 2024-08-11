@@ -1,5 +1,6 @@
 import * as service from "../services/product.services.js";
 import { httpResponse } from "../utils/httpResponse.js";
+import { logger } from "../utils/logger.js";
 
 //import { __dirname } from "../utils.js";
 
@@ -120,7 +121,8 @@ export const remove = async (req, res, next) => {
 };
 
 const testCookies = (req, res, product) => {
-  console.log(product);
+  logger.info(product);
+
   //Test de cookies
   //con el response (res) las seteamos y con request (req) las obtenemos
   res.cookie("product", product.title); // El servidor almacena una cookie en el front
@@ -131,10 +133,10 @@ const testCookies = (req, res, product) => {
     httpOnly: true,
   }); // El servidor almacena una cookie en el front
   const cookies = req.cookies;
-  console.log("Galletas: ", cookies); // el servidor recibe una cookie desde el front
+  logger.info(`Galletas:  ${cookies}`); // el servidor recibe una cookie desde el front
   res.cookie;
   const signedCookies = req.signedCookies;
-  console.log(signedCookies); // el servidor recibe una cookie signed desde el front
+  logger.info(signedCookies); // el servidor recibe una cookie signed desde el front
   //res.clearCookie("product");  // se utiliza para eliminar una cookie, si no sabemos las cookies, utilizamos el metodo Object.keys para obtener los nombres de todas las cookies
   //Fin test cookies
 };
@@ -146,7 +148,7 @@ export const mockingProducts = async (req, res, next) => {
     if (!product) httpResponse.NotFound(res, product, "Bad Request");
     httpResponse.Ok(res, product);
   } catch (error) {
-    console.log("Creation error", error);
+    logger.error(`Creation error: ${error}`);
     next(error);
   }
 };

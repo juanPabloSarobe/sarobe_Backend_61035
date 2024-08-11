@@ -1,4 +1,5 @@
 import { httpResponse } from "../utils/httpResponse.js";
+import { logger } from "../utils/logger.js";
 
 export const validateLogin = (req, res, next) => {
   if (req.session?.info?.loggedIn === undefined) {
@@ -26,5 +27,6 @@ export const isNotAuth = (req, res, next) => {
 
 export const isAuth = (req, res, next) => {
   if (req.isAuthenticated()) return next();
+  logger.warning(`attempted access without registration`);
   httpResponse.Forbidden(res, "", "Please login first");
 };

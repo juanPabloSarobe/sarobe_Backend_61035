@@ -1,3 +1,4 @@
+import { logger } from "../../utils/logger.js";
 import { ProductModel } from "./models/product.model.js";
 
 export default class ProductDaoMongoDB {

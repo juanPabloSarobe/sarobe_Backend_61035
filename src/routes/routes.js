@@ -5,6 +5,7 @@ import cartRouter from "./carts.router.js";
 import viewsRouter from "./views.router.js";
 import chatsRouter from "./chats.router.js";
 import ticketRouter from "./ticket.router.js";
+import loggerRouter from "./logger.router.js";
 
 export default class MainRouter {
   constructor() {
@@ -19,6 +20,7 @@ export default class MainRouter {
     this.router.use("/vistas", viewsRouter);
     this.router.use("/chats", chatsRouter);
     this.router.use("/ticket", ticketRouter);
+    this.router.use("/logger", loggerRouter);
   }
 
   getRouter() {

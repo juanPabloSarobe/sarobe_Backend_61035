@@ -1,4 +1,5 @@
 import config from "../../config.js";
+import { logger } from "./logger.js";
 
 const language = config.LANGUAGE;
 
@@ -44,47 +45,55 @@ export class HttpResponse {
   }
 
   NotFound(res, data, msg = "") {
-    return res.status(HttpStatus.NOT_FOUND).json({
+    const status = {
       status: HttpStatus.NOT_FOUND,
       message: {
         system: errorsDictionary[this.lang].NOT_FOUND,
         custom: msg,
       },
       data,
-    });
+    };
+    logger.info(JSON.stringify(status));
+    return res.status(HttpStatus.NOT_FOUND).json(status);
   }
 
   Unauthorized(res, data, msg = "") {
-    return res.status(HttpStatus.UNAUTHORIZED).json({
+    const status = {
       status: HttpStatus.UNAUTHORIZED,
       message: {
         system: errorsDictionary[this.lang].UNAUTHORIZED,
         custom: msg,
       },
       error: data,
-    });
+    };
+    logger.info(JSON.stringify(status));
+    return res.status(HttpStatus.UNAUTHORIZED).json(status);
   }
 
   Forbidden(res, data, msg = "") {
-    return res.status(HttpStatus.FORBIDDEN).json({
+    const status = {
       status: HttpStatus.FORBIDDEN,
       message: {
         system: errorsDictionary[this.lang].FORBIDDEN,
         custom: msg,
       },
       error: data,
-    });
+    };
+    logger.warning(JSON.stringify(status));
+    return res.status(HttpStatus.FORBIDDEN).json(status);
   }
 
   ServerError(res, data, msg = "") {
-    return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
+    const status = {
       status: HttpStatus.INTERNAL_SERVER_ERROR,
       message: {
         system: errorsDictionary[this.lang].INTERNAL_SERVER_ERROR,
         custom: msg,
       },
       error: data,
-    });
+    };
+    logger.error(JSON.stringify(status));
+    return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json(status);
   }
 }
 

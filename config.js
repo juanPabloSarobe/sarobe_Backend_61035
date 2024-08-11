@@ -1,7 +1,10 @@
 import dotenv from "dotenv";
 import "dotenv/config";
 
-const ENV = process.argv.slice(2)[0]; //si quiero tener multiples .env para distintos entornos
+const ENV =
+  process.argv.slice(2)[0] === "prod"
+    ? process.argv.slice(2)[0]
+    : process.env.ENV; //si quiero tener multiples .env para distintos entornos
 const PERSISTENCE = process.argv.slice(2)[1];
 const languagesAvailable = process.env.LANGUAGESAVAILABLE;
 const LANGUAGE = languagesAvailable.includes(process.argv.slice(2)[2])
@@ -18,7 +21,3 @@ export default {
   PERSISTENCE: PERSISTENCE,
   LANGUAGE: LANGUAGE,
 };
-
-(() => {
-  console.log("LANGUAGE =", LANGUAGE);
-})();
