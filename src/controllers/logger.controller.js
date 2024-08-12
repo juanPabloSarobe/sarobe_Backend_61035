@@ -7,6 +7,8 @@ export const loggerTest = async (req, res, next) => {
     logger.error("logger test error");
     logger.warning("logger test warning");
     logger.info("logger test info");
+    logger.http("logger test http");
+    logger.debug("logger test debug");
     httpResponse.Ok(res, "LoggerTest ejecutado");
   } catch (error) {
     throw new Error(error);

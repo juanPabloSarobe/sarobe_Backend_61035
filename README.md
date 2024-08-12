@@ -374,3 +374,36 @@ Por último se ejecutan los test de funcionamiento desde postman y desde el expl
 Se envía el archivo de variables de entorno de forma privada.
 <br/>
 <br/>
+
+<br/>
+
+## Desafío clase 34
+
+Se implementa el modulo de logger con winston, el cual permite almacenar los errores en un archivo de log.
+Se construye el logger. js utilizando la estructura existente de factory, el cual verifica el entorno que se provee al iniciar el servidor. Si al iniciar el servidor se utiliza el entorno de producción, utiliza una configuración especifica que ademas de mostrar en consola, almacena los datos completos en el archivo error.log, en caso contrario solo muestra por consola.
+
+Se combinó el modulo logger con el httpResponse, por lo cual en caso de cualquier tipo de error que se produzca en producción se almacene en el log.
+
+También se incluyo el logger, en el handles de errores, para dejar registro du cualquier error no controlado que se produzca.
+
+En los middleware de login e isAdmin, también se utiliza para dejar registro en caso de errores.
+Se cargan los datos default nuevos en el archivo .env .
+
+Se crearon los siguientes endpoints:
+
+1. **GET /logger** ejecuta una función de testing de logger. Para poder acceder a los log se debe estar logueado con permisos de administrador.
+
+<br/>
+Por último se ejecutan los test de funcionamiento desde postman y desde el explorador.
+<br/>
+Se envía el archivo de variables de entorno de forma privada.
+<br/>
+<br/>
+
+**User Manager API** https://documenter.getpostman.com/view/11511543/2sA3kbexfK
+
+**User Manager API** https://documenter.getpostman.com/view/11511543/2sA3s3JWzp
+<br/>
+<br/>
+
+<br/>
