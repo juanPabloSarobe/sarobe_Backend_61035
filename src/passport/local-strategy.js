@@ -14,7 +14,6 @@ const signUp = async (req, email, password, done) => {
     const user = await services.getUserByEmail(email);
     if (user) return done(null, false, { msg: "User already exists" });
     const newUser = await services.register(req.body);
-    sendGmail();
     return done(null, newUser);
   } catch (error) {
     return done(error);

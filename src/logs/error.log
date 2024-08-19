@@ -929,3 +929,91 @@ info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:21:29.839Z"}
 info: Password restore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T02:21:40.681Z"}
 info: tu password ha sido actualizado correctamente,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T02:21:48.169Z"}
 info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T02:21:58.627Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:43:14.705Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:43:15.510Z"}
+error: res is not defined {"timestamp":"2024-08-19T02:43:34.650Z"}
+error: {"status":500,"message":{"system":"error Interno del servidor","custom":{}},"error":"res is not defined"} {"timestamp":"2024-08-19T02:43:34.651Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:44:32.114Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:44:32.904Z"}
+error: res is not defined {"timestamp":"2024-08-19T02:44:51.024Z"}
+error: {"status":500,"message":{"system":"error Interno del servidor","custom":{}},"error":"res is not defined"} {"timestamp":"2024-08-19T02:44:51.024Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:44:58.315Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:44:59.187Z"}
+error: Cannot read properties of undefined (reading 'email') {"timestamp":"2024-08-19T02:45:09.576Z"}
+error: {"status":500,"message":{"system":"error Interno del servidor","custom":{}},"error":"Cannot read properties of undefined (reading 'email')"} {"timestamp":"2024-08-19T02:45:09.577Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:46:20.457Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:46:21.288Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:46:38.719Z"}
+error: {"status":500,"message":{"system":"error Interno del servidor","custom":{}},"error":"Error: TypeError: Cannot read properties of null (reading 'first_name')"} {"timestamp":"2024-08-19T02:46:38.720Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:47:43.319Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:47:44.197Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:47:51.598Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:48:50.908Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:48:51.671Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:48:52.961Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:49:29.783Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:49:30.586Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:49:44.018Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:51:35.917Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:51:36.747Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T02:51:42.196Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:16.439Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:18.857Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:19.874Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:20.704Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:21.533Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:22.374Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:23.192Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:24.036Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:52:32.001Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:52:32.784Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:36.111Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:37.345Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:38.117Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:38.873Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:52:52.182Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:52:53.012Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:52:56.780Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:53:35.693Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:53:43.900Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:53:44.682Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:53:48.905Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:53:53.180Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:53:53.987Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:55:09.390Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:55:10.183Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:55:15.675Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:55:27.048Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:55:48.515Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:56:22.591Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:56:32.701Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:56:33.512Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:56:37.120Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T02:57:13.858Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T02:57:14.623Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-19T02:57:24.330Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-08-19T02:58:42.698Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T02:59:07.835Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["pp4@mail.com"]} {"timestamp":"2024-08-19T02:59:18.187Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T02:59:50.844Z"}
+info: Password restore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T03:00:13.318Z"}
+info: {"status":401,"message":{"system":"No autorizado","custom":""},"error":"you can not repeat a password"} {"timestamp":"2024-08-19T03:00:21.066Z"}
+info: tu password ha sido actualizado correctamente,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T03:00:29.441Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe3@gmail.com"]} {"timestamp":"2024-08-19T03:00:53.000Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T03:01:21.479Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T03:01:22.328Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T03:01:32.743Z"}
+info: Password restore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T03:01:39.975Z"}
+info: tu password ha sido actualizado correctamente,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T03:01:47.910Z"}
+error: newUser is not defined {"timestamp":"2024-08-19T03:02:00.811Z"}
+error: newUser is not defined {"timestamp":"2024-08-19T03:02:06.553Z"}
+error: newUser is not defined {"timestamp":"2024-08-19T03:02:17.575Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T03:03:40.722Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T03:03:41.626Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe4@gmail.com"]} {"timestamp":"2024-08-19T03:03:54.014Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T03:05:53.596Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T03:06:35.927Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T03:06:36.767Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-19T03:07:05.886Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-19T03:07:34.302Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-19T03:07:35.144Z"}

@@ -36,21 +36,6 @@ const emailType = {
   },
 };
 
-export const current = async (req, res, next) => {
-  try {
-    const userId = req.session.passport?.user;
-    if (userId) {
-      const user = await services.getUserById(userId);
-      req.session.message = user;
-      httpResponse.Ok(res, user);
-    } else {
-      httpResponse.Unauthorized(res, user, "User not logued");
-    }
-  } catch (error) {
-    next(error);
-  }
-};
-
 export const sendGmail = async (req, res, next) => {
   try {
     const user = req.session?.message;
@@ -70,7 +55,6 @@ export const sendGmail = async (req, res, next) => {
     logger.info(
       `${gmailOptions.subject},  ${JSON.stringify(response.envelope)}`
     );
-    //httpResponse.Ok(res, response, "email sending ok");
   } catch (error) {
     next(error);
   }

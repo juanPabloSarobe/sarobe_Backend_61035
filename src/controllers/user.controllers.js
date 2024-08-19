@@ -7,9 +7,16 @@ const { userDao } = persistence;
 
 export const register = async (req, res, next) => {
   try {
-    req.session.emailType = "register";
-    sendGmail(req, res, next);
-    current(req, res, next);
+    const userId = req.session.passport?.user;
+    if (userId) {
+      const user = await services.getUserById(userId);
+      req.session.message = user;
+      req.session.emailType = "register";
+      await sendGmail(req, res, next);
+      httpResponse.Ok(res, user);
+    } else {
+      httpResponse.Unauthorized(res, user, "User not logued");
+    }
   } catch (error) {
     next(error.message);
   }
