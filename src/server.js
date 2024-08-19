@@ -5,7 +5,6 @@ import { Server } from "socket.io";
 import { errorHandler } from "./middlewares/errorHandler.js";
 import ProductsManager from "./daos/mongodb/product.dao.js";
 import * as messageManager from "./services/chat.services.js";
-import "dotenv/config";
 import cookieParser from "cookie-parser";
 import session from "express-session";
 import MongoStore from "connect-mongo";
@@ -21,7 +20,7 @@ const products = new ProductsManager();
 const app = express();
 
 //iniciamos el middleware de cookie parser
-const SECRET = process.env.COOKIE_KEY;
+const SECRET = config.COOKIE_KEY;
 app.use(cookieParser(SECRET)); //con esto queda disponible para utilizar en cualquier parte de la app
 //fin inicio cookie parser
 
@@ -31,8 +30,8 @@ app.use(express.urlencoded({ extended: true }));
 
 //Iniciamos la libreria express-sessions, es un middleware a nivel de aplicacion
 // para utilizar cookies en sesiones debemos inicializar cookiesParser antes.
-const SESSIONSECRET = process.env.SESSION_KEY;
-const connectionString = process.env.MONGO_URL;
+const SESSIONSECRET = config.SESSION_KEY;
+const connectionString = config.MONGO_URL;
 //para conectarnos a mongo loinicializamos con MongoStore.create y le pasamos los datos de configuracion
 const sessionConfig = {
   store: MongoStore.create({

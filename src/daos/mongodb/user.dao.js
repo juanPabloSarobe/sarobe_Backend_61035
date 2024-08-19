@@ -27,4 +27,16 @@ export default class UserDao {
       throw new Error(error);
     }
   };
+  resetPassword = async (id, newPass) => {
+    try {
+      const resp = await UserModel.findByIdAndUpdate(
+        id,
+        { password: newPass },
+        { new: true }
+      );
+      return resp;
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
 }

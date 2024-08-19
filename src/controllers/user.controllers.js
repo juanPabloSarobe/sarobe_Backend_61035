@@ -1,9 +1,14 @@
 import * as services from "../services/user.services.js";
 import { httpResponse } from "../utils/httpResponse.js";
-import { isValidPassword } from "../utils/utils.js";
+import { createHash, isValidPassword } from "../utils/utils.js";
+import { sendGmail } from "./email.controllers.js";
+import persistence from "../daos/factory.js";
+const { userDao } = persistence;
 
 export const register = async (req, res, next) => {
   try {
+    req.session.emailType = "register";
+    sendGmail(req, res, next);
     current(req, res, next);
   } catch (error) {
     next(error.message);
@@ -29,6 +34,8 @@ export const login = async (req, res, next) => {
         loggedIn: true,
         contador: 1,
       };
+      req.session.emailType = "login";
+      sendGmail(req, res, next);
       httpResponse.Ok(res, req.session);
     }
   } catch (error) {
@@ -93,6 +100,55 @@ export const current = async (req, res, next) => {
     } else {
       httpResponse.Unauthorized(res, user, "User not logued");
     }
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const sendResetPassMail = async (req, res, next) => {
+  try {
+    const token = createHash("hola");
+    const user = req.session?.message;
+    res.cookie("token", token, { maxAge: 60000 });
+    req.session.emailType = "reset";
+    sendGmail(req, res, next);
+    httpResponse.Ok(res, "cookie generada");
+  } catch (error) {
+    next(error);
+  }
+};
+export const getCookie = async (req, res, next) => {
+  try {
+    //const user = req.session.message;
+    const { token } = req.cookies;
+    if (!token)
+      return httpResponse.Forbidden(res, "Token expires, get a new token");
+    return httpResponse.Ok(res, token);
+  } catch (error) {
+    next(error);
+  }
+};
+export const updatePass = async (req, res, next) => {
+  try {
+    const id = req.session?.passport?.user;
+    const { token } = req.cookies;
+    if (!token)
+      return httpResponse.Forbidden(res, "Token expires, get a new token");
+
+    const user = await userDao.getById(id);
+    const { password } = user;
+    const { newPassword } = req.body;
+    const samePass = isValidPassword(newPassword, password);
+
+    if (samePass)
+      return httpResponse.Unauthorized(res, "you can not repeat a password");
+
+    const hashPass = createHash(newPassword);
+    const resp = await services.resetPassword(id, hashPass);
+    res.clearCookie("token");
+    req.session.emailType = "passwordRestored";
+    sendGmail(req, res, next);
+    return httpResponse.Ok(res, resp);
   } catch (error) {
     next(error);
   }

@@ -1,6 +1,7 @@
 import * as services from "../services/user.services.js";
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
+import { sendGmail } from "../controllers/email.controllers.js";
 
 const strategyConfig = {
   usernameField: "email",
@@ -13,6 +14,7 @@ const signUp = async (req, email, password, done) => {
     const user = await services.getUserByEmail(email);
     if (user) return done(null, false, { msg: "User already exists" });
     const newUser = await services.register(req.body);
+    sendGmail();
     return done(null, newUser);
   } catch (error) {
     return done(error);
@@ -24,7 +26,6 @@ const login = async (req, email, password, done) => {
     const userLogin = await services.login({ email, password });
     if (!userLogin) {
       req.session.destroy();
-
       return done(null, false, { message: "Autentication Denied" });
     }
     return done(null, userLogin);

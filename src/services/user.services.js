@@ -53,3 +53,11 @@ export const getUserByEmail = async (email) => {
     throw new Error(error);
   }
 };
+
+export const resetPassword = async (id, newPass) => {
+  try {
+    return await userDao.resetPassword(id, newPass);
+  } catch (error) {
+    throw new Error(error);
+  }
+};

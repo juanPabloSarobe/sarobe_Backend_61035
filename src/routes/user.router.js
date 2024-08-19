@@ -27,4 +27,8 @@ router.get(
   controller.githubResponse
 );
 
+router.get("/send-reset-mail", [isAuth], controller.sendResetPassMail);
+router.get("/getCookie", [isAuth], controller.getCookie);
+router.patch("/update-password", [isAuth], controller.updatePass);
+
 export default router;

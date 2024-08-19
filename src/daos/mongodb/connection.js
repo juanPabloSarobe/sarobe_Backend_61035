@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
-import "dotenv/config";
 import { logger } from "../../utils/logger.js";
+import config from "../../../config.js";
 
-const connectionString = process.env.MONGO_URL || "mongodb://localhost:27017/";
+const connectionString = config.MONGO_URL || "mongodb://localhost:27017/";
 
 export const initMongoDB = async () => {
   try {
