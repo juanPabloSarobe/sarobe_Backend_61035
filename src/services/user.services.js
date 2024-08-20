@@ -8,10 +8,17 @@ const userRepository = new UserRepository();
 export const register = async (userData) => {
   try {
     const { email, password } = userData;
+    console.log(userData.role);
     const existUser = await getUserByEmail(email);
     if (!existUser) {
       const cartUser = await cartDao.create();
-      const role = email === "adminCoder@coder.com" ? "admin" : "user";
+      const role =
+        email === "adminCoder@coder.com"
+          ? "admin"
+          : userData.role === "premium"
+          ? "premium"
+          : "user";
+
       const userHashed = {
         ...userData,
         role,

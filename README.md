@@ -407,3 +407,63 @@ Se envía el archivo de variables de entorno de forma privada.
 <br/>
 
 <br/>
+
+## Tercera Practica Integradora (clase 37)
+
+Se implementa el modulo de envío de emails, mediante nodemailer. Para ello se crea el servicio email.services.js el cual contiene la configuración de los datos de conexión. En el controller se crea un único método que permite ser reutilizado para enviar distintos tipos de mails, el cual se basa en diferentes plantillas html, en función de lo que se quiera comunicar y en un objeto con los datos de configuración extras del mail que nos permite cambiar el contenido completo del mismo. Asi desde cualquier lugar de la aplicación, seteando el tipo de mail que queremos enviar en el req.session, podemos personalizar la comunicación.
+
+Se crearon plantillas para el register de usuarios, el login, el envío de mail para reset de password y el propio cambio del mismo. También envía la confirmación cuando un usuario cambia alguno de sus datos personales o pasa de usuario user a premium o viceversa.
+
+Se creo un endpoint que genera el envío de un mail con el link a un nuevo endpoint, ademas este establece una cookie llamada token con expiración de una hora (1 minuto para testing), si al ingresar al endpoint update-password no encuentra la cookie token, la contraseña no puede ser restablecida. Caso contrario actualiza la misma en la base de datos, previa validación que no sea igual a la anterior.
+
+Por otro lado se modifico el schema de productos para que reciba un campo owner, que utiliza el id de usuario para hacer referencia que ese producto le pertenece.
+También se implemento un nuevo rol llamado premium.
+Al momento de dar de alta un nuevo usuario si recibe por body el rol premium, directamente lo crea como usuario premium. Caso contrario se crea como user.
+Se actualizaron todos los productos para que tengan un owner, ya sean users premium o el admin. Se creo un endpoint que permite actualizar los datos de los usuarios, pero solo los que no son críticos, (ya que por ejemplo el password, mail, cart, etc tienen tratamientos diferentes). Respecto al cambio de rol, se creo un endpoint que verifica si el usuario es user, lo cambia automáticamente a premium y viceversa.
+
+Se implementa un nuevo middleware que verifica si es admin o premium para permitir las funciones de alta, modificación y eliminación de productos.
+
+Se cambia la lógica al momento de agregar productos al carrito, para que no permita agregar los de su propio dueño.
+
+<br/>
+<br/>
+
+Se actualizan los siguientes endpoints:
+
+1. **POST user/register** ahora envía email al registrarse.
+2. **POST user/login** ahora envía email al loguearse.
+3. **POST products/** se cambia middleware de login administrador o premium. Se implementa lógica de validación de rol.
+4. **PATCH products/:pid** se cambia middleware de login administrador o premium. Se implementa lógica de validación de rol.
+5. **DELETE products/:pid** se cambia middleware de login administrador o premium. Se implementa lógica de validación de rol.
+6. **PUT userCart/products/:pid** Se implementa lógica de validación de rol.
+
+<br/>
+
+Se crearon los siguientes endpoints:
+
+1. **GET user/send-reset-mail** envía un mail al usuario logueado para cambiar su contraseña y guarda una cookie con expiración de una hora
+2. **GET user/getCookie** endpoint para testear que la cookie siga activa
+3. **PATCH user/update-password** enviar el nuevo password por body y actualiza en base de dato luego de las verificaciones correspondientes.
+4. **PATCH user/update-user** permite al usuario cambiar solo sus datos personales
+5. **PATCH user/premium** permite al usuario alternar entre usuario user y usuario premium automáticamente. También informa al mismo mediante email
+
+<br/>
+Por último se ejecutan los test de funcionamiento desde postman.
+<br/>
+Se envía el archivo de variables de entorno de forma privada.
+<br/>
+<br/>
+
+**Product Manager API** https://documenter.getpostman.com/view/11511543/2sA3BuW9A1
+<br/>
+
+**Cart Manager API** https://documenter.getpostman.com/view/11511543/2sA3JJ8NeR
+<br/>
+
+**Ticket Manager API** https://documenter.getpostman.com/view/11511543/2sA3kbexfH
+<br/>
+
+**User Manager API** https://documenter.getpostman.com/view/11511543/2sA3kbexfK
+<br/>
+<br/>
+<br/>

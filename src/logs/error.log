@@ -1386,3 +1386,24 @@ info: {"status":404,"message":{"system":"No encontrado","custom":"Product not fo
 info: {"status":401,"message":{"system":"No autorizado","custom":"you cant remove another owner product"},"error":{"_id":"66c403ae6a3d6fb439e88617","title":"Refresco de Uva","description":"Refresco de uva con un sabor dulce y refrescante.","price":1.99,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104891/7135S3EOy7L._AC_UF894_1000_QL80__ptojip.jpg"],"code":"Refrescos1005","stock":45,"category":"Refrescos","status":true,"faker":false,"owner":"66c401f6e12ffcda5069cb10","__v":0}} {"timestamp":"2024-08-20T02:48:06.542Z"}
 info: {"status":404,"message":{"system":"No encontrado","custom":"Product not found"},"data":null} {"timestamp":"2024-08-20T02:48:28.049Z"}
 info: {"status":401,"message":{"system":"No autorizado","custom":"you cant update another owner product"},"error":{"_id":"66c403ae6a3d6fb439e88617","title":"Refresco de Uva","description":"Refresco de uva con un sabor dulce y refrescante.","price":1.99,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104891/7135S3EOy7L._AC_UF894_1000_QL80__ptojip.jpg"],"code":"Refrescos1005","stock":45,"category":"Refrescos","status":true,"faker":false,"owner":"66c401f6e12ffcda5069cb10","__v":0}} {"timestamp":"2024-08-20T02:48:32.790Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe4@gmail.com"]} {"timestamp":"2024-08-20T03:10:49.681Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-20T03:16:41.197Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-20T03:16:42.736Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-20T03:17:10.569Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-20T03:17:11.402Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe4@gmail.com"]} {"timestamp":"2024-08-20T03:17:21.125Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-20T03:18:18.337Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-20T03:18:19.317Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-20T03:18:29.359Z"}
+error: {"status":500,"message":{"system":"error Interno del servidor","custom":{}},"error":"Error: TypeError: Cannot read properties of null (reading 'first_name')"} {"timestamp":"2024-08-20T03:18:29.360Z"}
+error: Error: TypeError: Cannot read properties of null (reading 'first_name') {"timestamp":"2024-08-20T03:18:45.942Z"}
+error: {"status":500,"message":{"system":"error Interno del servidor","custom":{}},"error":"Error: TypeError: Cannot read properties of null (reading 'first_name')"} {"timestamp":"2024-08-20T03:18:45.942Z"}
+warning: {"status":403,"message":{"system":"Acceso denegado","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-08-20T03:19:23.636Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe4@gmail.com"]} {"timestamp":"2024-08-20T03:19:31.523Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-20T03:20:29.109Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-20T03:20:29.913Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe4@gmail.com"]} {"timestamp":"2024-08-20T03:20:45.594Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = es {"timestamp":"2024-08-20T03:23:01.466Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-20T03:23:02.439Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe4@gmail.com"]} {"timestamp":"2024-08-20T03:23:40.916Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe4@gmail.com"]} {"timestamp":"2024-08-20T03:24:10.200Z"}
