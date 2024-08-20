@@ -91,7 +91,12 @@ export const getByCategory = async (req, res, next) => {
 
 export const create = async (req, res, next) => {
   try {
-    const product = await service.create(req.body);
+    const prod = req.body;
+    const owner = req.session?.passport?.user;
+    const isPremium = req.session.message.owner === "owner";
+    console.log(isPremium);
+    prod.owner = owner;
+    let product = await service.create(prod);
     if (!product) httpResponse.NotFound(res, product, "Bad Request");
     httpResponse.Ok(res, product);
   } catch (error) {
@@ -101,10 +106,26 @@ export const create = async (req, res, next) => {
 export const update = async (req, res, next) => {
   try {
     const { pid } = req.params;
+    const { user } = req.session.passport;
+    const { role } = req.session.message;
+    const product = await service.getById(pid);
+    if (!product)
+      return httpResponse.NotFound(res, product, "Product not found");
+    let owner = "";
+    owner = product.owner.toString();
+    if (owner !== user && role !== "admin")
+      return httpResponse.Unauthorized(
+        res,
+        product,
+        "you cant update another owner product"
+      );
 
-    const product = await service.update(pid, req.body);
-    if (!product) httpResponse.NotFound(res, product, "error update products");
-    else httpResponse.Ok(res, product);
+    let newValues = req.body;
+
+    const productUpd = await service.update(pid, newValues);
+    if (!productUpd)
+      httpResponse.NotFound(res, productUpd, "error update products");
+    else httpResponse.Ok(res, productUpd);
   } catch (error) {
     next(error.message);
   }
@@ -112,9 +133,24 @@ export const update = async (req, res, next) => {
 export const remove = async (req, res, next) => {
   try {
     const { pid } = req.params;
-    const product = await service.remove(pid);
-    if (!product) httpResponse.NotFound(res, product, "error removing product");
-    else httpResponse.Ok(res, product);
+    const { user } = req.session.passport;
+    const { role } = req.session.message;
+    const product = await service.getById(pid);
+    if (!product)
+      return httpResponse.NotFound(res, product, "Product not found");
+    let owner = "";
+    owner = product.owner.toString();
+    if (owner !== user && role !== "admin")
+      return httpResponse.Unauthorized(
+        res,
+        product,
+        "you cant remove another owner product"
+      );
+
+    const productDeleted = await service.remove(pid);
+    if (!product)
+      httpResponse.NotFound(res, productDeleted, "error removing product");
+    else httpResponse.Ok(res, productDeleted);
   } catch (error) {
     next(error.message);
   }

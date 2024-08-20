@@ -71,6 +71,7 @@ export default class ProductDaoMongoDB {
 
   create = async (product) => {
     try {
+      console.log(product);
       return await ProductModel.create(product);
     } catch (error) {
       throw new Error(error);

@@ -27,6 +27,10 @@ export const isNotAuth = (req, res, next) => {
 
 export const isAuth = (req, res, next) => {
   if (req.isAuthenticated()) return next();
-  logger.warning(`attempted access without registration`);
-  httpResponse.Forbidden(res, "", "Please login first");
+
+  httpResponse.Forbidden(
+    res,
+    "attempted access without registration",
+    "Please login first"
+  );
 };

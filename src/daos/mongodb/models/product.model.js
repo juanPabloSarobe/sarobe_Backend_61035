@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import { Schema, model } from "mongoose";
 import mongoosePaginate from "mongoose-paginate-v2";
 
@@ -29,6 +30,13 @@ const ProductSchema = new Schema({
   },
   status: { type: Boolean, default: true },
   faker: { type: Boolean, default: false },
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: "users",
+    required: true,
+  },
 });
 ProductSchema.plugin(mongoosePaginate);
 export const ProductModel = model("products", ProductSchema);
+
+//default: new ObjectId("66a6b94325975b3f1d4efc9a"),

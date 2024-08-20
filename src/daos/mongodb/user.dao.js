@@ -39,4 +39,14 @@ export default class UserDao {
       throw new Error(error);
     }
   };
+  update = async (id, newUserData) => {
+    try {
+      const resp = await UserModel.findByIdAndUpdate(id, newUserData, {
+        new: true,
+      });
+      return resp;
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
 }

@@ -17,3 +17,20 @@ export const isAdmin = (req, res, next) => {
     next(error);
   }
 };
+
+export const isAdminoOrPremium = (req, res, next) => {
+  try {
+    const { role } = req.session?.message;
+    if (role !== "admin" && role !== "premium") {
+      httpResponse.Unauthorized(
+        res,
+        { role: role },
+        `Unauthorized access try, administrator or Premium role only`
+      );
+    } else {
+      return next();
+    }
+  } catch (error) {
+    next(error);
+  }
+};

@@ -7,6 +7,8 @@ import {
   registerTemplate,
   resetPass,
   passwordRestored,
+  updateUser,
+  roleChange,
 } from "../utils/email.templates.js";
 
 const emailType = {
@@ -32,6 +34,24 @@ const emailType = {
     subject: `tu password ha sido actualizado correctamente`,
     html: function (user) {
       return passwordRestored(user);
+    },
+  },
+  updateUser: {
+    subject: `Tus datos de usuario han sido actualizado correctamente`,
+    html: function (user) {
+      return updateUser(user);
+    },
+  },
+  rolePremium: {
+    subject: `Felicitaciones ya eres un usuario premium`,
+    html: function (user) {
+      return roleChange(user);
+    },
+  },
+  roleUser: {
+    subject: `Lamentamos que hayas decidido dejar de ser premium`,
+    html: function (user) {
+      return roleChange(user);
     },
   },
 };

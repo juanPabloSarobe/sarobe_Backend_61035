@@ -30,5 +30,7 @@ router.get(
 router.get("/send-reset-mail", [isAuth], controller.sendResetPassMail);
 router.get("/getCookie", [isAuth], controller.getCookie);
 router.patch("/update-password", [isAuth], controller.updatePass);
+router.patch("/update-user", [isAuth], controller.update);
+router.patch("/premium", [isAuth], controller.updatePremium);
 
 export default router;

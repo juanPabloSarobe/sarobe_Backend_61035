@@ -1,7 +1,6 @@
 import * as services from "../services/user.services.js";
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
-import { sendGmail } from "../controllers/email.controllers.js";
 
 const strategyConfig = {
   usernameField: "email",

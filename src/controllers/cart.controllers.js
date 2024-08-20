@@ -1,4 +1,5 @@
 import * as service from "../services/cart.services.js";
+import * as productService from "../services/product.services.js";
 import UserRepository from "../repository/user.repository.js";
 import { httpResponse } from "../utils/httpResponse.js";
 const userRepository = new UserRepository();
@@ -36,6 +37,20 @@ export const addProduct = async (req, res, next) => {
   try {
     const cid = req.session?.message?.cart;
     const { pid } = req.params;
+    const { user } = req.session?.passport;
+    const product = await productService.getById(pid);
+    if (!product)
+      return httpResponse.NotFound(res, product, "Product not found");
+    let owner = "";
+    owner = product.owner.toString();
+    console.log("OWNER= ", owner);
+    if (owner === user)
+      return httpResponse.Forbidden(
+        res,
+        product,
+        "you cant add to cart your own product"
+      );
+
     let { quantity } = req.body;
     if (!quantity) quantity = 1;
     const cart = await service.addProduct(cid, pid, quantity);

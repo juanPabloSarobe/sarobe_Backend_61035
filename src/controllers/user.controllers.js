@@ -160,3 +160,39 @@ export const updatePass = async (req, res, next) => {
     next(error);
   }
 };
+export const update = async (req, res, next) => {
+  try {
+    const id = req.session?.passport?.user;
+    const newUserData = req.body;
+    const { first_name, last_name, age } = newUserData;
+    const newData = { first_name, last_name, age };
+    console.log(newData);
+
+    const user = await services.update(id, newData);
+    req.session.message = user;
+    req.session.emailType = "updateUser";
+    sendGmail(req, res, next);
+    return httpResponse.Ok(res, user);
+  } catch (error) {
+    next(error);
+  }
+};
+export const updatePremium = async (req, res, next) => {
+  try {
+    const id = req.session?.passport?.user;
+    let role = req.session?.message.role;
+    if (role === "user") {
+      role = "premium";
+    } else if (role === "premium") {
+      role = "user";
+    }
+    const newUser = await services.update(id, { role });
+    req.session.message = newUser;
+    role === "premium" && (req.session.emailType = "rolePremium");
+    role === "user" && (req.session.emailType = "roleUser");
+    sendGmail(req, res, next);
+    return httpResponse.Ok(res, newUser);
+  } catch (error) {
+    next(error);
+  }
+};

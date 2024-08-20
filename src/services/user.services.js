@@ -61,3 +61,11 @@ export const resetPassword = async (id, newPass) => {
     throw new Error(error);
   }
 };
+
+export const update = async (id, newUserData) => {
+  try {
+    return await userDao.update(id, newUserData);
+  } catch (error) {
+    throw new Error(error);
+  }
+};
