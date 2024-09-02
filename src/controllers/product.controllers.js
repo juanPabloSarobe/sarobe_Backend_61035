@@ -96,11 +96,10 @@ export const create = async (req, res, next) => {
     const prod = req.body;
     const owner = req.session?.passport?.user;
     const isPremium = req.session.message.owner === "owner";
-    console.log(isPremium);
     prod.owner = owner;
     let product = await service.create(prod);
-    if (!product) httpResponse.NotFound(res, product, "Bad Request");
-    httpResponse.Ok(res, product);
+    if (!product) return httpResponse.NotFound(res, product, "Bad Request");
+    return httpResponse.Ok(res, product);
   } catch (error) {
     next(error.message);
   }

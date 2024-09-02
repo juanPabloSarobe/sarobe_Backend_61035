@@ -1865,3 +1865,19 @@ info: conectado a mongo Atlas {"timestamp":"2024-09-02T05:05:29.142Z"}
 info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp8@gmail.com"]} {"timestamp":"2024-09-02T05:06:02.024Z"}
 warning: Unauthorized access try: {"first_name":"Juan Pablo 8","last_name":"Sarobe","email":"jp8@gmail.com","age":21,"role":"user","cart":{"_id":"66d547b7960fbf8687fd4c58","products":[],"__v":0}}, administrator role only {"timestamp":"2024-09-02T05:08:28.366Z"}
 info: {"status":401,"message":{"system":"Unauthorized","custom":"administrator role only"},"error":{"role":"user"}} {"timestamp":"2024-09-02T05:08:28.366Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T05:21:29.546Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T05:21:30.563Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T05:21:51.384Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T05:21:52.098Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T05:22:03.205Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T05:22:03.932Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T05:22:12.435Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T05:22:13.148Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T05:22:57.051Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T05:22:57.998Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T05:23:31.368Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T05:23:32.045Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T05:24:01.344Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T05:24:02.057Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T05:24:28.407Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T05:24:29.190Z"}

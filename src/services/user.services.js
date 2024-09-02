@@ -8,7 +8,6 @@ const userRepository = new UserRepository();
 export const register = async (userData) => {
   try {
     const { email, password } = userData;
-    console.log(userData.role);
     const existUser = await getUserByEmail(email);
     if (!existUser) {
       const cartUser = await cartDao.create();

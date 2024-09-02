@@ -43,7 +43,6 @@ export const addProduct = async (req, res, next) => {
       return httpResponse.NotFound(res, product, "Product not found");
     let owner = "";
     owner = product.owner.toString();
-    console.log("OWNER= ", owner);
     if (owner === user)
       return httpResponse.Unauthorized(
         res,

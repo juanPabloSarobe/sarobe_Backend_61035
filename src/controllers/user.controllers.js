@@ -166,8 +166,6 @@ export const update = async (req, res, next) => {
     const newUserData = req.body;
     const { first_name, last_name, age } = newUserData;
     const newData = { first_name, last_name, age };
-    console.log(newData);
-
     const user = await services.update(id, newData);
     req.session.message = user;
     req.session.emailType = "updateUser";

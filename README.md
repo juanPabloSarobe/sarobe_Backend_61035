@@ -467,3 +467,21 @@ Se envía el archivo de variables de entorno de forma privada.
 <br/>
 <br/>
 <br/>
+
+## Desafío clase 39
+
+Se implementa el modulo de documentación con swagger y swaggerUI.
+La misma incluye la documentación de los endpoints funcionales mas importantes. desde la misma se pueden testear todos los endpoint de funcionamiento de la API, ademas incluye un acceso directo a la documentación de postman para probar los endpoints que son de testing.
+Se subdividió la documentación en varios archivos, por un lado los datos semi-rígidos, como tags y schemas. Las respuestas y los requests en otro par de archivos separados, y luego un archivo de paths para cada uno de las rutas.
+No se realizaron modificaciones en el archivo .env
+
+Se crearon los siguientes endpoints:
+
+1. **GET http://localHost:8080/docs** endpoint de acceso a la documentación de la API con swagger.
+
+<br/>
+Por último se ejecutan los test de funcionamiento desde swagger.
+<br/>
+Se envía el archivo de variables de entorno de forma privada.
+<br/>
+<br/>
