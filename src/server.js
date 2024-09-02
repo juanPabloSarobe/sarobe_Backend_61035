@@ -14,11 +14,18 @@ import "./passport/github-strategy.js";
 import MainRouter from "./routes/routes.js";
 import config from "../config.js";
 import { logger } from "./utils/logger.js";
+import swaggerUi from "swagger-ui-express";
+import swaggerJSDoc from "swagger-jsdoc";
+import { infoSwagger } from "./docs/info.js";
+
+const specs = swaggerJSDoc(infoSwagger);
+
 const mainRouter = new MainRouter();
 
 const products = new ProductsManager();
 const app = express();
 
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(specs));
 //iniciamos el middleware de cookie parser
 const SECRET = config.COOKIE_KEY;
 app.use(cookieParser(SECRET)); //con esto queda disponible para utilizar en cualquier parte de la app

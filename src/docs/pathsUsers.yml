@@ -1,0 +1,206 @@
+paths:
+  /user/login:
+    post:
+      tags:
+        - Users
+      summary: Login de usuario
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Users/login"
+        required: true
+      responses:
+        401:
+          description: Unautorized - Usuario o password incorrectos
+
+        200:
+          description: Usuario logueado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Users/respLogin"
+  /user/register:
+    post:
+      tags:
+        - Users
+      summary: Register de usuario
+      description: formulario de registro de usuario nuevo.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Users/register"
+        required: true
+      responses:
+        401:
+          description: Unautorized - Usuario o password incorrectos
+        200:
+          description: Usuario creado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Users/respRegister"
+  /user/logout:
+    get:
+      tags:
+        - Users
+      summary: Cierre de sesión
+      description: endpoint para cerrar la sesión de usuario. Debe estar logueado.
+      responses:
+        200:
+          description: session cerrada correctamente
+          content:
+            application/json:
+              schema:
+                success:
+                  type: object
+                example:
+                  status: 200
+                  message:
+                    system: success
+                    custom: "session cerrada correctamente"
+        403:
+          description: no hay sesion activa - attempted access without registration
+          content:
+            application/json:
+              schema:
+                403:
+                  type: object
+                example:
+                  status: 403
+                  message:
+                    system: forbidden
+                    custom: "please login first"
+                  error: attempted access without registration
+  /user/premium:
+    patch:
+      tags:
+        - Users
+      summary: define usuario premium
+      description: endpoint para cambiar el rol de user a premium y viceversa. Debe estar logueado.
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Users/respPremium"
+        403:
+          description: no hay sesion activa - attempted access without registration
+          content:
+            application/json:
+              schema:
+                403:
+                  type: object
+                example:
+                  status: 403
+                  message:
+                    system: forbidden
+                    custom: "please login first"
+  /user/update-password:
+    patch:
+      tags:
+        - Users
+      summary: actualiza password
+      description: endpoint para actualizar el password luego de recibir el link por mail. Debe estar logueado.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Users/resetPassword"
+        required: true
+      responses:
+        200:
+          description: session cerrada correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Users/respPremium"
+        403:
+          description: no hay sesion activa - attempted access without registration
+          content:
+            application/json:
+              schema:
+                403:
+                  type: object
+                example:
+                  status: 403
+                  message:
+                    system: forbidden
+                    custom: ""
+                  error: Token expires, get a new token
+        401:
+          content:
+            application/json:
+              schema:
+                401:
+                  type: object
+                example:
+                  status: 401
+                  message:
+                    system: forbidden
+                    custom: ""
+                  error: you can not repeat a password
+  /user/update-user:
+    patch:
+      tags:
+        - Users
+      summary: actualiza datos de usuario
+      description: endpoint para actualizar los datos de usuario, solo recibe el nombre apellido y edad. Debe estar logueado.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Users/updateUser"
+        required: true
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Users/respPremium"
+        403:
+          description: no hay sesion activa - attempted access without registration
+          content:
+            application/json:
+              schema:
+                403:
+                  type: object
+                example:
+                  status: 403
+                  message:
+                    system: forbidden
+                    custom: ""
+                  error: Token expires, get a new token
+  /user/send-reset-mail:
+    get:
+      tags:
+        - Users
+      summary: envia mail para actualizar password
+      description: endpoint para disparar el mail que tendra el link para actualizar el password. Debe estar logueado.
+      responses:
+        200:
+          description: mail de reset password enviado
+          content:
+            application/json:
+              schema:
+                success:
+                  type: object
+                example:
+                  status: 200
+                  message:
+                    system: success
+                    custom: ""
+                  data: "cookie generada"
+        403:
+          description: no hay sesion activa - attempted access without registration
+          content:
+            application/json:
+              schema:
+                403:
+                  type: object
+                example:
+                  status: 403
+                  message:
+                    system: forbidden
+                    custom: "please login first"

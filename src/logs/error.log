@@ -1407,3 +1407,461 @@ info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE 
 info: conectado a mongo Atlas {"timestamp":"2024-08-20T03:23:02.439Z"}
 info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe4@gmail.com"]} {"timestamp":"2024-08-20T03:23:40.916Z"}
 info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe4@gmail.com"]} {"timestamp":"2024-08-20T03:24:10.200Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T21:17:10.548Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T21:17:12.004Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-08-31T21:18:52.422Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T21:31:18.351Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T21:31:19.419Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T21:37:49.688Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T21:37:50.937Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T21:44:22.765Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T21:44:24.088Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T21:46:54.398Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T21:46:55.174Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T23:36:32.617Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T23:36:33.669Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T23:39:01.625Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T23:39:02.620Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T23:39:19.354Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T23:39:20.056Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T23:39:45.375Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T23:39:46.122Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T23:39:57.795Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T23:39:58.522Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T23:40:09.440Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T23:40:10.160Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T23:40:18.897Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T23:40:19.698Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T23:40:35.914Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T23:40:36.707Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T23:41:04.126Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T23:41:04.888Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-08-31T23:41:54.891Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-08-31T23:41:55.989Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-08-31T23:55:11.777Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:05:11.314Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:05:12.568Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:09:27.467Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:09:28.433Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:09:32.809Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:09:33.518Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:15:08.408Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:15:09.229Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:20:06.275Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:20:07.272Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:23:43.935Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:23:44.862Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:32:35.772Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:32:36.624Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:33:54.352Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:33:55.144Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:38:50.136Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:38:51.112Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:41:47.955Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:41:48.752Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:43:01.661Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:43:02.420Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:45:23.408Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:45:24.201Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:45:51.841Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:45:52.553Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:51:23.233Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:51:24.177Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:53:20.216Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:53:21.040Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:57:21.451Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:57:22.239Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T00:58:30.135Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T00:58:30.897Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T01:05:34.465Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T01:05:35.232Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T01:05:39.897Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T01:05:40.615Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T01:07:05.556Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T01:08:21.732Z"}
+error: undefined {"timestamp":"2024-09-01T01:08:22.282Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Error: MongoServerError: E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: \"Refrescos1005\" }"}} {"timestamp":"2024-09-01T01:08:22.282Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T01:15:06.958Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T01:15:08.044Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T01:22:59.425Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T01:23:00.234Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T01:23:25.438Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T01:23:26.164Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T01:24:24.703Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T01:24:25.474Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"product not found"},"data":null} {"timestamp":"2024-09-01T01:29:03.779Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T01:30:55.673Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T01:30:56.520Z"}
+error: undefined {"timestamp":"2024-09-01T01:31:25.148Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Error: CastError: Cast to ObjectId failed for value \"6654fd71af457eac8e6beeb\" (type string) at path \"_id\" for model \"products\""}} {"timestamp":"2024-09-01T01:31:25.148Z"}
+error: undefined {"timestamp":"2024-09-01T01:33:42.856Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Error: CastError: Cast to ObjectId failed for value \"6654fd71af457eac8e6beeb87\" (type string) at path \"_id\" for model \"products\""}} {"timestamp":"2024-09-01T01:33:42.857Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T01:35:59.817Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T01:36:00.576Z"}
+error: undefined {"timestamp":"2024-09-01T01:36:12.565Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Cannot access 'product' before initialization"}} {"timestamp":"2024-09-01T01:36:12.565Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T01:36:34.715Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T01:36:35.395Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Verify the Id Product length"},"error":""} {"timestamp":"2024-09-01T01:36:37.974Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Verify the Id Product length"},"error":""} {"timestamp":"2024-09-01T01:36:55.271Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T01:38:55.361Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T01:38:56.270Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T18:06:34.890Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T18:18:44.094Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T18:18:45.124Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T18:21:43.168Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T18:21:44.076Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T18:38:12.440Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T18:38:13.541Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T18:47:02.985Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T18:47:04.041Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T18:50:30.142Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:02:37.102Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:02:37.939Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:05:38.111Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:05:38.959Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:07:03.033Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:07:04.041Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:13:19.768Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:13:20.612Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T19:13:32.372Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:17:01.643Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:17:02.714Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T19:17:14.645Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:18:32.485Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:18:33.335Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T19:18:39.680Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:26:10.789Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:26:11.828Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:26:39.663Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:26:40.420Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:28:25.549Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:28:26.388Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:30:40.074Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:30:40.862Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:35:57.057Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:35:58.126Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:37:20.600Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:37:21.547Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:39:14.412Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:39:15.350Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:42:10.623Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:42:11.454Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"product not found"},"data":null} {"timestamp":"2024-09-01T19:47:15.779Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:49:35.520Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:49:36.283Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Verify the Id Product length"},"error":""} {"timestamp":"2024-09-01T19:49:56.664Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:50:36.417Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:50:37.204Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Verify the Id Product length"},"error":""} {"timestamp":"2024-09-01T19:51:00.202Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"product not found"},"data":null} {"timestamp":"2024-09-01T19:51:38.084Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Verify the Id Product length"},"error":""} {"timestamp":"2024-09-01T19:51:45.469Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T19:52:28.120Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T19:52:28.896Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Verify the Id Product length"},"error":""} {"timestamp":"2024-09-01T19:52:51.078Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T20:00:00.805Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T20:00:01.652Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T20:21:29.013Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T20:22:26.442Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T20:22:27.562Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T20:30:40.723Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T20:31:40.096Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T20:31:40.917Z"}
+error: Error: data must be a string or Buffer and hash must be a string {"timestamp":"2024-09-01T20:31:53.986Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":{}},"error":"Error: data must be a string or Buffer and hash must be a string"} {"timestamp":"2024-09-01T20:31:53.987Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T20:32:33.561Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T20:32:34.295Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T20:32:48.630Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T20:37:46.409Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T20:46:22.811Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T20:46:24.324Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T20:46:25.090Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T20:47:13.248Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T20:47:13.987Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T20:48:09.430Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T20:48:10.379Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T20:48:28.171Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T20:48:42.345Z"}
+error: undefined {"timestamp":"2024-09-01T20:48:57.575Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Error: MongoServerError: E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: \"cervezas1001\" }"}} {"timestamp":"2024-09-01T20:48:57.576Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T20:56:34.173Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T20:57:58.518Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:00:05.578Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:00:06.518Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:00:54.636Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:00:55.383Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:01:20.704Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:01:21.466Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:01:34.664Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:01:35.457Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:02:37.570Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:02:38.311Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:31:58.922Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:31:59.922Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:33:13.116Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:33:13.868Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:33:54.769Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:33:55.530Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T21:34:01.962Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T21:34:30.577Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T21:36:28.747Z"}
+info: Lamentamos que hayas decidido dejar de ser premium,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T21:36:30.262Z"}
+info: Felicitaciones ya eres un usuario premium,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T21:36:35.608Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T21:36:51.067Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:38:33.813Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:38:34.750Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T21:38:40.440Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:39:43.917Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:39:44.680Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T21:41:33.747Z"}
+info: Lamentamos que hayas decidido dejar de ser premium,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T21:41:35.442Z"}
+info: Felicitaciones ya eres un usuario premium,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T21:41:40.256Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:45:13.194Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:45:14.073Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T21:45:19.968Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T21:45:39.609Z"}
+info: Lamentamos que hayas decidido dejar de ser premium,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T21:45:44.266Z"}
+info: Felicitaciones ya eres un usuario premium,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T21:45:50.490Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T21:50:19.698Z"}
+info: Password restore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T21:50:23.780Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:52:12.124Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:52:13.038Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:52:37.066Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:52:37.843Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T21:52:42.684Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T21:52:54.371Z"}
+info: Password restore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T21:52:59.984Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:57:24.029Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:57:24.946Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:57:44.541Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:57:45.263Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":""},"error":"Token expires, get a new token"} {"timestamp":"2024-09-01T21:57:53.784Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T21:59:05.748Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T21:59:06.622Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T21:59:37.485Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T21:59:45.362Z"}
+info: Password restore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T21:59:46.884Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":""},"error":"you can not repeat a password"} {"timestamp":"2024-09-01T21:59:53.143Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":""},"error":"Token expires, get a new token"} {"timestamp":"2024-09-01T22:01:01.499Z"}
+info: Password restore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:01:08.706Z"}
+info: tu password ha sido actualizado correctamente,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:01:12.044Z"}
+info: Password restore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:01:54.353Z"}
+info: tu password ha sido actualizado correctamente,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:02:00.788Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T22:02:07.340Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T22:02:08.658Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T22:02:09.423Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T22:02:34.047Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:03:04.507Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":""},"error":"Token expires, get a new token"} {"timestamp":"2024-09-01T22:03:12.573Z"}
+info: Password restore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:03:29.982Z"}
+info: tu password ha sido actualizado correctamente,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:03:37.251Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:04:30.914Z"}
+info: Password restore,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:04:42.462Z"}
+info: tu password ha sido actualizado correctamente,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:04:49.626Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:21:30.826Z"}
+info: Tus datos de usuario han sido actualizado correctamente,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:21:56.235Z"}
+info: Tus datos de usuario han sido actualizado correctamente,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:22:06.976Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T22:22:40.542Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T22:22:41.568Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T22:22:54.193Z"}
+info: Tus datos de usuario han sido actualizado correctamente,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T22:23:11.002Z"}
+info: Tus datos de usuario han sido actualizado correctamente,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T22:23:45.564Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:33:37.855Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"you cant update another owner product"},"error":{"_id":"66c403ae6a3d6fb439e88617","title":"Refresco de Uva","description":"Refresco de uva con un sabor dulce y refrescante.","price":1.99,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104891/7135S3EOy7L._AC_UF894_1000_QL80__ptojip.jpg"],"code":"Refrescos1005","stock":45,"category":"Refrescos","status":true,"faker":false,"owner":"66c401f6e12ffcda5069cb10","__v":0}} {"timestamp":"2024-09-01T22:33:49.882Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T22:34:51.998Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"you cant update another owner product"},"error":{"_id":"66c403ae6a3d6fb439e88617","title":"Refresco de Uva","description":"Refresco de uva con un sabor dulce y refrescante.","price":1.99,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104891/7135S3EOy7L._AC_UF894_1000_QL80__ptojip.jpg"],"code":"Refrescos1005","stock":45,"category":"Refrescos","status":true,"faker":false,"owner":"66c401f6e12ffcda5069cb10","__v":0}} {"timestamp":"2024-09-01T22:35:02.178Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:36:36.734Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"you cant update another owner product"},"error":{"faker":false,"_id":"6657b94e89a5200476974535","title":"Whisky Escocés","description":"Whisky escocés de malta, suave y ahumado.","price":29.99,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104567/Jack-Daniels-Master-Distiller-N4-550x550_qvvkp4.png"],"code":"licores1001","stock":29,"category":"Licores","status":true,"__v":0,"owner":"66c3f3c82ec5df53bc75cfb6"}} {"timestamp":"2024-09-01T22:36:38.975Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T22:38:20.251Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T22:38:21.544Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:38:41.461Z"}
+error: Expected double-quoted property name in JSON at position 22 (line 5 column 1) {"timestamp":"2024-09-01T22:39:28.878Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":{"expose":true,"statusCode":400,"status":400,"body":"{\n\n  \"price\": 10.20,\n\n}","type":"entity.parse.failed"}},"error":"Expected double-quoted property name in JSON at position 22 (line 5 column 1)"} {"timestamp":"2024-09-01T22:39:28.879Z"}
+error: Expected double-quoted property name in JSON at position 24 (line 5 column 1) {"timestamp":"2024-09-01T22:39:57.713Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":{"expose":true,"statusCode":400,"status":400,"body":"{\n\n  \"price\": \"10.20\",\n\n}","type":"entity.parse.failed"}},"error":"Expected double-quoted property name in JSON at position 24 (line 5 column 1)"} {"timestamp":"2024-09-01T22:39:57.713Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:40:28.503Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"you cant update another owner product"},"error":{"faker":false,"_id":"6657b98289a520047697453b","title":"Soda Limón","description":"Soda de limón refrescante, ideal para mezclar con licores.","price":1.49,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104654/61F7Y3rOWCL._AC_UF894_1000_QL80__xsimls.jpg"],"code":"refrescos1001","stock":29,"category":"Refrescos","status":true,"__v":0,"owner":"66a6b94325975b3f1d4efc9c"}} {"timestamp":"2024-09-01T22:41:57.826Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T22:49:11.282Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:49:47.619Z"}
+error: undefined {"timestamp":"2024-09-01T22:49:57.919Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Error: CastError: Cast to ObjectId failed for value \"66d4b785ffeb8dd190d446c\" (type string) at path \"_id\" for model \"products\""}} {"timestamp":"2024-09-01T22:49:57.919Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"Product not found"},"data":null} {"timestamp":"2024-09-01T22:50:08.038Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"you cant remove another owner product"},"error":{"faker":false,"_id":"6657b9b689a5200476974541","title":"Té de Manzanilla","description":"Té de manzanilla calmante, perfecto para relajarse.","price":2.29,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104790/41K9uMEPj8L._AC_UF894_1000_QL80__jugepp.jpg"],"code":"tes1001","stock":29,"category":"Tés","status":true,"__v":0,"owner":"66a6b94325975b3f1d4efc9c"}} {"timestamp":"2024-09-01T22:50:36.130Z"}
+error: undefined {"timestamp":"2024-09-01T22:51:09.078Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Error: MongoServerError: E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: \"Refrescos1005\" }"}} {"timestamp":"2024-09-01T22:51:09.078Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T22:51:52.951Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T22:51:53.749Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T22:53:47.578Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T22:54:58.463Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"you cant remove another owner product"},"error":{"_id":"66d4efee0b9c9b44d4c8e88b","title":"Refresco de Uva","description":"Refresco de uva con un sabor dulce y refrescante.","price":1.99,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104891/7135S3EOy7L._AC_UF894_1000_QL80__ptojip.jpg"],"code":"Refrescos1007","stock":45,"category":"Refrescos","status":true,"faker":false,"owner":"66c3d25674106f92f9b8f8b7","__v":0}} {"timestamp":"2024-09-01T22:55:38.004Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"Product not found"},"data":null} {"timestamp":"2024-09-01T22:55:45.790Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"you cant remove another owner product"},"error":{"_id":"66d4efee0b9c9b44d4c8e88b","title":"Refresco de Uva","description":"Refresco de uva con un sabor dulce y refrescante.","price":1.99,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104891/7135S3EOy7L._AC_UF894_1000_QL80__ptojip.jpg"],"code":"Refrescos1007","stock":45,"category":"Refrescos","status":true,"faker":false,"owner":"66c3d25674106f92f9b8f8b7","__v":0}} {"timestamp":"2024-09-01T22:56:17.216Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:56:29.324Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T22:56:52.119Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T22:56:59.908Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T23:04:53.000Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-01T23:05:06.093Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["pp4@mail.com"]} {"timestamp":"2024-09-01T23:06:30.245Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["pp2@mail.com"]} {"timestamp":"2024-09-01T23:08:24.144Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["pp4@mail.com"]} {"timestamp":"2024-09-01T23:11:25.647Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T23:18:40.580Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T23:18:42.525Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T23:19:19.204Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T23:19:20.302Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T23:19:27.917Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["pp2@mail.com"]} {"timestamp":"2024-09-01T23:20:02.871Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["pp4@mail.com"]} {"timestamp":"2024-09-01T23:20:43.505Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T23:21:33.339Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T23:21:34.155Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T23:21:53.869Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T23:21:54.604Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T23:23:21.250Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T23:23:22.036Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T23:27:16.649Z"}
+error: undefined {"timestamp":"2024-09-01T23:27:41.351Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Cannot set headers after they are sent to the client"}} {"timestamp":"2024-09-01T23:27:41.351Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T23:29:01.628Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T23:29:02.394Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T23:31:33.050Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T23:31:34.000Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T23:33:01.168Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T23:33:01.914Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T23:33:21.144Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T23:33:21.877Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T23:33:31.798Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T23:33:32.541Z"}
+error: undefined {"timestamp":"2024-09-01T23:34:05.896Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"silentCleanCart is not defined"}} {"timestamp":"2024-09-01T23:34:05.896Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T23:34:18.439Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T23:34:25.530Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T23:34:26.390Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"empty cart"},"data":{"_id":"66c3d25674106f92f9b8f8b5","products":[],"__v":0}} {"timestamp":"2024-09-01T23:34:52.685Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T23:37:53.503Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T23:37:54.307Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T23:38:05.979Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T23:38:31.390Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"empty cart"},"data":{"_id":"66c3d25674106f92f9b8f8b5","products":[],"__v":0}} {"timestamp":"2024-09-01T23:39:26.698Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-01T23:39:51.443Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T23:39:59.945Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-01T23:47:47.459Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-01T23:47:48.610Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-01T23:48:46.474Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"you cant add to cart your own product"},"error":{"faker":false,"_id":"6654fd71af457eac8e6beeb8","title":"Vino Tinto Reserva","description":"Vino tinto reserva de alta calidad, cosecha 2015.","price":10.21,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104434/CeYiCOGWSUuyzWD_JuDsOg_ytj20a.jpg"],"code":"vino1003","stock":301,"category":"Vinos","status":true,"__v":0,"owner":"66c3d25674106f92f9b8f8b7"}} {"timestamp":"2024-09-01T23:48:52.239Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-02T03:21:20.963Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["adminCoder@coder.com"]} {"timestamp":"2024-09-02T03:25:03.691Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T03:32:33.683Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T03:32:34.639Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-02T03:32:57.032Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-02T03:33:10.009Z"}
+warning: Unauthorized access try: {"first_name":"Juan Pablo 2","last_name":"Sarobe","email":"jp.sarobe2@gmail.com","age":41,"role":"premium","cart":{"_id":"66c3f3c82ec5df53bc75cfb4","products":[],"__v":0}}, administrator role only {"timestamp":"2024-09-02T03:33:15.702Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"administrator role only"},"error":{"role":"premium"}} {"timestamp":"2024-09-02T03:33:15.703Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T03:34:31.343Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T03:34:32.590Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-02T03:34:41.036Z"}
+warning: Unauthorized access try: {"first_name":"Juan Pablo 2","last_name":"Sarobe","email":"jp.sarobe2@gmail.com","age":41,"role":"premium","cart":{"_id":"66c3f3c82ec5df53bc75cfb4","products":[],"__v":0}}, administrator role only {"timestamp":"2024-09-02T03:34:45.624Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"administrator role only"},"error":{"role":"premium"}} {"timestamp":"2024-09-02T03:34:45.625Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["adminCoder@coder.com"]} {"timestamp":"2024-09-02T03:35:42.134Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T03:36:38.176Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T03:36:39.111Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T03:42:02.062Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T03:42:03.048Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T03:46:14.523Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T03:46:15.327Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-02T03:47:16.015Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"you cant add to cart your own product"},"error":{"faker":false,"_id":"6654fd71af457eac8e6beeb8","title":"Vino Tinto Reserva","description":"Vino tinto reserva de alta calidad, cosecha 2015.","price":10.21,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104434/CeYiCOGWSUuyzWD_JuDsOg_ytj20a.jpg"],"code":"vino1003","stock":301,"category":"Vinos","status":true,"__v":0,"owner":"66c3d25674106f92f9b8f8b7"}} {"timestamp":"2024-09-02T03:47:40.809Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T03:52:39.385Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T03:52:40.210Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-02T03:53:13.412Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-02T03:53:18.811Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:09:12.324Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:09:13.553Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-02T04:09:44.324Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-02T04:10:04.529Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-02T04:12:54.178Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"you cant add to cart your own product"},"error":{"faker":false,"_id":"6654fd71af457eac8e6beeb8","title":"Vino Tinto Reserva","description":"Vino tinto reserva de alta calidad, cosecha 2015.","price":10.21,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104434/CeYiCOGWSUuyzWD_JuDsOg_ytj20a.jpg"],"code":"vino1003","stock":301,"category":"Vinos","status":true,"__v":0,"owner":"66c3d25674106f92f9b8f8b7"}} {"timestamp":"2024-09-02T04:13:32.710Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"Product not found"},"data":null} {"timestamp":"2024-09-02T04:13:58.917Z"}
+error: undefined {"timestamp":"2024-09-02T04:14:09.324Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Error: CastError: Cast to ObjectId failed for value \"6654fd71af457eac8e6beeb\" (type string) at path \"_id\" for model \"products\""}} {"timestamp":"2024-09-02T04:14:09.325Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"Product not found"},"data":null} {"timestamp":"2024-09-02T04:14:19.368Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"you cant add to cart your own product"},"error":{"faker":false,"_id":"6654fd71af457eac8e6beeb8","title":"Vino Tinto Reserva","description":"Vino tinto reserva de alta calidad, cosecha 2015.","price":10.21,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104434/CeYiCOGWSUuyzWD_JuDsOg_ytj20a.jpg"],"code":"vino1003","stock":301,"category":"Vinos","status":true,"__v":0,"owner":"66c3d25674106f92f9b8f8b7"}} {"timestamp":"2024-09-02T04:14:28.719Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:14:53.988Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:14:55.083Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"you cant add to cart your own product"},"error":{"faker":false,"_id":"6654fd71af457eac8e6beeb8","title":"Vino Tinto Reserva","description":"Vino tinto reserva de alta calidad, cosecha 2015.","price":10.21,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104434/CeYiCOGWSUuyzWD_JuDsOg_ytj20a.jpg"],"code":"vino1003","stock":301,"category":"Vinos","status":true,"__v":0,"owner":"66c3d25674106f92f9b8f8b7"}} {"timestamp":"2024-09-02T04:15:04.018Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-02T04:15:48.603Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-02T04:17:03.595Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"you cant add to cart your own product"},"error":{"faker":false,"_id":"6654fd71af457eac8e6beeb8","title":"Vino Tinto Reserva","description":"Vino tinto reserva de alta calidad, cosecha 2015.","price":10.21,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104434/CeYiCOGWSUuyzWD_JuDsOg_ytj20a.jpg"],"code":"vino1003","stock":301,"category":"Vinos","status":true,"__v":0,"owner":"66c3d25674106f92f9b8f8b7"}} {"timestamp":"2024-09-02T04:17:09.866Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:18:26.280Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:18:27.045Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"you cant add to cart your own product"},"error":{"faker":false,"_id":"6654fd71af457eac8e6beeb8","title":"Vino Tinto Reserva","description":"Vino tinto reserva de alta calidad, cosecha 2015.","price":10.21,"img":["https://res.cloudinary.com/dg8ndxl2y/image/upload/v1696104434/CeYiCOGWSUuyzWD_JuDsOg_ytj20a.jpg"],"code":"vino1003","stock":301,"category":"Vinos","status":true,"__v":0,"owner":"66c3d25674106f92f9b8f8b7"}} {"timestamp":"2024-09-02T04:18:32.247Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-02T04:21:37.539Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"bad request"},"data":null} {"timestamp":"2024-09-02T04:21:40.950Z"}
+error: undefined {"timestamp":"2024-09-02T04:21:40.977Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Cannot set headers after they are sent to the client"}} {"timestamp":"2024-09-02T04:21:40.977Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-02T04:21:56.992Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"bad request"},"data":null} {"timestamp":"2024-09-02T04:22:07.709Z"}
+error: undefined {"timestamp":"2024-09-02T04:22:07.728Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Cannot set headers after they are sent to the client"}} {"timestamp":"2024-09-02T04:22:07.728Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"bad request"},"data":null} {"timestamp":"2024-09-02T04:22:54.498Z"}
+error: undefined {"timestamp":"2024-09-02T04:22:54.524Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Cannot set headers after they are sent to the client"}} {"timestamp":"2024-09-02T04:22:54.524Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:23:21.593Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:23:22.342Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:23:36.266Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:23:37.000Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"bad request"},"data":null} {"timestamp":"2024-09-02T04:23:39.604Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-02T04:24:13.887Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:26:19.007Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:26:19.757Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-02T04:26:46.952Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"bad request"},"data":null} {"timestamp":"2024-09-02T04:27:15.031Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:28:01.974Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:28:02.760Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"bad request adding products"},"data":null} {"timestamp":"2024-09-02T04:28:12.111Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:29:16.625Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:29:17.352Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:29:22.164Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:29:22.958Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"bad request adding products - the quantity not be the same"},"error":null} {"timestamp":"2024-09-02T04:29:54.667Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:31:22.320Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:31:23.100Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"bad request adding products - the quantity not be the same"},"error":null} {"timestamp":"2024-09-02T04:31:49.701Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"bad request adding products - the quantity not be the same"},"error":null} {"timestamp":"2024-09-02T04:31:59.251Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:32:31.996Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:32:32.771Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:36:16.553Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:36:17.511Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:37:07.498Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:37:08.221Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-02T04:38:05.390Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:42:06.463Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:42:07.269Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"bad request"}} {"timestamp":"2024-09-02T04:42:13.501Z"}
+error: undefined {"timestamp":"2024-09-02T04:42:13.529Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Cannot set headers after they are sent to the client"}} {"timestamp":"2024-09-02T04:42:13.529Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:42:46.054Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:42:46.762Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:43:15.149Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:43:15.900Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"bad request. cant delete an inexistent product"}} {"timestamp":"2024-09-02T04:43:19.417Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:43:56.488Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:43:57.253Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-02T04:44:22.191Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-02T04:44:39.106Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"bad request. Product is not in cart"}} {"timestamp":"2024-09-02T04:44:41.065Z"}
+info: {"status":404,"message":{"system":"Not found","custom":"bad request. Product is not in cart"}} {"timestamp":"2024-09-02T04:45:11.727Z"}
+error: undefined {"timestamp":"2024-09-02T04:45:34.383Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Error: CastError: Cast to ObjectId failed for value \"6654fd71af457eac8e6beeb\" (type string) at path \"product\" because of \"BSONError\""}} {"timestamp":"2024-09-02T04:45:34.383Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:48:07.676Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:48:08.830Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:50:18.415Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:50:19.483Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-02T04:50:52.050Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-02T04:51:07.436Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T04:58:50.124Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T04:58:50.870Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp7@gmail.com"]} {"timestamp":"2024-09-02T05:02:31.544Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-02T05:05:28.369Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-02T05:05:29.142Z"}
+info: Gracias por suscribirte a LiquidStore,  {"from":"liquidstoreproyect@gmail.com","to":["jp8@gmail.com"]} {"timestamp":"2024-09-02T05:06:02.024Z"}
+warning: Unauthorized access try: {"first_name":"Juan Pablo 8","last_name":"Sarobe","email":"jp8@gmail.com","age":21,"role":"user","cart":{"_id":"66d547b7960fbf8687fd4c58","products":[],"__v":0}}, administrator role only {"timestamp":"2024-09-02T05:08:28.366Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"administrator role only"},"error":{"role":"user"}} {"timestamp":"2024-09-02T05:08:28.366Z"}

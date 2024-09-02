@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import * as services from "../services/ticket.services.js";
 import { getById } from "../services/product.services.js";
-import { cleanCart } from "./cart.controllers.js";
+import { silentCleanCart } from "./cart.controllers.js";
 import UserRepository from "../repository/user.repository.js";
 import { httpResponse } from "../utils/httpResponse.js";
 const userRepository = new UserRepository();
@@ -60,10 +60,10 @@ export const create = async (req, res, next) => {
 
     const ticket = await services.create(preTicket);
     if (!ticket) {
-      httpResponse.NotFound(res, ticket, "Bad Request");
+      return httpResponse.NotFound(res, ticket, "Bad Request");
     } else {
-      cleanCart(req, res, next);
-      httpResponse.Ok(res, ticket);
+      silentCleanCart(req, res, next);
+      return httpResponse.Ok(res, ticket);
     }
   } catch (error) {
     next(error.message);

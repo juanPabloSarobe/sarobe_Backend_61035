@@ -39,6 +39,8 @@ export const getAll = async (req, res, next) => {
 export const getById = async (req, res, next) => {
   try {
     const { pid } = req.params;
+    if (pid.length !== 24)
+      return httpResponse.Forbidden(res, "", "Verify the Id Product length");
     const product = await service.getById(pid);
     if (!product) httpResponse.NotFound(res, product, "product not found");
     else {
