@@ -485,3 +485,25 @@ Por último se ejecutan los test de funcionamiento desde swagger.
 Se envía el archivo de variables de entorno de forma privada.
 <br/>
 <br/>
+
+## Desafío complementario clase 41
+
+Se implementaron diversos ejemplos de test de integración a modo de ejemplos. Se decidió utilizar las herramientas nativas de node para testing, dado que el profesor dio dicha posibilidad.
+
+Se crean 3 suits de tests, una para products, otra para carts y otra para sessions:
+
+1. El endpoint que trae todos los productos
+2. El endpoint que trae un producto por su id con un id correcto.
+3. El mismo endpoint pero ahora con un id no valido
+4. Un test que prueba el login con un usuario y passwords validos
+5. Otro test que hace la misma prueba con usuario o password invalido
+6. Y un test que falla al intentar traer el carrito del usuario sin estar logueado.
+
+Teniendo el servidor levantado, se puede probar, con:
+
+> npm run test:api
+
+<br/>
+No hubo cambios en el archivo de variables de entorno.
+<br/>
+<br/>
