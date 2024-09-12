@@ -31,10 +31,30 @@ export const login = async (req, res, next) => {
       req.session.error = "Usuario o mail incorrecto";
       httpResponse.NotFound(res, user, req.session.error);
     } else {
-      const { first_name, last_name, email, age, role, cart } = user;
+      const {
+        first_name,
+        last_name,
+        email,
+        age,
+        role,
+        cart,
+        last_connection,
+        documents,
+        status,
+      } = user;
 
       const message = {
-        msg: { first_name, last_name, email, age, role, cart },
+        msg: {
+          first_name,
+          last_name,
+          email,
+          age,
+          role,
+          cart,
+          last_connection,
+          documents,
+          status,
+        },
       };
       req.session.message = message.msg;
       req.session.info = {
@@ -112,6 +132,32 @@ export const current = async (req, res, next) => {
   }
 };
 
+export const updProfile = async (req, res, next) => {
+  try {
+    const { documents, email } = req.session?.message;
+    const id = req.session.passport.user;
+    const document = {
+      type: req.file.fieldname,
+      name: req.file.filename,
+      reference: req.file.path,
+    };
+    const existProfile = documents.findIndex(
+      ({ type }) => type == req.file.fieldname
+    );
+    if (existProfile === -1) documents.push(document);
+    else documents.splice(existProfile, 1, document);
+
+    const user = await services.updateProfile(id, documents);
+    if (user.documents.length === 3) {
+      const status = await services.update(id, { status: true });
+      req.session.message.status = status;
+    }
+    if (!user) return httpResponse.NotFound(res, user, "Not found");
+    return httpResponse.Ok(res, documents, "Profile Image uploaded");
+  } catch (error) {
+    res.json(error.message);
+  }
+};
 export const sendResetPassMail = async (req, res, next) => {
   try {
     const token = createHash("hola");
@@ -178,12 +224,24 @@ export const update = async (req, res, next) => {
 export const updatePremium = async (req, res, next) => {
   try {
     const id = req.session?.passport?.user;
+    const user = await userDao.getById(id);
+    const { status } = user || false;
+
     let role = req.session?.message.role;
     if (role === "user") {
-      role = "premium";
+      if (status === true) {
+        role = "premium";
+      } else {
+        return httpResponse.Unauthorized(
+          res,
+          status,
+          "You need upload all de documents for be an Premium user"
+        );
+      }
     } else if (role === "premium") {
       role = "user";
     }
+
     const newUser = await services.update(id, { role });
     req.session.message = newUser;
     role === "premium" && (req.session.emailType = "rolePremium");

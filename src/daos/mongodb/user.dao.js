@@ -18,6 +18,18 @@ export default class UserDao {
       throw new Error(error);
     }
   };
+  updLastConnection = async (id) => {
+    try {
+      const isLogin = await UserModel.findByIdAndUpdate(
+        id,
+        { last_connection: Date.now() },
+        { new: true }
+      );
+      return isLogin;
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
 
   getById = async (id) => {
     try {
@@ -44,6 +56,20 @@ export default class UserDao {
       const resp = await UserModel.findByIdAndUpdate(id, newUserData, {
         new: true,
       });
+      return resp;
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
+  updateProfile = async (id, newUserData) => {
+    try {
+      const resp = await UserModel.findByIdAndUpdate(
+        { _id: id },
+        { $set: { documents: newUserData } },
+        {
+          new: true,
+        }
+      );
       return resp;
     } catch (error) {
       throw new Error(error);

@@ -9,6 +9,16 @@ const UserSchema = new Schema({
   role: { type: String, default: "user" },
   isGithub: { type: Boolean, default: false },
   cart: { type: Schema.Types.ObjectId, ref: "carts", default: [] },
+  last_connection: { type: Date, default: Date.now },
+  documents: [
+    {
+      _id: false,
+      type: { type: String },
+      name: { type: String },
+      reference: { type: String },
+    },
+  ],
+  status: { type: Boolean, default: false },
 });
 
 UserSchema.pre("find", function () {

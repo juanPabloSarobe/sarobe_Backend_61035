@@ -40,7 +40,9 @@ export const login = async ({ email, password }) => {
     if (!userExist) return null;
     const passValid = isValidPassword(password, userExist.password);
     if (!passValid) return null;
-    return userExist;
+    const { id } = userExist;
+    const updLastConnection = await userDao.updLastConnection(id);
+    return updLastConnection;
   } catch (error) {
     throw new Error(error);
   }
@@ -71,6 +73,13 @@ export const resetPassword = async (id, newPass) => {
 export const update = async (id, newUserData) => {
   try {
     return await userDao.update(id, newUserData);
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+export const updateProfile = async (id, newUserData) => {
+  try {
+    return await userDao.updateProfile(id, newUserData);
   } catch (error) {
     throw new Error(error);
   }

@@ -2,3 +2,5 @@ node_modules
 mongodInstrucciones.txt
 .env
 .env.zip
+src/public/images/**/*.jpg
+src/public/images/**/*.png

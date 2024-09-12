@@ -3,6 +3,7 @@ import { isAuth, isLogued } from "../middlewares/validateLogin.js";
 import * as controller from "../controllers/user.controllers.js";
 import passport from "passport";
 import { isAdmin } from "../middlewares/isAdmin.js";
+import { uploader } from "../middlewares/multer.js";
 
 const router = Router();
 
@@ -25,6 +26,21 @@ router.get(
   "/profile",
   passport.authenticate("github", { scope: ["user:email"] }),
   controller.githubResponse
+);
+router.post(
+  "/profile",
+  [isAuth, uploader.single("profile")],
+  controller.updProfile
+);
+router.post(
+  "/documents",
+  [isAuth, uploader.single("documents")],
+  controller.updProfile
+);
+router.post(
+  "/products",
+  [isAuth, uploader.single("products")],
+  controller.updProfile
 );
 
 router.get("/send-reset-mail", [isAuth], controller.sendResetPassMail);
