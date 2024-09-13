@@ -172,6 +172,14 @@ components:
             type: integer
             description: edad a actualizar
             example: 31
+      profile:
+        type: object
+        properties:
+          first_name:
+            type: string
+            description: archivo a subir
+            example: "Juan Carlos"
+
     Carts:
       reqPutProductCart:
         type: object

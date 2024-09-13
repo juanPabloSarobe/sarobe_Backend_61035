@@ -97,6 +97,19 @@ paths:
                   message:
                     system: forbidden
                     custom: "please login first"
+        401:
+          description: You need upload all de documents for be an Premium user
+          content:
+            application/json:
+              schema:
+                401:
+                  type: object
+                example:
+                  status: 401
+                  message:
+                    system: Unauthorized
+                    custom: "You need upload all de documents for be an Premium user"
+
   /user/update-password:
     patch:
       tags:
@@ -192,6 +205,148 @@ paths:
                     system: success
                     custom: ""
                   data: "cookie generada"
+        403:
+          description: no hay sesion activa - attempted access without registration
+          content:
+            application/json:
+              schema:
+                403:
+                  type: object
+                example:
+                  status: 403
+                  message:
+                    system: forbidden
+                    custom: "please login first"
+  /user/profile:
+    post:
+      tags:
+        - Users
+      summary: subir foto de perfil
+      description: endpoint para subir imagen de perfil. Debe estar logueado.
+
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                profile:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: imagen de perfil enviado
+          content:
+            application/json:
+              schema:
+                success:
+                  type: object
+                example:
+                  status: 200
+                  message:
+                    system: success
+                    custom: "Profile Image uploaded"
+                  data:
+                    - type: profile
+                      name: "jp.sarobe9@gmail.com-77f164ac.FotoPatente.183216.jpg"
+                      reference: "/Users/juanpablosarobe/Documents/sarobe_Backend_61035/src/public/images/profile/jp.sarobe9@gmail.com-77f164ac.FotoPatente.183216.jpg"
+
+        403:
+          description: no hay sesion activa - attempted access without registration
+          content:
+            application/json:
+              schema:
+                403:
+                  type: object
+                example:
+                  status: 403
+                  message:
+                    system: forbidden
+                    custom: "please login first"
+
+  /user/products:
+    post:
+      tags:
+        - Users
+      summary: subir imagen de products
+      description: endpoint para subir imagen de productos. Debe estar logueado.
+
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                products:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: imagen de products enviado
+          content:
+            application/json:
+              schema:
+                success:
+                  type: object
+                example:
+                  status: 200
+                  message:
+                    system: success
+                    custom: "Products Image uploaded"
+                  data:
+                    - type: products
+                      name: "jp.sarobe9@gmail.com-77f164ac.FotoPatente.183216.jpg"
+                      reference: "/Users/juanpablosarobe/Documents/sarobe_Backend_61035/src/public/images/profile/jp.sarobe9@gmail.com-77f164ac.FotoPatente.183216.jpg"
+
+        403:
+          description: no hay sesion activa - attempted access without registration
+          content:
+            application/json:
+              schema:
+                403:
+                  type: object
+                example:
+                  status: 403
+                  message:
+                    system: forbidden
+                    custom: "please login first"
+  /user/documents:
+    post:
+      tags:
+        - Users
+      summary: subir documento
+      description: endpoint para subir documento. Debe estar logueado.
+
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                documents:
+                  type: string
+                  format: binary
+      responses:
+        200:
+          description: documento enviado
+          content:
+            application/json:
+              schema:
+                success:
+                  type: object
+                example:
+                  status: 200
+                  message:
+                    system: success
+                    custom: "documents Image uploaded"
+                  data:
+                    - type: profile
+                      name: "jp.sarobe9@gmail.com-77f164ac.FotoPatente.183216.jpg"
+                      reference: "/Users/juanpablosarobe/Documents/sarobe_Backend_61035/src/public/images/profile/jp.sarobe9@gmail.com-77f164ac.FotoPatente.183216.jpg"
+                    - type: documents
+                      name: "jp.sarobe9@gmail.com-77f164ac.FotoPatente.183216.jpg"
+                      reference: "/Users/juanpablosarobe/Documents/sarobe_Backend_61035/src/public/images/documents/jp.sarobe9@gmail.com-77f164ac.FotoPatente.183216.jpg"
+
         403:
           description: no hay sesion activa - attempted access without registration
           content:

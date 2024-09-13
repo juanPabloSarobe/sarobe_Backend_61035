@@ -153,7 +153,11 @@ export const updProfile = async (req, res, next) => {
       req.session.message.status = status;
     }
     if (!user) return httpResponse.NotFound(res, user, "Not found");
-    return httpResponse.Ok(res, documents, "Profile Image uploaded");
+    return httpResponse.Ok(
+      res,
+      documents,
+      `${req.file.fieldname} Image uploaded`
+    );
   } catch (error) {
     res.json(error.message);
   }

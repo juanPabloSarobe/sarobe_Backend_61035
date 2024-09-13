@@ -2541,3 +2541,84 @@ info: {"status":401,"message":{"system":"Unauthorized","custom":"You need upload
 info: {"status":401,"message":{"system":"Unauthorized","custom":"You need upload all de documents for be an Premium user"},"error":false} {"timestamp":"2024-09-12T03:55:13.369Z"}
 info: {"status":401,"message":{"system":"Unauthorized","custom":"You need upload all de documents for be an Premium user"},"error":false} {"timestamp":"2024-09-12T03:55:31.643Z"}
 info: Felicitaciones ya eres un usuario premium,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe10@gmail.com"]} {"timestamp":"2024-09-12T03:55:39.726Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-12T04:06:11.171Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-12T04:06:49.340Z"}
+info: Lamentamos que hayas decidido dejar de ser premium,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-12T04:07:06.724Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"You need upload all de documents for be an Premium user"},"error":false} {"timestamp":"2024-09-12T04:07:27.188Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe12@gmail.com"]} {"timestamp":"2024-09-13T09:28:42.960Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe10@gmail.com"]} {"timestamp":"2024-09-13T09:28:56.231Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe9@gmail.com"]} {"timestamp":"2024-09-13T09:29:06.310Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"You need upload all de documents for be an Premium user"},"error":false} {"timestamp":"2024-09-13T09:29:19.601Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:07:32.778Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:07:33.950Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe9@gmail.com"]} {"timestamp":"2024-09-13T11:08:22.235Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"You need upload all de documents for be an Premium user"},"error":false} {"timestamp":"2024-09-13T11:08:28.376Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-13T11:11:26.829Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe9@gmail.com"]} {"timestamp":"2024-09-13T11:11:34.425Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:19:36.764Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:19:38.428Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:20:27.613Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:20:28.669Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:25:14.725Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:25:16.554Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:25:54.907Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:25:56.152Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:27:20.095Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:27:21.288Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:29:21.060Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:29:22.099Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:31:04.979Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:31:06.040Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-13T11:33:24.451Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe9@gmail.com"]} {"timestamp":"2024-09-13T11:33:45.665Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:40:44.913Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:40:46.288Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-13T11:41:11.182Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe9@gmail.com"]} {"timestamp":"2024-09-13T11:41:39.785Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:44:28.869Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:44:30.403Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:47:38.702Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:47:40.238Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-13T11:47:54.354Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:48:39.903Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:48:40.960Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe9@gmail.com"]} {"timestamp":"2024-09-13T11:48:58.610Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:51:37.775Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:51:38.943Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:54:30.047Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:54:31.329Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T11:55:01.025Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T11:55:02.038Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-13T11:55:14.791Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe9@gmail.com"]} {"timestamp":"2024-09-13T11:55:33.327Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T12:01:41.157Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T12:01:42.707Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-13T12:03:28.287Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe9@gmail.com"]} {"timestamp":"2024-09-13T12:03:47.441Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T12:04:18.235Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T12:04:19.471Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T12:13:19.255Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T12:13:20.462Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe9@gmail.com"]} {"timestamp":"2024-09-13T12:13:35.766Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T12:25:16.616Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T12:25:17.775Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T12:27:00.858Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T12:27:02.250Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T12:29:06.822Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T12:29:08.414Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe9@gmail.com"]} {"timestamp":"2024-09-13T12:29:37.740Z"}
+error: Unexpected field {"timestamp":"2024-09-13T12:29:43.370Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":{"name":"MulterError","message":"Unexpected field","code":"LIMIT_UNEXPECTED_FILE","field":"fileName","storageErrors":[]}},"error":"Unexpected field"} {"timestamp":"2024-09-13T12:29:43.371Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T12:30:14.439Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T12:30:15.555Z"}
+warning: {"status":403,"message":{"system":"Forbidden","custom":"Please login first"},"error":"attempted access without registration"} {"timestamp":"2024-09-13T12:37:10.225Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe12@gmail.com"]} {"timestamp":"2024-09-13T12:37:27.982Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T12:38:59.914Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T12:39:01.377Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T12:42:15.712Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T12:42:16.842Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-13T12:42:36.411Z"}
+error: Unexpected field {"timestamp":"2024-09-13T12:43:17.914Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":{"name":"MulterError","message":"Unexpected field","code":"LIMIT_UNEXPECTED_FILE","field":"products","storageErrors":[]}},"error":"Unexpected field"} {"timestamp":"2024-09-13T12:43:17.915Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-13T12:44:04.895Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-13T12:44:06.230Z"}
