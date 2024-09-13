@@ -507,3 +507,42 @@ Teniendo el servidor levantado, se puede probar, con:
 No hubo cambios en el archivo de variables de entorno.
 <br/>
 <br/>
+
+## Desafío complementario clase 44
+
+Se implemento el modulo de multer para subir archivos al servidor. se crearon 3 carpetas, dentro de public/images, llamadas profile, documents y products.
+se ajusto el modulo para que cada tipo de archivo se suba en la carpeta correspondiente.
+
+Se crean 3 endpoints diferentes uno para cada tipo de imagen. Se requiere que esten logueado para la correcta imputación de la imagen al user. Se creo el servicio de tal forma que solo permita 3 archivos en un array. Luego de la correcta carga de un archivo se valida que se hayan subido los 3 tipos de documentos, si es verdadero, actualiza el status del usuario a true, lo cual permite que pase de user a premium.
+Se modifico el endpoint /user/premium, para que valide, antes de actualizar a usuario premium, si ya subió la documentación, en caso contrario responde con un error.
+
+Se implementó un registro de ultima conexión solo al momento del login (tal cual lo indicado en clase) en un campo last_connection, dentro del objeto user.
+Actualiza la ultima conexión solo si se accedió correctamente al perfil.
+
+Se crearon los siguientes endpoints:
+
+1. **POST user/profile** permite subir una imagen de perfil, almacena la ubicación y el nombre de la imagen en la DB.
+2. **POST user/documents** permite subir una imagen de documento, almacena la ubicación y el nombre de la imagen en la DB.
+3. **POST user/products** permite subir una imagen de producto, almacena la ubicación y el nombre de la imagen en la DB.
+
+Se actualizan los siguientes endpoints:
+
+1. **PATCH user/premium** permite al usuario alternar entre usuario user y usuario premium automáticamente. También informa al mismo mediante email. para pasar a ser premium primero valida que haya subido los 3 tipos de documentos.
+
+<br/>
+
+## Script recomendado para correr la API
+
+> npm run dev prod mongo en
+
+<br/>
+
+## Documentación:
+
+> Se actualizo la documentación en swagger permitiendo hacer testing del upload de archivos.
+> **GET http://localHost:8080/docs**
+
+<br/>
+No hubo cambios en el archivo de variables de entorno.
+<br/>
+<br/>
