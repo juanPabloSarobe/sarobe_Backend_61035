@@ -75,4 +75,12 @@ export default class UserDao {
       throw new Error(error);
     }
   };
+  getAll = async () => {
+    try {
+      const allUsers = await UserModel.find();
+      return allUsers;
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
 }

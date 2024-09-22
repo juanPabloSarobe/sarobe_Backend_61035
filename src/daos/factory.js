@@ -32,9 +32,15 @@ switch (persistence) {
   //     prodDao = new ProductDaoSql();
   //     cartDao = new CartDaoSqlDB();
   default:
-    prodDao = new ProductDaoFS("./src/data/products.json");
+    //prodDao = new ProductDaoFS("./src/data/products.json");
     // userDao = new UserDaoFS('./src/daos/....
     // cartDao = new
+
+    initMongoDB();
+    userDao = new UserDaoMongo();
+    prodDao = new ProductDaoMongo();
+    cartDao = new cartDaoMongoDB();
+    ticketDao = new TicketDaoMongoDB();
     break;
 }
 

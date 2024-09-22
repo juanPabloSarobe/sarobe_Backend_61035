@@ -1,5 +1,9 @@
 //import UserDao from "../daos/mongodb/user.dao.js";
-import { createHash, isValidPassword } from "../utils/utils.js";
+import {
+  createHash,
+  hasBeenMoreThanXTime,
+  isValidPassword,
+} from "../utils/utils.js";
 import persistence from "../daos/factory.js";
 const { userDao, cartDao } = persistence;
 import UserRepository from "../repository/user.repository.js";
@@ -50,6 +54,46 @@ export const login = async ({ email, password }) => {
 export const getUserById = async (id) => {
   try {
     return await userRepository.getUserById(id);
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+export const getAll = async () => {
+  try {
+    return await userRepository.getAll();
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+export const getAllComplete = async () => {
+  try {
+    return await userDao.getAll();
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+export const setInactive = async () => {
+  try {
+    const users = await userDao.getAll();
+    if (users.length > 0) {
+      for (const user of users) {
+        if (
+          user.last_connection &&
+          hasBeenMoreThanXTime(user.last_connection)
+        ) {
+          console.log(
+            `${user.email}, Han pasado mas de 48hs de la ultima conexion de ${user._id}`
+          );
+          await userDao.update(user._id, {
+            inactive: true,
+          });
+
+          inactiveUsers.push(user.email);
+        }
+      }
+    }
+
+    return inactiveUsers;
   } catch (error) {
     throw new Error(error);
   }

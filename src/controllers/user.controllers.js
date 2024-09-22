@@ -1,7 +1,12 @@
 import * as services from "../services/user.services.js";
 import { httpResponse } from "../utils/httpResponse.js";
-import { createHash, isValidPassword } from "../utils/utils.js";
+import {
+  createHash,
+  hasBeenMoreThanXTime,
+  isValidPassword,
+} from "../utils/utils.js";
 import { sendGmail } from "./email.controllers.js";
+import { logger } from "../utils/logger.js";
 import persistence from "../daos/factory.js";
 const { userDao } = persistence;
 
@@ -126,6 +131,58 @@ export const current = async (req, res, next) => {
       httpResponse.Ok(res, user);
     } else {
       httpResponse.Unauthorized(res, user, "User not logued");
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+export const getAll = async (req, res, next) => {
+  try {
+    const users = await services.getAll();
+
+    if (users) {
+      req.session.message = users;
+      httpResponse.Ok(res, users);
+    } else {
+      httpResponse.Unauthorized(res, users, "User not logued");
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+export const setInactive = async (req, res, next) => {
+  try {
+    const inactiveUsers = [];
+    const users = await services.getAllComplete();
+
+    if (users.length > 0) {
+      for (const user of users) {
+        if (
+          user.last_connection &&
+          hasBeenMoreThanXTime(user.last_connection)
+        ) {
+          logger.info(
+            `${user.email}, Han pasado mas de 48hs de la ultima conexión, se ha desactivado el usuario id: ${user._id}`
+          );
+
+          await services.update(user._id, {
+            inactive: true,
+          });
+          req.session.emailType = "inactive";
+          req.session.message.first_name = user.first_name;
+          req.session.message.email = user.email;
+          sendGmail(req, res, next);
+          inactiveUsers.push(user.email);
+        }
+      }
+      req.session.message = inactiveUsers;
+      return httpResponse.Ok(res, "completing inactive users", inactiveUsers);
+    } else {
+      return httpResponse.NotFound(
+        res,
+        inactiveUsers,
+        "Not users for Set inactive"
+      );
     }
   } catch (error) {
     next(error);

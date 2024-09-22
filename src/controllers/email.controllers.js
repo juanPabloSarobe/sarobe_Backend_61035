@@ -9,6 +9,7 @@ import {
   passwordRestored,
   updateUser,
   roleChange,
+  inactive,
 } from "../utils/email.templates.js";
 
 const emailType = {
@@ -52,6 +53,12 @@ const emailType = {
     subject: `Lamentamos que hayas decidido dejar de ser premium`,
     html: function (user) {
       return roleChange(user);
+    },
+  },
+  inactive: {
+    subject: `Lamentamos informarte que por falta de uso hemos desactivado tu usuario`,
+    html: function (user) {
+      return inactive(user);
     },
   },
 };

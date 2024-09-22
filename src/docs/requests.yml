@@ -119,8 +119,11 @@ components:
             type: string
             description: password del usuario
         example:
-          email: jp.sarobe2@gmail.com
-          password: "1234"
+          - email: jp.sarobe2@gmail.com
+            password: "1234"
+          - email: adminCoder@coder.com
+            password: adminCod3r123
+          - email: borrar el que no corresponda, solo enviar un objeto
       register:
         type: object
         properties:

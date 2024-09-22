@@ -9,7 +9,11 @@ export const isAdmin = (req, res, next) => {
       logger.warning(
         `Unauthorized access try: ${data}, administrator role only`
       );
-      httpResponse.Unauthorized(res, { role: role }, "administrator role only");
+      return httpResponse.Unauthorized(
+        res,
+        { role: role },
+        "administrator role only"
+      );
     } else {
       return next();
     }
@@ -22,7 +26,7 @@ export const isAdminoOrPremium = (req, res, next) => {
   try {
     const { role } = req.session?.message;
     if (role !== "admin" && role !== "premium") {
-      httpResponse.Unauthorized(
+      return httpResponse.Unauthorized(
         res,
         { role: role },
         `Unauthorized access try, administrator or Premium role only`

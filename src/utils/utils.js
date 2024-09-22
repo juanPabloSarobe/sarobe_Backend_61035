@@ -39,3 +39,12 @@ export const generateProduct = () => {
     faker: true,
   };
 };
+
+export const hasBeenMoreThanXTime = (lastConnectionDate) => {
+  const dateNow = new Date();
+  const diffMs = dateNow - lastConnectionDate;
+  const hours48Ms = 48 * 60 * 60 * 1000; //48hs en ms
+  const minMs = 60 * 1000; //1 minuto
+
+  return diffMs > hours48Ms; //diferencia es mayor a 48hs en ms
+};

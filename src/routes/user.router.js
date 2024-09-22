@@ -48,5 +48,7 @@ router.get("/getCookie", [isAuth], controller.getCookie);
 router.patch("/update-password", [isAuth], controller.updatePass);
 router.patch("/update-user", [isAuth], controller.update);
 router.patch("/premium", [isAuth], controller.updatePremium);
+router.get("/", [isAuth, isAdmin], controller.getAll);
+router.get("/set_inactive", [isAuth, isAdmin], controller.setInactive);
 
 export default router;
