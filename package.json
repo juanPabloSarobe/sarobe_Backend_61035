@@ -8,7 +8,8 @@
     "test": "node entregables/desafioClase4.js",
     "start": "node .",
     "dev": "nodemon .",
-    "test:api": "node ./src/tests/test.js"
+    "test:api": "node ./src/tests/test.js",
+    "inicio": "node . prod mongo en"
   },
   "repository": {
     "type": "git",

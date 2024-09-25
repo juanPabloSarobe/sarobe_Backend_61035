@@ -3078,3 +3078,27 @@ info: El producto ha sido correctamente eliminado,  {"from":"liquidstoreproyect@
 info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-25T02:35:02.251Z"}
 info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:35:14.881Z"}
 info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:35:15.726Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:07:03.530Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:07:04.750Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:10:27.705Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:10:28.500Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:11:06.986Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:11:07.864Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:11:56.812Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:11:57.719Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:12:15.243Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:12:15.960Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:12:26.616Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:12:27.376Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:13:01.861Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:13:02.570Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:13:50.568Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:13:51.332Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:14:55.128Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:14:55.873Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:16:04.253Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:16:05.101Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:17:07.239Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:17:08.111Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:20:54.597Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:20:55.397Z"}

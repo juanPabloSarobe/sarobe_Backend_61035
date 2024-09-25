@@ -104,3 +104,5 @@ socketServer.on("connection", async (socket) => {
     socketServer.emit("products", await products.getAllWebSocket());
   });
 });
+
+export default app;

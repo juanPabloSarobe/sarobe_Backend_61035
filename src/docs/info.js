@@ -1,3 +1,4 @@
+import config from "../../config.js";
 export const infoSwagger = {
   definition: {
     openapi: "3.0.3",
@@ -14,7 +15,7 @@ Links de utilidad:
     servers: [
       {
         description: "localHost server for development",
-        url: "http://localhost:8080/api",
+        url: `http://localhost:${config.PORT}/api`,
       },
       // {
       //      - url: https://api.example.com/v1
