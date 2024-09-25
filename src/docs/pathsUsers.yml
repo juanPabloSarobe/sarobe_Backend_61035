@@ -423,3 +423,106 @@ paths:
                   message:
                     system: Unauthorized
                     custom: "administrator role only"
+  /user/set_inactive:
+    get:
+      tags:
+        - Users
+      summary: Pasa a inactivos todos los usuarios sin actividad
+      description: endpoint para Marcar como inactivos a todos los usuarios que no tuvieron actividad en las ultimas 48hs. Debe estar logueado como administrador.
+      responses:
+        200:
+          description: Datos de usuarios obtenidos
+          content:
+            application/json:
+              schema:
+                success:
+                  type: object
+                example:
+                  status: 200
+                  message:
+                    system: success
+                    custom:
+                      - jp.sarobe@gmail.com
+                      - jp.sarobe12@gmail.com
+                      - jp.sarobe13@gmail.com
+                  data: completing inactive users
+
+        403:
+          description: no hay sesion activa - attempted access without registration
+          content:
+            application/json:
+              schema:
+                403:
+                  type: object
+                example:
+                  status: 403
+                  message:
+                    system: forbidden
+                    custom: "please login first"
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                401:
+                  type: object
+                example:
+                  status: 401
+                  message:
+                    system: Unauthorized
+                    custom: "administrator role only"
+  /user/set_active:
+    post:
+      tags:
+        - Users
+      summary: Pasa a Activos los usuarios inactivos
+      description: endpoint para Marcar como activo al usuario cuyo email es pasado por body. Debe estar logueado como administrador.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Users/set_active"
+      responses:
+        200:
+          description: Datos de usuarios obtenidos
+          content:
+            application/json:
+              schema:
+                success:
+                  type: object
+                example:
+                  status: 200
+                  message:
+                    system: success
+                    custom:
+                      first_name: "Juan Pablo13"
+                      last_name: "Sarobe"
+                      email: "jp.sarobe13@gmail.com"
+                      role: "user"
+                      last_connection: "2024-09-25T01:48:35.852Z"
+                  data: User reactivated
+
+        403:
+          description: no hay sesion activa - attempted access without registration
+          content:
+            application/json:
+              schema:
+                403:
+                  type: object
+                example:
+                  status: 403
+                  message:
+                    system: forbidden
+                    custom: "please login first"
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                401:
+                  type: object
+                example:
+                  status: 401
+                  message:
+                    system: Unauthorized
+                    custom: "administrator role only"

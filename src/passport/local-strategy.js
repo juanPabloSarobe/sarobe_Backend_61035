@@ -1,6 +1,7 @@
 import * as services from "../services/user.services.js";
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
+import { httpResponse } from "../utils/httpResponse.js";
 
 const strategyConfig = {
   usernameField: "email",
@@ -25,6 +26,10 @@ const login = async (req, email, password, done) => {
     if (!userLogin) {
       req.session.destroy();
       return done(null, false, { message: "Autentication Denied" });
+    }
+    if (userLogin.inactive) {
+      req.session.destroy();
+      return done(null, false, { message: "User Inactive" });
     }
     return done(null, userLogin);
   } catch (error) {

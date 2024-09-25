@@ -123,7 +123,17 @@ components:
             password: "1234"
           - email: adminCoder@coder.com
             password: adminCod3r123
-          - email: borrar el que no corresponda, solo enviar un objeto
+          - email: Se dejan 2 usuarios para tenerlos de referencia. Borrar el que no corresponda, solo enviar un objeto no el array completo.
+      set_active:
+        type: object
+        required:
+          - email
+        properties:
+          email:
+            type: string
+            description: email del usuario a reactivar
+        example:
+          email: jp.sarobe12@gmail.com
       register:
         type: object
         properties:

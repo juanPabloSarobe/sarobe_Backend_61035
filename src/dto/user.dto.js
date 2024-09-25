@@ -10,6 +10,7 @@ export class UserDTO {
     this.documents = user.documents;
     this.status = user.status;
     this._id = user._id;
+    this.inactive = user.inactive;
   }
 }
 export class UserLiteDTO {

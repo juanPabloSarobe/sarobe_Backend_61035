@@ -7,6 +7,7 @@ import {
 } from "../utils/utils.js";
 import { sendGmail } from "./email.controllers.js";
 import { logger } from "../utils/logger.js";
+import { UserLiteDTO } from "../dto/user.dto.js";
 import persistence from "../daos/factory.js";
 const { userDao } = persistence;
 
@@ -46,6 +47,7 @@ export const login = async (req, res, next) => {
         last_connection,
         documents,
         status,
+        inactive,
       } = user;
 
       const message = {
@@ -59,6 +61,7 @@ export const login = async (req, res, next) => {
           last_connection,
           documents,
           status,
+          inactive,
         },
       };
       req.session.message = message.msg;
@@ -68,9 +71,11 @@ export const login = async (req, res, next) => {
       };
       req.session.emailType = "login";
       sendGmail(req, res, next);
+
       httpResponse.Ok(res, req.session);
     }
   } catch (error) {
+    console.log(error.message);
     next(error.message);
   }
 };
@@ -159,7 +164,8 @@ export const setInactive = async (req, res, next) => {
       for (const user of users) {
         if (
           user.last_connection &&
-          hasBeenMoreThanXTime(user.last_connection)
+          hasBeenMoreThanXTime(user.last_connection) &&
+          user.role !== "admin"
         ) {
           logger.info(
             `${user.email}, Han pasado mas de 48hs de la ultima conexión, se ha desactivado el usuario id: ${user._id}`
@@ -183,6 +189,24 @@ export const setInactive = async (req, res, next) => {
         inactiveUsers,
         "Not users for Set inactive"
       );
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+export const setActive = async (req, res, next) => {
+  try {
+    const { email } = req.body;
+    const user = await services.getUserByEmail(email);
+
+    if (!user) {
+      return httpResponse.NotFound(res, user, "Not a valid email");
+    } else {
+      await services.update(user._id, {
+        inactive: false,
+      });
+      const liteUser = new UserLiteDTO(user);
+      return httpResponse.Ok(res, "User reactivated", liteUser);
     }
   } catch (error) {
     next(error);
