@@ -547,46 +547,30 @@ No hubo cambios en el archivo de variables de entorno.
 <br/>
 <br/>
 
-## Entrega Proyecto final (clase 44)
+## Entrega Proyecto final - Backend de una aplicación e-commerce (clase 44)
 
-Se refactoriza prácticamente casi todo el proyecto. Primero se refactoriza todo lo referido al cart, ya que tenia una falta de ortográfica (chart) que confundía, por ende se cambiaron los nombre de los archivos, dependencias, funciones, métodos, clases, etc.
-La capa de persistencia ya estaba implementada utilizando el patron factory de la entrega anterior, se agrega patron repository y DTO para el endpoint current.
+Se realiza la entrega del proyecto final backend de una aplicación e-commerce.
+Para la misma se decidió no utilizar vistas (aunque las mismas quedaron en el proyecto), dado que se desvía del objetivo principal del proyecto, que es justamente la aplicación de la lógica de backend.
 
-Se eliminó el uso de vistas, ahora todos los endpoints devuelven la respuesta en JSON.
-
-Se implementa el middleware isAuth, en los endpoint que sea necesario que el usuario este logueado, el cual solo permite continuar si esta correctamente logueado.
-Se crea el middleware isAdmin, que verifica si el usuario logueado tienen permisos de administrador, en dicho caso permite continuar. se implementa en los endpoints de creación, edición y eliminación de productos, no asi en los de consulta.
-
-Se refactorizan todos los endpoints referidos al carrito, ya no es necesario pasarle el id de usuario por parámetro, sino que lo obtiene del objeto session, que se crea luego de loguearse, como tiene un middleware que verifica el login, no se puede acceder a ningún endpoint si no esta logueado.
-
-Se crea el modelo ticket, con los datos requeridos en desafío, pero ademas se agregaron algunos datos extras, por ejemplo el detalle de los productos comprados, la cantidad de cada uno, el precio al momento de compra, y al tener la cantidad se calcula el subtotal.
-Ademas se agrega también el id del usuario.
-
-De esta forma se crea un endpoint raíz para tickets, que permite obtener todos los tickets que haya comprado el usuario logueado.
-
-Al momento de realizar la compra, tal cual lo indicado por el profesor en clase se realiza una verificación muy simple del stock, si la cantidad comprada es menor al stock, se compra dicha cantidad, si es mayor, se compra todo el stock. luego de realizada la compra se vacía el carrito del usuario.
-
-No se implementó envío de mail o sms, dado que no lo indico el profesor ni lo implementó en en afterclass
+La tienda es una tienda de bebidas, la misma permite un login de usuarios, con el rol por defecto de user, luego de completar su perfil subiendo las imágenes y documentación correspondiente, permite cambiar su rol a premium, el cual habilita a cada usuario a subir y vender sus propios productos. Un usuario no puede auto comprarse sus propios productos, pero si puede editarlos o eliminarlos.
+Los usuarios pueden agregar uno a uno los productos de otros usuarios a su carrito y de esta forma luego ejecutar la compra.
+Al momento de realizar la compra se crea un ticket por cada compra, con los datos de todos los productos comprados asi como también el detalle de los importes parciales y totales, quedando almacenado en cada perfil de usuario, el total de tickets comprados.
+La tienda cuenta también con el envío de emails para confirmar determinadas operaciones como, el inicio de sesión, cambio de rol o eliminación de un producto. cuenta con una plantilla de emails para personalizar cada tipo de correo en función de la acción que lo ejecuto.
+Cuenta con un sistema de respuestas personalizado y homogéneo en toda la plataforma.
+Para el login se utiliza la librería passport, asi como session para mantener los datos de sesión activa.
+La api cuenta con un enrutador personalizado, un sistema de logs de eventos y errores, diferentes middlewares para controles de acceso a las diferentes rutas, dto para control de datos en respuestas, y posibilidad de cambiar de persistencia mediante DAOS.
+Actualmente utiliza como persistencia mongoDB, almacenado en la nube mediante mongo Atlas.
+También se realizaron diferentes tests, tanto unitarios como de integración.
+Por ultimo cuenta con toda la documentación de los diferentes endpoints, con ejemplos reales y funcionales, mediante swagger.
 
 <br/>
 <br/>
 
 Se actualizan los siguientes endpoints:
 
-1. **POST /products** se agrega middleware de login administrador
-2. **PUT /products/pid** se agrega middleware de login administrador. Ahora se utiliza el mismo endpoint para agregar o modificar productos
-3. **DELETE /products/pid** se agrega middleware de login administrador
-4. **GET carts/userCart** ya no requiere el id de usuario por parámetro, se agrega middleware de login
-5. **POST carts** ya no requiere el id de usuario por parámetro, se elimina el endpoint, se utiliza de forma interna al crear el usuario
-6. **PUT carts/userCart/products/:pid** ya no requiere el id de usuario por parámetro, se agrega middleware de login
-7. **DELETE carts/userCart/delete/:pid** ya no requiere el id de usuario por parámetro, se agrega middleware de login
-8. **DELETE carts/userCart/cleanCart** ya no requiere el id de usuario por parámetro, se agrega middleware de login
-9. **DELETE carts/userCart/delete** ya no requiere el id de usuario por parámetro, se agrega middleware de login. Se deshabilita, ya que ahora cara usuario tiene un único ID de carrito, si lo eliminamos traerá problemas al querer volver a crearlo. se deje la lógica ya que serviría para eliminar un carrito solo al momento de querer eliminar un usuario.
-10. **GET user/current** ya no requiere el id de usuario por parámetro, se agrega middleware de login, se implementa DTO para entregar solo la info necesaria.
-11. **GET user/infoSession** se agrega middleware de login administrador. permite visualizar la información completa de la session
-12. **GET user/logout** se agrega middleware de login, cierra la session.
+1. **DELETE /products/pid** Se envia email con detalle del producto eliminado.
 
-    <br/>
+<br/>
 
 Se crearon los siguientes endpoints:
 
@@ -595,15 +579,16 @@ Se crearon los siguientes endpoints:
 3. **POST /users/set_active** Marca como activo el usuario recibido por body. Debe estar logueado como administrador
 
 <br/>
-Por último se ejecutan los test de funcionamiento desde postman.
+Por último se ejecutan los test de funcionamiento desde postman y desde swagger.
 <br/>
 Se envía el archivo de variables de entorno de forma privada.
 <br/>
 <br/>
 
-> A esta altura, el front ya podría diseñar una página de visualización y búsqueda de productos, por categorías, palabras claves, y paginada.
-> Se podría agregar, editar o eliminar productos, mediante el usuario administrador.
-> Creación de usuarios, agregar, editar o eliminar productos al carrito, y ejecutar una compra simulada. Y también cada usuario podría ver todas sus compras realizadas.
+## Documentación:
+
+> Se actualizo la documentación en swagger permitiendo hacer testing del upload de archivos.
+> **GET http://localHost:8080/docs**
 
 <br/>
 
