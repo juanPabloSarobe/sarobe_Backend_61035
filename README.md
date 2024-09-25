@@ -588,7 +588,7 @@ Se envía el archivo de variables de entorno de forma privada.
 ## Documentación:
 
 > Se actualizo la documentación en swagger permitiendo hacer testing del upload de archivos.
-> **GET http://localHost:8080/docs**
+> **GET http://localHost:3000/docs**
 
 <br/>
 

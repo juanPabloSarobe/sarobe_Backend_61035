@@ -3102,3 +3102,5 @@ info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE 
 info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:17:08.111Z"}
 info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T03:20:54.597Z"}
 info: conectado a mongo Atlas {"timestamp":"2024-09-25T03:20:55.397Z"}
+info: Server ok en puerto 3000 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T05:53:20.969Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T05:53:21.959Z"}

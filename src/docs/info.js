@@ -17,6 +17,10 @@ Links de utilidad:
         description: "localHost server for development",
         url: `http://localhost:${config.PORT}/api`,
       },
+      {
+        description: "Render API deploy",
+        url: `https://liquidstore-backend.onrender.com/api`,
+      },
       // {
       //      - url: https://api.example.com/v1
       // description: Production server (uses live data)
