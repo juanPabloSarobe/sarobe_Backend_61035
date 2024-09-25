@@ -45,17 +45,43 @@ Por ultimo cuenta con toda la documentación de los diferentes endpoints, con ej
 
 <br/>
 
-**Product Manager API** https://documenter.getpostman.com/view/11511543/2sA3BuW9A1
-<br/>
+<h2>💻 Built with</h2>
 
-**Cart Manager API** https://documenter.getpostman.com/view/11511543/2sA3JJ8NeR
-<br/>
+Tecnologías utilizadas en el proyecto:
 
-**Ticket Manager API** https://documenter.getpostman.com/view/11511543/2sA3kbexfH
-<br/>
+- NODE
+- EXPRESS
+- EXPRESS-SESSIONS
+- MONGO
+- MONGO ATLAS
+- MONGO COMPASS
+- MONGOOSE
+- HANDLEBARS
+- SWEETALERT2
+- MULTER
+- NODEMAILER
+- PASSPORT
+- PASSPORT-LOCAL
+- PASSPORT-GITHUB2
+- BASIC HTML & CSS
+- SOCKET.IO
+- SWAGGER DOCUMENTATION
+- GIT
+- GITHUB
+- UUID
+- WINSTON
+- BCRYPT
+- FAKER
+- FILESYSTEM
+- DEPLOY ON RENDER
 
-**User Manager API** https://documenter.getpostman.com/view/11511543/2sA3kbexfK
-<br/>
+<h2>🛡️ License:</h2>
+
+This project is licensed under the MIT
+
+<h2>💖Like my work?</h2>
+
+Sígueme en https://www.linkedin.com/in/juanpablosarobe/
 <br/>
 <br/>
 

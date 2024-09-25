@@ -5,7 +5,6 @@
   "main": "./src/server.js",
   "type": "module",
   "scripts": {
-    "test": "node entregables/desafioClase4.js",
     "start": "node .",
     "dev": "nodemon .",
     "test:api": "node ./src/tests/test.js",

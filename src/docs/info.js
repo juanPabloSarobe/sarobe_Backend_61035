@@ -10,7 +10,8 @@ Esta documentación corresponde a los diferentes endpoints del servidor backend 
 
 Links de utilidad:
   - [React FrontEnd Repository](https://github.com/juanPabloSarobe/react-47225)
-  - [React Native APP Repository](https://github.com/juanPabloSarobe/LiquidStoreApp)`,
+  - [React Native APP Repository](https://github.com/juanPabloSarobe/LiquidStoreApp)
+  - [BackEnd Repository](https://github.com/juanPabloSarobe/sarobe_Backend_61035)`,
     },
     servers: [
       {
@@ -21,12 +22,6 @@ Links de utilidad:
         description: "localHost server for development",
         url: `http://localhost:${config.PORT}/api`,
       },
-      // {
-      //      - url: https://api.example.com/v1
-      // description: Production server (uses live data)
-      // - url: https://sandbox-api.example.com:8443/v1
-      // description: Sandbox server (uses test data)
-      // }
     ],
   },
   apis: ["./src/docs/*.yml"],
