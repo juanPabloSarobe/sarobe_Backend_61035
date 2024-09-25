@@ -4,6 +4,7 @@ paths:
       tags:
         - Products
       summary: Inserta un nuevo producto. Debe ser usuario Premium o admin y estar logueado
+      description: Para insertar un producto debe ser premium, para ser premium, debe subir 3 documentos con multer. Como estamos utilizando una version gratuita de Render, no podemos subir archivos, por lo cual para hacer las pruebas se puede usar el usuario jpsarobe@gmail.com password 1234, en caso de querer probarlo con un nuevo usuario, se debe ejecutar la API de forma local.
       requestBody:
         content:
           application/json:

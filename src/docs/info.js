@@ -14,12 +14,12 @@ Links de utilidad:
     },
     servers: [
       {
-        description: "localHost server for development",
-        url: `http://localhost:${config.PORT}/api`,
-      },
-      {
         description: "Render API deploy",
         url: `https://liquidstore-backend.onrender.com/api`,
+      },
+      {
+        description: "localHost server for development",
+        url: `http://localhost:${config.PORT}/api`,
       },
       // {
       //      - url: https://api.example.com/v1

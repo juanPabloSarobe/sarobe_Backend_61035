@@ -1,6 +1,65 @@
 # Curso Backend comisión 61035 - SAROBE JUAN PABLO 2024
 
-Repo curso backend comisión 61035
+<p align='center'>
+<img src="https://raw.githubusercontent.com/juanPabloSarobe/LiquidStoreApp/main/assets/IconoLiquidStore_PlayStore.png">
+</p>
+
+## LiquidStore Backend es un proyecto del curso Backend con Node dictado en CoderHouse comisión 61035, para desarrollo de un servidor backend que se encargue de administrar las peticiones a la base de datos mediante API endpoints.
+
+<br/>
+<br/>
+
+## Entrega Proyecto final - Backend de una aplicación e-commerce (clase 44)
+
+<br/>
+
+### Resumen del proyecto realizado
+
+Se realiza la entrega del proyecto final backend de una aplicación e-commerce.
+Para la misma se decidió no utilizar vistas (aunque las mismas quedaron en el proyecto), dado que se desvía del objetivo principal del proyecto, que es justamente la aplicación de la lógica de backend.
+
+La tienda es una tienda de bebidas, la misma permite un login de usuarios, con el rol por defecto de user, luego de completar su perfil subiendo las imágenes y documentación correspondiente, permite cambiar su rol a premium, el cual habilita a cada usuario a subir y vender sus propios productos. Un usuario no puede auto comprarse sus propios productos, pero si puede editarlos o eliminarlos.
+Los usuarios pueden agregar uno a uno los productos de otros usuarios a su carrito y de esta forma luego ejecutar la compra.
+Al momento de realizar la compra se crea un ticket por cada compra, con los datos de todos los productos comprados asi como también el detalle de los importes parciales y totales, quedando almacenado en cada perfil de usuario, el total de tickets comprados.
+La tienda cuenta también con el envío de emails para confirmar determinadas operaciones como, el inicio de sesión, cambio de rol o eliminación de un producto. cuenta con una plantilla de emails para personalizar cada tipo de correo en función de la acción que lo ejecuto.
+Cuenta con un sistema de respuestas personalizado y homogéneo en toda la plataforma.
+Para el login se utiliza la librería passport, asi como session para mantener los datos de sesión activa.
+La api cuenta con un enrutador personalizado, un sistema de logs de eventos y errores, diferentes middlewares para controles de acceso a las diferentes rutas, dto para control de datos en respuestas, y posibilidad de cambiar de persistencia mediante DAOS.
+Actualmente utiliza como persistencia mongoDB, almacenado en la nube mediante mongo Atlas.
+También se realizaron diferentes tests, tanto unitarios como de integración.
+Por ultimo cuenta con toda la documentación de los diferentes endpoints, con ejemplos reales y funcionales, mediante swagger.
+
+<br/>
+<br/>
+
+## API entry point:
+
+> **https://liquidstore-backend.onrender.com**
+
+## Documentación:
+
+> Se actualizo la documentación en swagger permitiendo hacer testing del upload de archivos.
+> **https://liquidstore-backend.onrender.com/docs**
+>
+> **http://localHost:3000/docs**
+
+<br/>
+
+**Product Manager API** https://documenter.getpostman.com/view/11511543/2sA3BuW9A1
+<br/>
+
+**Cart Manager API** https://documenter.getpostman.com/view/11511543/2sA3JJ8NeR
+<br/>
+
+**Ticket Manager API** https://documenter.getpostman.com/view/11511543/2sA3kbexfH
+<br/>
+
+**User Manager API** https://documenter.getpostman.com/view/11511543/2sA3kbexfK
+<br/>
+<br/>
+<br/>
+
+# Detalle del paso a paso en la construcción de del proyecto.
 
 ## Desafío clase 2
 
@@ -549,21 +608,6 @@ No hubo cambios en el archivo de variables de entorno.
 
 ## Entrega Proyecto final - Backend de una aplicación e-commerce (clase 44)
 
-Se realiza la entrega del proyecto final backend de una aplicación e-commerce.
-Para la misma se decidió no utilizar vistas (aunque las mismas quedaron en el proyecto), dado que se desvía del objetivo principal del proyecto, que es justamente la aplicación de la lógica de backend.
-
-La tienda es una tienda de bebidas, la misma permite un login de usuarios, con el rol por defecto de user, luego de completar su perfil subiendo las imágenes y documentación correspondiente, permite cambiar su rol a premium, el cual habilita a cada usuario a subir y vender sus propios productos. Un usuario no puede auto comprarse sus propios productos, pero si puede editarlos o eliminarlos.
-Los usuarios pueden agregar uno a uno los productos de otros usuarios a su carrito y de esta forma luego ejecutar la compra.
-Al momento de realizar la compra se crea un ticket por cada compra, con los datos de todos los productos comprados asi como también el detalle de los importes parciales y totales, quedando almacenado en cada perfil de usuario, el total de tickets comprados.
-La tienda cuenta también con el envío de emails para confirmar determinadas operaciones como, el inicio de sesión, cambio de rol o eliminación de un producto. cuenta con una plantilla de emails para personalizar cada tipo de correo en función de la acción que lo ejecuto.
-Cuenta con un sistema de respuestas personalizado y homogéneo en toda la plataforma.
-Para el login se utiliza la librería passport, asi como session para mantener los datos de sesión activa.
-La api cuenta con un enrutador personalizado, un sistema de logs de eventos y errores, diferentes middlewares para controles de acceso a las diferentes rutas, dto para control de datos en respuestas, y posibilidad de cambiar de persistencia mediante DAOS.
-Actualmente utiliza como persistencia mongoDB, almacenado en la nube mediante mongo Atlas.
-También se realizaron diferentes tests, tanto unitarios como de integración.
-Por ultimo cuenta con toda la documentación de los diferentes endpoints, con ejemplos reales y funcionales, mediante swagger.
-
-<br/>
 <br/>
 
 Se actualizan los siguientes endpoints:
@@ -585,10 +629,14 @@ Se envía el archivo de variables de entorno de forma privada.
 <br/>
 <br/>
 
+## API entry point:
+
+> **https://liquidstore-backend.onrender.com**
+
 ## Documentación:
 
 > Se actualizo la documentación en swagger permitiendo hacer testing del upload de archivos.
-> **GET http://localHost:3000/docs**
+> **http://localHost:3000/docs**
 
 <br/>
 

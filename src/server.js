@@ -66,6 +66,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Enrutador
+app.get("/", (req, res) =>
+  res.send(`<h1>LiquidStore Backend.</h1>
+            <p style="font-size: 16px">
+              Bienvenido, para acceder a la documentación por favor haga clic <a href="https://liquidstore-backend.onrender.com/docs" target="_blank">AQUI</a>.
+            </p>`)
+);
 app.use("/api", mainRouter.getRouter());
 app.use(errorHandler);
 
