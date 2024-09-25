@@ -10,6 +10,7 @@ import {
   updateUser,
   roleChange,
   inactive,
+  productDeleted,
 } from "../utils/email.templates.js";
 
 const emailType = {
@@ -61,19 +62,26 @@ const emailType = {
       return inactive(user);
     },
   },
+  productDeleted: {
+    subject: `El producto ha sido correctamente eliminado`,
+    html: function (user, product) {
+      return productDeleted(user, product);
+    },
+  },
 };
 
 export const sendGmail = async (req, res, next) => {
   try {
     const user = req.session?.message;
     const type = req.session?.emailType;
+    const productDeleted = req.session?.productDeleted || null;
     const { subject } = emailType[type];
 
     const gmailOptions = {
       from: `LiquidStore <${config.SENDER_GMAIL_USER}>`,
       to: user.email,
       subject,
-      html: emailType[type].html(user),
+      html: emailType[type].html(user, productDeleted),
     };
 
     const response = await gmailTransporter.sendMail(gmailOptions);

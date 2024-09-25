@@ -3040,3 +3040,41 @@ info: jp.sarobe9@gmail.com, Han pasado mas de 48hs de la ultima conexión, se ha
 info: jp.sarobe10@gmail.com, Han pasado mas de 48hs de la ultima conexión, se ha desactivado el usuario id: 66e222d30bb425e65ff2cb31 {"timestamp":"2024-09-25T01:59:27.916Z"}
 info: Lamentamos informarte que por falta de uso hemos desactivado tu usuario,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe9@gmail.com"]} {"timestamp":"2024-09-25T01:59:30.350Z"}
 info: Lamentamos informarte que por falta de uso hemos desactivado tu usuario,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe10@gmail.com"]} {"timestamp":"2024-09-25T01:59:31.006Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:20:18.621Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:20:19.628Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-25T02:20:38.278Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe2@gmail.com"]} {"timestamp":"2024-09-25T02:21:31.336Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:22:52.048Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:22:52.802Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:23:40.264Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:23:41.027Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:25:01.280Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:25:02.090Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:25:51.398Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:25:52.125Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:26:05.070Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:26:05.760Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:26:18.827Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:26:19.590Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-25T02:26:49.024Z"}
+info: {"status":401,"message":{"system":"Unauthorized","custom":"You need upload all de documents for be an Premium user"},"error":false} {"timestamp":"2024-09-25T02:28:15.823Z"}
+info: Felicitaciones ya eres un usuario premium,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-25T02:28:44.348Z"}
+error: productDeleted is not a function {"timestamp":"2024-09-25T02:30:28.238Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":{}},"error":"productDeleted is not a function"} {"timestamp":"2024-09-25T02:30:28.238Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:31:44.463Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:31:45.251Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:31:58.987Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:31:59.746Z"}
+error: undefined {"timestamp":"2024-09-25T02:32:19.654Z"}
+error: {"status":500,"message":{"system":"Internal Server Error","custom":"Error: MongoServerError: E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: \"Refrescos1005\" }"}} {"timestamp":"2024-09-25T02:32:19.655Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:32:45.489Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:32:46.208Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:33:41.235Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:33:42.142Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:34:05.330Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:34:06.067Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-25T02:34:12.164Z"}
+info: El producto ha sido correctamente eliminado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-25T02:34:30.528Z"}
+info: Nuevo inicio de sesion registrado,  {"from":"liquidstoreproyect@gmail.com","to":["jp.sarobe@gmail.com"]} {"timestamp":"2024-09-25T02:35:02.251Z"}
+info: Server ok en puerto 8080 in prod mode whit persistence in mongo, LANGUAGE = en {"timestamp":"2024-09-25T02:35:14.881Z"}
+info: conectado a mongo Atlas {"timestamp":"2024-09-25T02:35:15.726Z"}

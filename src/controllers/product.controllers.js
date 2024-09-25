@@ -1,6 +1,7 @@
 import * as service from "../services/product.services.js";
 import { httpResponse } from "../utils/httpResponse.js";
 import { logger } from "../utils/logger.js";
+import { sendGmail } from "./email.controllers.js";
 
 //import { __dirname } from "../utils.js";
 
@@ -151,7 +152,12 @@ export const remove = async (req, res, next) => {
     const productDeleted = await service.remove(pid);
     if (!product)
       httpResponse.NotFound(res, productDeleted, "error removing product");
-    else httpResponse.Ok(res, productDeleted);
+    else {
+      req.session.emailType = "productDeleted";
+      req.session.productDeleted = productDeleted;
+      sendGmail(req, res, next);
+      return httpResponse.Ok(res, productDeleted);
+    }
   } catch (error) {
     next(error.message);
   }
